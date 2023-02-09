@@ -55,7 +55,7 @@
   <entry>
     <title><![CDATA[双目相机内参标定]]></title>
     <url>%2F%2Fbinocular-camera-calibration%2F</url>
-    <content type="text"><![CDATA[摘要双目相机标定主要就是为了确定左右相机的内参和两个相机之间的旋转跟平移矩阵，其中matlab的可视化标定工具对双目相机标定入门选手比较友好，本文主要介绍目前可以使用的双目标定工具及双目标定原理。 Edit By Porter, 积水成渊,蛟龙生焉。 1. 双目相机标定方法介绍目前可以实现相机标定的方法有很多，比如常见的matlab自带相机标定工具箱，可以实现单目相机、双目相机标定例如 Matlab工具箱标定双目相机 手把手教双目相机标定（超详细，附代码） halcon 双目相机标定程序demoHalcon自带的双目相机标定程序在binocular_calibration.hdev ros 自带的标定工具\ 1rosdep install camera_calibration 2. 双目标定原理]]></content>
+    <content type="text"><![CDATA[摘要双目相机标定主要就是为了确定左右相机的内参和两个相机之间的旋转跟平移矩阵，其中matlab的可视化标定工具对双目相机标定入门选手比较友好，本文主要介绍目前可以使用的双目标定工具及双目标定原理。 Edit By Porter, 积水成渊,蛟龙生焉。 1. 双目相机标定方法介绍目前可以实现相机标定的方法有很多，比如常见的matlab自带相机标定工具箱，可以实现单目相机、双目相机标定例如 Matlab工具箱标定双目相机 手把手教双目相机标定（超详细，附代码） halcon 双目相机标定程序demoHalcon自带的双目相机标定程序在binocular_calibration.hdev ros 自带的标定工具\ 1rosdep install camera_calibration 2. 双目标定原理3. 参考文献黑马机器人-双目相机原理 黑马机器人-相机标定&amp;物体检测]]></content>
       <categories>
         <category>vision</category>
       </categories>
@@ -103,17 +103,6 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[2.17vscode新建工程]]></title>
-    <url>%2F%2Fvscodenewproject%2F</url>
-    <content type="text"><![CDATA[摘要 vscode 中新建工程 launch.json 用于设置调试、运行时的东东 task.json 用于设置编译时的东东 launch.json1"program": "$&#123;fileDirname&#125;/$&#123;fileBasenameNoExtension&#125;" 如果你的工程文件结构如下 12345C:\Users\admin\Desktop\test+.vscode ++tasks.json ++launch.json+main.cpp 则有： ${workspaceFolder} :表示当前workspace文件夹路径，也即C:\Users\admin\Desktop\test ${workspaceRootFolderName}:表示workspace的文件夹名，也即test ${file}:文件自身的绝对路径，也即C:\Users\admin\Desktop\test.vscode\launch.json ${relativeFile}:文件在workspace中的路径，也即.vscode\launch.json ${fileBasenameNoExtension}:当前文件的文件名，不带后缀，也即launch ${fileBasename}:当前文件的文件名，launch.json ${fileDirname}:文件所在的文件夹路径，也即C:\Users\admin\Desktop\test.vscode ${fileExtname}:当前文件的后缀，也即.json ${lineNumber}:当前文件光标所在的行号 ${env:PATH}:系统中的环境变量 vocode执行调试命令执行ctrl+shift+P后，执行下面命令： 1&gt;c/c++:build and debug active File]]></content>
-      <categories>
-        <category>summary</category>
-      </categories>
-      <tags>
-        <tag>vscode</tag>
-      </tags>
-  </entry>
-  <entry>
     <title><![CDATA[2.18gcc相关命令]]></title>
     <url>%2F%2Fvscodegcc%2F</url>
     <content type="text"><![CDATA[摘要gcc和g++相关的命令学习笔记 g++g++主要是c++语言编译的相关命令 12345678910111213GCC(1) GNU GCC(1)NAME gcc - GNU project C and C++ compilerSYNOPSIS gcc [-c|-S|-E] [-std=standard] [-g] [-pg] [-Olevel] [-Wwarn...] [-Wpedantic] [-Idir...] [-Ldir...] [-Dmacro[=defn]...] [-Umacro] [-foption...] [-mmachine-option...] [-o outfile] [@file] infile... 1.1 常用命令 gcc -o 指定生成可执行文件的名称，如果不实用-o则会生成a.out 使用方法： 123g++ -o afile file.cpp file.hppg++ -o test test.cppg++ test.cpp -o test gcc -g 可以对程序进行调试，添加gdb调试选项,生成调试信息 使用方法： 1g++ -g -o hello hello.cpp g++ -c 只生成目标文件，只编译步链接 使用方法： g++ -wall 编译后显示警告 g++ -std=c++17 最新的g++6.3已经默认支持c++14 而更高的已经支持c++17标准]]></content>
@@ -122,6 +111,17 @@
       </categories>
       <tags>
         <tag>gcc</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[2.17vscode新建工程]]></title>
+    <url>%2F%2Fvscodenewproject%2F</url>
+    <content type="text"><![CDATA[摘要 vscode 中新建工程 launch.json 用于设置调试、运行时的东东 task.json 用于设置编译时的东东 launch.json1"program": "$&#123;fileDirname&#125;/$&#123;fileBasenameNoExtension&#125;" 如果你的工程文件结构如下 12345C:\Users\admin\Desktop\test+.vscode ++tasks.json ++launch.json+main.cpp 则有： ${workspaceFolder} :表示当前workspace文件夹路径，也即C:\Users\admin\Desktop\test ${workspaceRootFolderName}:表示workspace的文件夹名，也即test ${file}:文件自身的绝对路径，也即C:\Users\admin\Desktop\test.vscode\launch.json ${relativeFile}:文件在workspace中的路径，也即.vscode\launch.json ${fileBasenameNoExtension}:当前文件的文件名，不带后缀，也即launch ${fileBasename}:当前文件的文件名，launch.json ${fileDirname}:文件所在的文件夹路径，也即C:\Users\admin\Desktop\test.vscode ${fileExtname}:当前文件的后缀，也即.json ${lineNumber}:当前文件光标所在的行号 ${env:PATH}:系统中的环境变量 vocode执行调试命令执行ctrl+shift+P后，执行下面命令： 1&gt;c/c++:build and debug active File]]></content>
+      <categories>
+        <category>summary</category>
+      </categories>
+      <tags>
+        <tag>vscode</tag>
       </tags>
   </entry>
   <entry>
@@ -527,20 +527,9 @@
         <category>Deep Learning</category>
       </categories>
       <tags>
-        <tag>Algorithm</tag>
         <tag>Deep Learning</tag>
+        <tag>Algorithm</tag>
         <tag>kmean</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[2.15 机器学习算法GBDT]]></title>
-    <url>%2F%2FGBDT%2F</url>
-    <content type="text"><![CDATA[摘要 Docker 是一个开源的应用容器引擎，基于 Go 语言 并遵从Apache2.0协议开源。 Docker 可以让开发者打包他们的应用以及依赖包到一个轻量级、可移植的容器中，然后发布到任何流行的 Linux 机器上，也可以实现虚拟化。 容器是完全使用沙箱机制，相互之间不会有任何接口（类似 iPhone 的 app）,更重要的是容器性能开销极低。]]></content>
-      <categories>
-        <category>summary</category>
-      </categories>
-      <tags>
-        <tag>docker</tag>
       </tags>
   </entry>
   <entry>
@@ -558,6 +547,17 @@
     <title><![CDATA[docker 配置权限问题]]></title>
     <url>%2F%2FdockerConf%2F</url>
     <content type="text"><![CDATA[摘要 本文主要介绍Docker 安装结束后的全权限配置问题 一、解决终端运行每次需要运行root权限问题 12porter@porter-Aspire:~$ docker images Got permission denied while trying to connect to the Docker daemon socket at unix:///var/run/docker.sock: Get http://%2Fvar%2Frun%2Fdocker.sock/v1.39/images/json: dial unix /var/run/docker.sock: connect: permission denied 二、解决Pycharm中导入docker时提示权限问题 一、问题分析以上两种问题的出现，都是因为没把当前的用户组加到 /var/run/docker.sock 执行组中去 解决办法步骤一、检查docker.sock 的用户权限情况12ls -l /var/run/docker.socksrw-rw---- 1 root docker 0 Aug 23 09:40 /var/run/docker.sock 步骤二、将当前用户组添加到docker的组中12sudo gpasswd -a $&#123;USER&#125; dockercat /etc/group | grep ^docker 步骤三、重启docker1sudo service docker restart 步骤四、更新docker的用户和组1newgrp docker #更新用户组 步骤五、终端测试可以发现可以不用root权限就可以操作docker相关的命令了 1docker ps #测试docker命令是否可以使用sudo正常使用 二、 问题分析导致问题二中的pycharm出问题的原因是因为file的读写权限的问题，我们只需要改下，出问题的文件的读写权限就可以了 问题的现象如下图 问题的解决方法如下 1sudo chmod a+rw /var/run/docker.sock 然后再重新+一个Docker 看下效果如下]]></content>
+      <categories>
+        <category>summary</category>
+      </categories>
+      <tags>
+        <tag>docker</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[2.15 机器学习算法GBDT]]></title>
+    <url>%2F%2FGBDT%2F</url>
+    <content type="text"><![CDATA[摘要 Docker 是一个开源的应用容器引擎，基于 Go 语言 并遵从Apache2.0协议开源。 Docker 可以让开发者打包他们的应用以及依赖包到一个轻量级、可移植的容器中，然后发布到任何流行的 Linux 机器上，也可以实现虚拟化。 容器是完全使用沙箱机制，相互之间不会有任何接口（类似 iPhone 的 app）,更重要的是容器性能开销极低。]]></content>
       <categories>
         <category>summary</category>
       </categories>
@@ -729,8 +729,8 @@
         <category>gym</category>
       </categories>
       <tags>
-        <tag>Algorithm</tag>
         <tag>Deep Learning</tag>
+        <tag>Algorithm</tag>
         <tag>gym</tag>
       </tags>
   </entry>
@@ -742,8 +742,8 @@
         <category>ROS</category>
       </categories>
       <tags>
-        <tag>Algorithm</tag>
         <tag>Deep Learning</tag>
+        <tag>Algorithm</tag>
         <tag>ROS</tag>
       </tags>
   </entry>
@@ -772,17 +772,6 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[1.15 ubuntu下goldendict有道爬虫小程序]]></title>
-    <url>%2F%2Fgoldendictsetting%2F</url>
-    <content type="text"><![CDATA[摘要有道翻译 for GoldenDict 半完美取词显示插件说道linux里面好用的取词软件，不得不数goldendict很不错的，比好几年都没更新linux客户端的有道来说好用的多，毕竟ubuntu18下，有道qt已经存在不兼容，要么降qt版本，要么自己折腾对官方提供的deb安装包进行解包，然后进行修改以来环境的代码，再打包，太麻烦了，当然目前也有基于官方的有道词典打包好的支持ubuntu18系统，可以去我的github下载直接安装就好了，但是打包后我发现一个问题，OCR屏幕取词，一天下来Python和取词插件会把你电脑内存占得满满的，结果就是，你的电脑很卡，所以还是转goldendict吧。 下面高能 将解决目前goldendict的网页引入有道的查词，界面各种不整洁，不友好的解决办法。 Edit By Porter, 积水成渊,蛟龙生焉。 原理原理是爬虫的，我是基于：完了，这是真的，原作者的代码我参考，忘了转移到我的github了，如果，原作看到了，记得给我留言，我加上你的参考地址啊，尴尬了 首先效果图如下图]]></content>
-      <categories>
-        <category>summary</category>
-      </categories>
-      <tags>
-        <tag>goldendict</tag>
-      </tags>
-  </entry>
-  <entry>
     <title><![CDATA[1.16 ubuntu18升级后部分应用不能中文输入的问题]]></title>
     <url>%2F%2FinputU18%2F</url>
     <content type="text"><![CDATA[摘要ubuntu18升级后部分应用不能中文输入的问题作者做死尝试新的系统和新的桌面gnome结果悲剧了 问题一：我的爽系统引导失效了，重启直接进入windows不进入ubuntu的登录界面 问题二：我的输入法抽风了，我卸载安装，又卸载安装好多遍，结果还是不能用。本文我们只写如何修复部分应用可以i中文输入，然而像浏览器，啥的并不能英文输入的解决办法 Edit By Porter, 积水成渊,蛟龙生焉。 解决办法是，首先卸载ibus，然后进入系统输入法设置选择输入法为fcitx ，然后重启，开机后就正常了 12345678sudo apt-get remove ibus*sudo apt-get purge ibus*# 卸载～/.cache中的不能中文输入的软件cahe全删除掉sudo rm -rf ~/.cache/gedit/sudo rm -rf ~/.cache/webkitgtk/sudo rm -rf ~/.cache/gnome-software/............sudo rm -rf ~/.cache/google-chrome/ 去官网下载fictx安装的binary 二进制安装文件deb fcitx 12345678910sudo rm -rf ~/.cache/ibus/sudo apt-get install fcitx-binsudo apt-get install fcitx-stablesudo apt-get remove ibussudo apt-get purge ibussudo apt-get remove indicator-keyboardsudo apt-get install fcitxfcitx -r# 下载搜狗官方安装包直接安装，双击或者cd到目录后执行如下代码sudo dpkg -i sogoupinyin_2.2.0.0108_amd64.deb 比如我是x64的，我选择amd64对应的deb，下载后直接双击安装就好 fcitx_4.2.9.6-1_all.deb 建议上面的 sudo apt-get install fcitx-bin sudo apt-get install fcitx-stable 也换成直接官方下载deb包然后安装，在哪可以自己去fcitx官网找到. 最后一步重启，要重启才有用。 然后按照之前那样设置搜狗输入法。 提示，如果你本来就安装了搜狗输入法，你也不用卸载，直接忽略我上面安装搜狗的步骤就好了，效果和重装搜狗一样。笔者是捣鼓的时候，误卸载了搜狗的，所以后面重装了。]]></content>
@@ -794,14 +783,14 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[1.14 ubuntu16_18安装peek工具录制gif]]></title>
-    <url>%2F%2Fpeektool%2F</url>
-    <content type="text"><![CDATA[摘要在写一些博客文章中，一般的png，jpg格式的图片往往满足不了复杂的演示过程，这时peek软件就能很好的帮助我们完成gif文件的制作，并且peek还是一个轻量级的gif制作软件，值得推荐，但是我根据官方的ubuntu安装步骤，发现确实能够安装，但是容易出问题，这里我把我的安装方法写出来，供安装后录制保存就死机的朋友参考。 Edit By Porter, 积水成渊,蛟龙生焉。 一、安装 获取deb包： 1wget https://github.com/phw/peek/releases/download/v0.7.2/peek-0.7.2-Linux.deb 安装依赖： 1sudo apt install libsdl1.2debian ffmpeg libavdevice-ffmpeg56 安装peek： 1sudo dpkg -i peek-0.7.2-Linux.deb 二、使用演示 已启用 类型 名称 命令行 图标 [v] html 词典名称随意填 /词典路径/wordtag.py %GDWORD% /图标路径/png.png]]></content>
+    <title><![CDATA[1.15 ubuntu下goldendict有道爬虫小程序]]></title>
+    <url>%2F%2Fgoldendictsetting%2F</url>
+    <content type="text"><![CDATA[摘要有道翻译 for GoldenDict 半完美取词显示插件说道linux里面好用的取词软件，不得不数goldendict很不错的，比好几年都没更新linux客户端的有道来说好用的多，毕竟ubuntu18下，有道qt已经存在不兼容，要么降qt版本，要么自己折腾对官方提供的deb安装包进行解包，然后进行修改以来环境的代码，再打包，太麻烦了，当然目前也有基于官方的有道词典打包好的支持ubuntu18系统，可以去我的github下载直接安装就好了，但是打包后我发现一个问题，OCR屏幕取词，一天下来Python和取词插件会把你电脑内存占得满满的，结果就是，你的电脑很卡，所以还是转goldendict吧。 下面高能 将解决目前goldendict的网页引入有道的查词，界面各种不整洁，不友好的解决办法。 Edit By Porter, 积水成渊,蛟龙生焉。 原理原理是爬虫的，我是基于：完了，这是真的，原作者的代码我参考，忘了转移到我的github了，如果，原作看到了，记得给我留言，我加上你的参考地址啊，尴尬了 首先效果图如下图]]></content>
       <categories>
         <category>summary</category>
       </categories>
       <tags>
-        <tag>peek</tag>
+        <tag>goldendict</tag>
       </tags>
   </entry>
   <entry>
@@ -816,14 +805,14 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[1.13 mysql 笔记]]></title>
-    <url>%2F%2Fmysqlnotes%2F</url>
-    <content type="text"><![CDATA[摘要本文主要记录mysql的相关文档，包括安装，配置和数据库访问相关代码 Edit By Porter, 积水成渊,蛟龙生焉。 一、下载安装mysql1.1 准备工作 MySQL8.0 For Windows zip包 -&gt; : 下载地址 [1] 解压 我的解压在了D:\program\mysql\mysql-8.0.11-winx64 [2] 配置环境变量 [3] 配置初始化的my.ini文件 我们发现解压后的目录并没有my.ini文件，没关系可以自行创建。在安装根目录下添加 my.ini（新建文本文件，将文件类型改为.ini），写入基本配置： 12345678910111213141516171819202122232425[mysqld]# 设置3306端口port=3306# 设置mysql的安装目录basedir=D:\Program Files\MySQL# 设置mysql数据库的数据的存放目录datadir=D:\Program Files\MySQL\Data# 允许最大连接数max_connections=200# 允许连接失败的次数。max_connect_errors=10# 服务端使用的字符集默认为UTF8character-set-server=utf8# 创建新表时将使用的默认存储引擎default-storage-engine=INNODB# 默认使用“mysql_native_password”插件认证#mysql_native_passworddefault_authentication_plugin=mysql_native_password[mysql]# 设置mysql客户端默认字符集default-character-set=utf8[client]# 设置mysql客户端连接服务端时默认使用的端口port=3306default-character-set=utf8 注意：其中的data目录不需要创建，下一步初始化工作中会自动创建 1.2 安装工作在安装时，必须以管理员身份运行cmd，否则在安装时会报错，会导致安装失败的情况 1.2.1 初始化数据库1CD \d D:/ 在MySQL安装目录的 bin 目录下执行命令： 1mysqld --initialize --console 执行完成后，会打印 root 用户的初始默认密码，比如： 12345D:\Program Files\mysql\bin&gt;mysqld --initialize --console2019-02-14T11:47:59.282979Z 0 [System] [MY-013169] [Server] D:\Program Files\mysql\bin\mysqld.exe (mysqld 8.0.15) initializing of server in progress as process 137522019-02-14T11:47:59.284705Z 0 [Warning] [MY-013242] [Server] --character-set-server: 'utf8' is currently an alias for the character set UTF8MB3, but will be an alias for UTF8MB4 in a future release. Please consider using UTF8MB4 in order to be unambiguous.2019-02-14T11:48:40.707445Z 5 [Note] [MY-010454] [Server] A temporary password is generated for root@localhost: 7CwffH5&lt;(lem2019-02-14T11:49:02.894787Z 0 [System] [MY-013170] [Server] D:\Program Files\mysql\bin\mysqld.exe (mysqld 8.0.15) initializing of server has completed 注意！执行输出结果里面有一段： [Note] [MY-010454] [Server] A temporary password is generated for root@localhost: 7CwffH5&lt;(lem,D 其中root@localhost:后面的“7CwffH5&lt;(lem,D”就是初始密码（不含首位空格）。在没有更改密码前，需要记住这个密码，后续登录需要用到。要是你手贱，关快了，或者没记住，那也没事，删掉初始化的 datadir 目录，再执行一遍初始化命令，又会重新生成的。当然，也可以使用安全工具，强制改密码，用什么方法，自己随意。 1.3 安装服务在MySQL安装目录的 bin 目录下执行命令： 1mysqld --install [服务名] 后面的服务名可以不写，默认的名字为 mysql。当然，如果你的电脑上需要安装多个MySQL服务，就可以用不同的名字区分了，比如 mysql5 和 mysql8。安装完成之后，就可以通过命令net start mysql启动MySQL的服务了。通过命令net stop mysql停止服务。通过命令sc delete MySQL/mysqld -remove卸载 MySQL 服务 1.4 更改密码下面提供两种方法修改密码，一种是GUI界面的一种是终端操作 1.4.1 GUI界面修改密码（推荐） 这里附上软件下载地址: 链接: https://pan.baidu.com/s/19mjZmCgZYaXRezxdukuG0w 提取码: m7de 复制这段内容后打开百度网盘手机App，操作更方便哦 新建的MySQL的连接 还记得刚刚让你复制的root @ localhost：后面的初始密码了吗？现在要用到它了复制粘贴上去！测试一下！ MySQL的是成功安装了也可以登录现在就是改密码的时候了写SQL改密码吗？太麻烦了太低来我有个简单的方法用Navicat的点击刚刚的连接就会提示我们输入新密码 1.4.2 终端方式修改密码终端里管理员身份运行cmd,并CD 到在MySQL安装目录的 bin 目录下执行命令： 1mysql -u root -p 这时候会提示输入密码，记住了上面第3.1步安装时的密码，填入即可登录成功，进入MySQL命令模式。 在MySQL中执行命令： 1ALTER USER &apos;root&apos;@&apos;localhost&apos; IDENTIFIED WITH mysql_native_password BY &apos;新密码&apos;; 修改密码，注意命令尾的；一定要有，这是mysql的语法 二、账号配置与使用测试2.1 数据库的创建、表单和字段配置 创建数据库：iodata 创建数据库表单：teacher ，user_info 创建数据库表单中的字段：user_id，user_pass，user_modified 等等 设置数据库表单中的主键。 1234567891011121314151617CREATE DATABASE iodata;use iodata;/*show tables;create table teacher ( code varchar(20) primary key, name varchar(20));*/CREATE TABLE user_info( ID int NOT NULL AUTO_INCREMENT,/* 设置自动加的用户ID*/ user_id VARCHAR(200) NOT NULL,/*支持中英文200个字符的用户字符串*/ user_pass VARCHAR(200) NOT NULL, user_create datetime(3) NULL DEFAULT CURRENT_TIMESTAMP(3), user_modified datetime(3) NULL DEFAULT CURRENT_TIMESTAMP(3) ON UPDATE CURRENT_TIMESTAMP(3), PRIMARY KEY (ID)/* 设置主键*/); 2.2 配置数据库的用户访问账号密码，权限123456use iodata;CREATE USER &apos;porter&apos;@&apos;localhost&apos; IDENTIFIED BY &apos;shuruniziji_mima&apos;;/* 创建用户 */INSERT INTO iodata.user_info ( user_id, user_pass) VALUES ( &apos;porter&apos;, &apos;123&apos;); grant all privileges on *.* to &apos;porter&apos;@&apos;%&apos;; /* 放行用户的所有权限并允许远程网络连接 */ Python 代码来链接数据库 如下代码功能是链接数据库并从数据库中读取数据并打印出来 123456789101112131415161718192021222324# -*- coding:utf-8 -*-import pymysqlimport sysdef get_db_data(): connect = pymysql.Connect( host="210.28.33.2", port=3306, user="porter", passwd="smrit", db="iodata", charset='utf8' ) print("写入中，请等待……") cursor = connect.cursor() sql = "select * from user_info" cursor.execute(sql) number = cursor.fetchall() print(number) cursor.close() connect.close()if __name__ == "__main__": get_db_data() 三、简单的操作例程3.1 存储图片的数据库读写操作使用上面推荐的GUI数据库操作工具：Navicat Premium, 软件，在软件中执行 12use iodata;CREATE TABLE Images(Id INT PRIMARY KEY AUTO_INCREMENT, Data MEDIUMBLOB); 读取数据库中图片的Python 代码 1234567891011121314151617181920212223242526272829303132# -*- coding:utf-8 -*-import pymysqlimport matplotlib.pyplot as pltimport matplotlib.image as mpimg # mpimg 用于读取图片import sysdef get_loan_number(file): connect = pymysql.Connect( host="210.28.33.2", port=3306, user="porter", passwd="smriti", db="iodata", charset='utf8' ) print("写入中，请等待……") cursor = connect.cursor() sql = "select Data from images LIMIT 1" cursor.execute(sql) fout = open('2.jpg','wb') image_file = cursor.fetchone()[0] fout.write(image_file) fout.close() cursor.close() connect.close() print("写入完成,共写入%d条数据……" % 1)if __name__ == "__main__": # file = r"C:\Users\test\Desktop\loanNUmber.txt" file = "task1.txt" get_loan_number(file) 3.2 读取数据数据并保存在txt文件中123456789101112131415161718192021222324252627282930313233343536373839404142# -*- coding:utf-8 -*-import pymysqldef get_loan_number(file): connect = pymysql.Connect( host="106.14.221.55", port=3306, user="nadersidc", passwd="366583", db="defect_detecting", charset='utf8' ) print("写入中，请等待……") cursor = connect.cursor() # sql = "select id from application where status='SUBMITTING' and contract like 'Performance-%' and " \ # "loan_org_party='166490194444444444'" # sql = "select Element.Id,Element.FileName,DefectPosition.TopX,DefectPosition.TopY,\ # DefectPosition.Width,DefectPosition.Height from Element,DefectPosition where Element.DefectId=6 \ # and Element.ImageTypeId=2 and DefectPosition.ElementId=Element.Id" # sql = "select * from Element LIMIT 1,5" # sql = "select * from * LIMIT 1,5" # 查询数据库表中所有的表名字 # sql = "select table_name from information_schema.tables where table_schema='defect_detecting'" sql = "select * from TrainProject LIMIT 1,5" cursor.execute(sql) number = cursor.fetchall() fp = open(file, "w") loan_count = 0 for loanNumber in number: loan_count += 1 fp.write(str(loanNumber)+'\n') fp.close() cursor.close() connect.close() print("写入完成,共写入%d条数据……" % loan_count)if __name__ == "__main__": # file = r"C:\Users\test\Desktop\loanNUmber.txt" file = "task2.txt" get_loan_number(file) 3.2 读取数据数据并直接显示 涉及一个问题，就是数据库中的图片是二进制流的，如何直接从数据库中获取数据并显示]]></content>
+    <title><![CDATA[1.14 ubuntu16_18安装peek工具录制gif]]></title>
+    <url>%2F%2Fpeektool%2F</url>
+    <content type="text"><![CDATA[摘要在写一些博客文章中，一般的png，jpg格式的图片往往满足不了复杂的演示过程，这时peek软件就能很好的帮助我们完成gif文件的制作，并且peek还是一个轻量级的gif制作软件，值得推荐，但是我根据官方的ubuntu安装步骤，发现确实能够安装，但是容易出问题，这里我把我的安装方法写出来，供安装后录制保存就死机的朋友参考。 Edit By Porter, 积水成渊,蛟龙生焉。 一、安装 获取deb包： 1wget https://github.com/phw/peek/releases/download/v0.7.2/peek-0.7.2-Linux.deb 安装依赖： 1sudo apt install libsdl1.2debian ffmpeg libavdevice-ffmpeg56 安装peek： 1sudo dpkg -i peek-0.7.2-Linux.deb 二、使用演示 已启用 类型 名称 命令行 图标 [v] html 词典名称随意填 /词典路径/wordtag.py %GDWORD% /图标路径/png.png]]></content>
       <categories>
         <category>summary</category>
       </categories>
       <tags>
-        <tag>mysql</tag>
+        <tag>peek</tag>
       </tags>
   </entry>
   <entry>
@@ -835,6 +824,17 @@
       </categories>
       <tags>
         <tag>sublime test3</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[1.13 mysql 笔记]]></title>
+    <url>%2F%2Fmysqlnotes%2F</url>
+    <content type="text"><![CDATA[摘要本文主要记录mysql的相关文档，包括安装，配置和数据库访问相关代码 Edit By Porter, 积水成渊,蛟龙生焉。 一、下载安装mysql1.1 准备工作 MySQL8.0 For Windows zip包 -&gt; : 下载地址 [1] 解压 我的解压在了D:\program\mysql\mysql-8.0.11-winx64 [2] 配置环境变量 [3] 配置初始化的my.ini文件 我们发现解压后的目录并没有my.ini文件，没关系可以自行创建。在安装根目录下添加 my.ini（新建文本文件，将文件类型改为.ini），写入基本配置： 12345678910111213141516171819202122232425[mysqld]# 设置3306端口port=3306# 设置mysql的安装目录basedir=D:\Program Files\MySQL# 设置mysql数据库的数据的存放目录datadir=D:\Program Files\MySQL\Data# 允许最大连接数max_connections=200# 允许连接失败的次数。max_connect_errors=10# 服务端使用的字符集默认为UTF8character-set-server=utf8# 创建新表时将使用的默认存储引擎default-storage-engine=INNODB# 默认使用“mysql_native_password”插件认证#mysql_native_passworddefault_authentication_plugin=mysql_native_password[mysql]# 设置mysql客户端默认字符集default-character-set=utf8[client]# 设置mysql客户端连接服务端时默认使用的端口port=3306default-character-set=utf8 注意：其中的data目录不需要创建，下一步初始化工作中会自动创建 1.2 安装工作在安装时，必须以管理员身份运行cmd，否则在安装时会报错，会导致安装失败的情况 1.2.1 初始化数据库1CD \d D:/ 在MySQL安装目录的 bin 目录下执行命令： 1mysqld --initialize --console 执行完成后，会打印 root 用户的初始默认密码，比如： 12345D:\Program Files\mysql\bin&gt;mysqld --initialize --console2019-02-14T11:47:59.282979Z 0 [System] [MY-013169] [Server] D:\Program Files\mysql\bin\mysqld.exe (mysqld 8.0.15) initializing of server in progress as process 137522019-02-14T11:47:59.284705Z 0 [Warning] [MY-013242] [Server] --character-set-server: 'utf8' is currently an alias for the character set UTF8MB3, but will be an alias for UTF8MB4 in a future release. Please consider using UTF8MB4 in order to be unambiguous.2019-02-14T11:48:40.707445Z 5 [Note] [MY-010454] [Server] A temporary password is generated for root@localhost: 7CwffH5&lt;(lem2019-02-14T11:49:02.894787Z 0 [System] [MY-013170] [Server] D:\Program Files\mysql\bin\mysqld.exe (mysqld 8.0.15) initializing of server has completed 注意！执行输出结果里面有一段： [Note] [MY-010454] [Server] A temporary password is generated for root@localhost: 7CwffH5&lt;(lem,D 其中root@localhost:后面的“7CwffH5&lt;(lem,D”就是初始密码（不含首位空格）。在没有更改密码前，需要记住这个密码，后续登录需要用到。要是你手贱，关快了，或者没记住，那也没事，删掉初始化的 datadir 目录，再执行一遍初始化命令，又会重新生成的。当然，也可以使用安全工具，强制改密码，用什么方法，自己随意。 1.3 安装服务在MySQL安装目录的 bin 目录下执行命令： 1mysqld --install [服务名] 后面的服务名可以不写，默认的名字为 mysql。当然，如果你的电脑上需要安装多个MySQL服务，就可以用不同的名字区分了，比如 mysql5 和 mysql8。安装完成之后，就可以通过命令net start mysql启动MySQL的服务了。通过命令net stop mysql停止服务。通过命令sc delete MySQL/mysqld -remove卸载 MySQL 服务 1.4 更改密码下面提供两种方法修改密码，一种是GUI界面的一种是终端操作 1.4.1 GUI界面修改密码（推荐） 这里附上软件下载地址: 链接: https://pan.baidu.com/s/19mjZmCgZYaXRezxdukuG0w 提取码: m7de 复制这段内容后打开百度网盘手机App，操作更方便哦 新建的MySQL的连接 还记得刚刚让你复制的root @ localhost：后面的初始密码了吗？现在要用到它了复制粘贴上去！测试一下！ MySQL的是成功安装了也可以登录现在就是改密码的时候了写SQL改密码吗？太麻烦了太低来我有个简单的方法用Navicat的点击刚刚的连接就会提示我们输入新密码 1.4.2 终端方式修改密码终端里管理员身份运行cmd,并CD 到在MySQL安装目录的 bin 目录下执行命令： 1mysql -u root -p 这时候会提示输入密码，记住了上面第3.1步安装时的密码，填入即可登录成功，进入MySQL命令模式。 在MySQL中执行命令： 1ALTER USER &apos;root&apos;@&apos;localhost&apos; IDENTIFIED WITH mysql_native_password BY &apos;新密码&apos;; 修改密码，注意命令尾的；一定要有，这是mysql的语法 二、账号配置与使用测试2.1 数据库的创建、表单和字段配置 创建数据库：iodata 创建数据库表单：teacher ，user_info 创建数据库表单中的字段：user_id，user_pass，user_modified 等等 设置数据库表单中的主键。 1234567891011121314151617CREATE DATABASE iodata;use iodata;/*show tables;create table teacher ( code varchar(20) primary key, name varchar(20));*/CREATE TABLE user_info( ID int NOT NULL AUTO_INCREMENT,/* 设置自动加的用户ID*/ user_id VARCHAR(200) NOT NULL,/*支持中英文200个字符的用户字符串*/ user_pass VARCHAR(200) NOT NULL, user_create datetime(3) NULL DEFAULT CURRENT_TIMESTAMP(3), user_modified datetime(3) NULL DEFAULT CURRENT_TIMESTAMP(3) ON UPDATE CURRENT_TIMESTAMP(3), PRIMARY KEY (ID)/* 设置主键*/); 2.2 配置数据库的用户访问账号密码，权限123456use iodata;CREATE USER &apos;porter&apos;@&apos;localhost&apos; IDENTIFIED BY &apos;shuruniziji_mima&apos;;/* 创建用户 */INSERT INTO iodata.user_info ( user_id, user_pass) VALUES ( &apos;porter&apos;, &apos;123&apos;); grant all privileges on *.* to &apos;porter&apos;@&apos;%&apos;; /* 放行用户的所有权限并允许远程网络连接 */ Python 代码来链接数据库 如下代码功能是链接数据库并从数据库中读取数据并打印出来 123456789101112131415161718192021222324# -*- coding:utf-8 -*-import pymysqlimport sysdef get_db_data(): connect = pymysql.Connect( host="210.28.33.2", port=3306, user="porter", passwd="smrit", db="iodata", charset='utf8' ) print("写入中，请等待……") cursor = connect.cursor() sql = "select * from user_info" cursor.execute(sql) number = cursor.fetchall() print(number) cursor.close() connect.close()if __name__ == "__main__": get_db_data() 三、简单的操作例程3.1 存储图片的数据库读写操作使用上面推荐的GUI数据库操作工具：Navicat Premium, 软件，在软件中执行 12use iodata;CREATE TABLE Images(Id INT PRIMARY KEY AUTO_INCREMENT, Data MEDIUMBLOB); 读取数据库中图片的Python 代码 1234567891011121314151617181920212223242526272829303132# -*- coding:utf-8 -*-import pymysqlimport matplotlib.pyplot as pltimport matplotlib.image as mpimg # mpimg 用于读取图片import sysdef get_loan_number(file): connect = pymysql.Connect( host="210.28.33.2", port=3306, user="porter", passwd="smriti", db="iodata", charset='utf8' ) print("写入中，请等待……") cursor = connect.cursor() sql = "select Data from images LIMIT 1" cursor.execute(sql) fout = open('2.jpg','wb') image_file = cursor.fetchone()[0] fout.write(image_file) fout.close() cursor.close() connect.close() print("写入完成,共写入%d条数据……" % 1)if __name__ == "__main__": # file = r"C:\Users\test\Desktop\loanNUmber.txt" file = "task1.txt" get_loan_number(file) 3.2 读取数据数据并保存在txt文件中123456789101112131415161718192021222324252627282930313233343536373839404142# -*- coding:utf-8 -*-import pymysqldef get_loan_number(file): connect = pymysql.Connect( host="106.14.221.55", port=3306, user="nadersidc", passwd="366583", db="defect_detecting", charset='utf8' ) print("写入中，请等待……") cursor = connect.cursor() # sql = "select id from application where status='SUBMITTING' and contract like 'Performance-%' and " \ # "loan_org_party='166490194444444444'" # sql = "select Element.Id,Element.FileName,DefectPosition.TopX,DefectPosition.TopY,\ # DefectPosition.Width,DefectPosition.Height from Element,DefectPosition where Element.DefectId=6 \ # and Element.ImageTypeId=2 and DefectPosition.ElementId=Element.Id" # sql = "select * from Element LIMIT 1,5" # sql = "select * from * LIMIT 1,5" # 查询数据库表中所有的表名字 # sql = "select table_name from information_schema.tables where table_schema='defect_detecting'" sql = "select * from TrainProject LIMIT 1,5" cursor.execute(sql) number = cursor.fetchall() fp = open(file, "w") loan_count = 0 for loanNumber in number: loan_count += 1 fp.write(str(loanNumber)+'\n') fp.close() cursor.close() connect.close() print("写入完成,共写入%d条数据……" % loan_count)if __name__ == "__main__": # file = r"C:\Users\test\Desktop\loanNUmber.txt" file = "task2.txt" get_loan_number(file) 3.2 读取数据数据并直接显示 涉及一个问题，就是数据库中的图片是二进制流的，如何直接从数据库中获取数据并显示]]></content>
+      <categories>
+        <category>summary</category>
+      </categories>
+      <tags>
+        <tag>mysql</tag>
       </tags>
   </entry>
   <entry>
@@ -911,19 +911,6 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[2.13 局部响应归一化]]></title>
-    <url>%2F%2FLRN%2F</url>
-    <content type="text"><![CDATA[摘要LRN(Local Reponse Normalization, 局部响应归一化), 该层中其作用类似DROPOUT和数据增强作为relu激励之后防止数据过拟合而提出的一种处理方法。 作用： 有利于增加泛化能力 做了平滑处理 防止过拟合 LRN 层模仿生物神经系统的侧抑制机制，对局部神经元的活动创建竞争机制，使得响应比较大的值相对更大，提高模型的泛化能力。 Edit By Porter, 积水成渊,蛟龙生焉。]]></content>
-      <categories>
-        <category>Deep Learning</category>
-      </categories>
-      <tags>
-        <tag>Algorithm</tag>
-        <tag>Deep Learning</tag>
-        <tag>LRN</tag>
-      </tags>
-  </entry>
-  <entry>
     <title><![CDATA[2.12 logistic regression]]></title>
     <url>%2F%2FlogisticRe%2F</url>
     <content type="text"><![CDATA[摘要 Edit By Porter, 积水成渊,蛟龙生焉。]]></content>
@@ -931,9 +918,22 @@
         <category>Deep Learning</category>
       </categories>
       <tags>
-        <tag>Algorithm</tag>
         <tag>Deep Learning</tag>
+        <tag>Algorithm</tag>
         <tag>logistic regression</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[2.13 局部响应归一化]]></title>
+    <url>%2F%2FLRN%2F</url>
+    <content type="text"><![CDATA[摘要LRN(Local Reponse Normalization, 局部响应归一化), 该层中其作用类似DROPOUT和数据增强作为relu激励之后防止数据过拟合而提出的一种处理方法。 作用： 有利于增加泛化能力 做了平滑处理 防止过拟合 LRN 层模仿生物神经系统的侧抑制机制，对局部神经元的活动创建竞争机制，使得响应比较大的值相对更大，提高模型的泛化能力。 Edit By Porter, 积水成渊,蛟龙生焉。]]></content>
+      <categories>
+        <category>Deep Learning</category>
+      </categories>
+      <tags>
+        <tag>Deep Learning</tag>
+        <tag>Algorithm</tag>
+        <tag>LRN</tag>
       </tags>
   </entry>
   <entry>
@@ -944,8 +944,8 @@
         <category>Deep Learning</category>
       </categories>
       <tags>
-        <tag>Algorithm</tag>
         <tag>Deep Learning</tag>
+        <tag>Algorithm</tag>
         <tag>Bayes</tag>
       </tags>
   </entry>
@@ -957,8 +957,8 @@
         <category>Deep Learning</category>
       </categories>
       <tags>
-        <tag>Algorithm</tag>
         <tag>Deep Learning</tag>
+        <tag>Algorithm</tag>
         <tag>最大似然估计</tag>
       </tags>
   </entry>
@@ -970,22 +970,9 @@
         <category>Deep Learning</category>
       </categories>
       <tags>
-        <tag>Algorithm</tag>
         <tag>Deep Learning</tag>
+        <tag>Algorithm</tag>
         <tag>ROS</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[2.1.3 隐马尔科夫HMM]]></title>
-    <url>%2F%2Fyingmaerkefu%2F</url>
-    <content type="text"><![CDATA[摘要本篇文章笔记总结来自网络和书本，引用部分都有来源，内容主要介绍隐马尔科夫HMM相关实际应用搞得入门例子，很简单，但是能说明隐马尔科夫HMM的原理相关。 Edit By Porter, 积水成渊,蛟龙生焉。 文章同步于: 我的gitbook HMM（隐马尔可夫模型）隐马尔可夫模型是一种统计模型，用来描述一个含有隐含未知参数的马尔可夫过程。其难点是从可观察的参数中确定该过程的隐含参数。然后利用这些参数来作进一步的分析，例如模式识别。 是在被建模的系统被认为是一个马尔可夫过程与未观测到的（隐藏的）的状态的统计马尔可夫模型。 本文简述的是离散情况下的隐马尔可夫模型. 一、贝叶斯公式定义：假设以硬币的例子，从5角和1元的一堆硬币中，随意取出一枚硬币，然后然我们猜这枚硬币是5角还是1元。假设允许我们称这枚硬币的重量x（单位：g），(但是不允许我们直接看硬币，一般1元是比5角重的)。现在应考察在一直这枚硬币的重量x的情况下硬币属于各类（5角还是一元)的概率，分别记$$P(\omega_{1}|x)$$,(知重量为x时，是5角的概率),$$P(\omega_{2}|x)$$, (知重量为x时，是一元的概率)，这种概率成为后验概率（我们需要求的）。这时的决策为：如果$$P(\omega_{1}|x)&gt;P(\omega_{2}|x)$$,则$$x \epsilon \omega_{1} $$; 反之，则$$x \epsilon \omega_{2} $$ 最终我们要的就是这个决策。 概率论中的贝叶斯公式： $$P(\omega_{i}|x)=\frac{p(x,\omega_{i})}{p(\omega_{i})}=\frac{p|\omega_{i}P(\omega_{i})}{p(x)} ,i=1,2$$ 分布 表示 $$x \epsilon \left { \omega_{1},\omega_{2} \right }$$ 类条件概率： $$p(x\mid \omega_{i})$$ 表示得到硬币结果是$$\omega_{i}$$条件下，得到x的概率密度 后验概率： $$P(\omega_{i}\mid x)$$ 在重量为x，的条件下，得到是哪种硬币（5/1）的概率 先验概率： $$P(\omega_{i})$$ 根据之前的经验，得到5角和1元各自取得的概率 硬币重量概率密度函数: $$p(x)$$ 硬币重量的概率密度函数 联合概率密度： $$p(x,\omega_{i})$$ 在重量不同条件下，每种情况对应的取得不同硬币结果的联合概率 $$P(Q_{i}|O)=\frac{P(O,Q_{i})}{P(O)}=\frac{P(O|Q_{i})P(Q)}{P(O)}$$ $$P(Q_{i}|O)=\frac{P(O,Q_{i})}{P(O)}=\frac{P(O|Q_{i})P(Q)}{P(O)}$$ $$P(Q_{i}|O)$$ ,后验概率，$$P(O,Q_{i})$$ ,表示O与Q的联合概率密度；P(O)表示两类所有的概率密度； P(Q_{i})是先验概率；$$P(O|Q_{i})$$是第i类状态随机序列的类条件概率密度 贝叶斯决策：在类条件概率密度和鲜艳概率已知（或可估计）的情况下，通过贝叶斯公式比较样本属于两类的后验概率，将类别决策为后验概率大的一类，这样做的目的是为了使总体错误率最小。 一条隐藏的马尔可夫链生成的 状态随机序列 (State sequence, 图中的白色节点) $$Q=(q_{1},q_{2},…..,q_{T})$$是不可观测的，并记所有可能状态的集合为$$S={S_{1},S_{2},…..,S_{N}}$$;由它们产生一个可观测的观测随机序列（observation sequence，图示的深色节点）$$O=(o_{1},o_{2},……,o_{T})$$, 并记所有可能观测的集合为$$V={v_{1},v_{2},……,v_{M}}$$。 序列的值可以看作是随时刻产生的，每个时刻对应着序列的一个值。所以HMM是个双重随机过程（doubly embedded stochastic process），一个是状态转移，另一个是由状态释放出观测值。在序列标注（Sequence labelling）任务中，模型就是需要对状态序列进行标注。]]></content>
-      <categories>
-        <category>Deep Learning</category>
-      </categories>
-      <tags>
-        <tag>Algorithm</tag>
-        <tag>Deep Learning</tag>
-        <tag>隐马尔科夫HMM</tag>
       </tags>
   </entry>
   <entry>
@@ -996,9 +983,22 @@
         <category>Deep Learning</category>
       </categories>
       <tags>
-        <tag>Algorithm</tag>
         <tag>Deep Learning</tag>
+        <tag>Algorithm</tag>
         <tag>最大熵模型</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[2.1.3 隐马尔科夫HMM]]></title>
+    <url>%2F%2Fyingmaerkefu%2F</url>
+    <content type="text"><![CDATA[摘要本篇文章笔记总结来自网络和书本，引用部分都有来源，内容主要介绍隐马尔科夫HMM相关实际应用搞得入门例子，很简单，但是能说明隐马尔科夫HMM的原理相关。 Edit By Porter, 积水成渊,蛟龙生焉。 文章同步于: 我的gitbook HMM（隐马尔可夫模型）隐马尔可夫模型是一种统计模型，用来描述一个含有隐含未知参数的马尔可夫过程。其难点是从可观察的参数中确定该过程的隐含参数。然后利用这些参数来作进一步的分析，例如模式识别。 是在被建模的系统被认为是一个马尔可夫过程与未观测到的（隐藏的）的状态的统计马尔可夫模型。 本文简述的是离散情况下的隐马尔可夫模型. 一、贝叶斯公式定义：假设以硬币的例子，从5角和1元的一堆硬币中，随意取出一枚硬币，然后然我们猜这枚硬币是5角还是1元。假设允许我们称这枚硬币的重量x（单位：g），(但是不允许我们直接看硬币，一般1元是比5角重的)。现在应考察在一直这枚硬币的重量x的情况下硬币属于各类（5角还是一元)的概率，分别记$$P(\omega_{1}|x)$$,(知重量为x时，是5角的概率),$$P(\omega_{2}|x)$$, (知重量为x时，是一元的概率)，这种概率成为后验概率（我们需要求的）。这时的决策为：如果$$P(\omega_{1}|x)&gt;P(\omega_{2}|x)$$,则$$x \epsilon \omega_{1} $$; 反之，则$$x \epsilon \omega_{2} $$ 最终我们要的就是这个决策。 概率论中的贝叶斯公式： $$P(\omega_{i}|x)=\frac{p(x,\omega_{i})}{p(\omega_{i})}=\frac{p|\omega_{i}P(\omega_{i})}{p(x)} ,i=1,2$$ 分布 表示 $$x \epsilon \left { \omega_{1},\omega_{2} \right }$$ 类条件概率： $$p(x\mid \omega_{i})$$ 表示得到硬币结果是$$\omega_{i}$$条件下，得到x的概率密度 后验概率： $$P(\omega_{i}\mid x)$$ 在重量为x，的条件下，得到是哪种硬币（5/1）的概率 先验概率： $$P(\omega_{i})$$ 根据之前的经验，得到5角和1元各自取得的概率 硬币重量概率密度函数: $$p(x)$$ 硬币重量的概率密度函数 联合概率密度： $$p(x,\omega_{i})$$ 在重量不同条件下，每种情况对应的取得不同硬币结果的联合概率 $$P(Q_{i}|O)=\frac{P(O,Q_{i})}{P(O)}=\frac{P(O|Q_{i})P(Q)}{P(O)}$$ $$P(Q_{i}|O)=\frac{P(O,Q_{i})}{P(O)}=\frac{P(O|Q_{i})P(Q)}{P(O)}$$ $$P(Q_{i}|O)$$ ,后验概率，$$P(O,Q_{i})$$ ,表示O与Q的联合概率密度；P(O)表示两类所有的概率密度； P(Q_{i})是先验概率；$$P(O|Q_{i})$$是第i类状态随机序列的类条件概率密度 贝叶斯决策：在类条件概率密度和鲜艳概率已知（或可估计）的情况下，通过贝叶斯公式比较样本属于两类的后验概率，将类别决策为后验概率大的一类，这样做的目的是为了使总体错误率最小。 一条隐藏的马尔可夫链生成的 状态随机序列 (State sequence, 图中的白色节点) $$Q=(q_{1},q_{2},…..,q_{T})$$是不可观测的，并记所有可能状态的集合为$$S={S_{1},S_{2},…..,S_{N}}$$;由它们产生一个可观测的观测随机序列（observation sequence，图示的深色节点）$$O=(o_{1},o_{2},……,o_{T})$$, 并记所有可能观测的集合为$$V={v_{1},v_{2},……,v_{M}}$$。 序列的值可以看作是随时刻产生的，每个时刻对应着序列的一个值。所以HMM是个双重随机过程（doubly embedded stochastic process），一个是状态转移，另一个是由状态释放出观测值。在序列标注（Sequence labelling）任务中，模型就是需要对状态序列进行标注。]]></content>
+      <categories>
+        <category>Deep Learning</category>
+      </categories>
+      <tags>
+        <tag>Deep Learning</tag>
+        <tag>Algorithm</tag>
+        <tag>隐马尔科夫HMM</tag>
       </tags>
   </entry>
   <entry>
@@ -1009,9 +1009,22 @@
         <category>Deep Learning</category>
       </categories>
       <tags>
-        <tag>Algorithm</tag>
         <tag>Deep Learning</tag>
+        <tag>Algorithm</tag>
         <tag>线性回归</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[2.7 神经网络浅学笔记]]></title>
+    <url>%2F%2Fshenjingwanguo%2F</url>
+    <content type="text"><![CDATA[摘要本文主要记录神经网络相关的基础知识 Edit By Porter, 积水成渊,蛟龙生焉。 一、神经网络神经网络是一种模拟人脑的神经网络以期能够实现类人工智能的机器学习技术。 对于神经元的研究由来已久，1904年生物学家就已经知晓了神经元的组成结构。 一个神经元通常具有多个树突，主要用来接受传入信息；而轴突只有一条，轴突尾端有许多轴突末梢可以给其他多个神经元传递信息。轴突末梢跟其他神经元的树突产生连接，从而传递信号。这个连接的位置在生物学上叫做“突触”。 1.1 神经元1.1.1 让我们来看一个经典的神经网络。这是一个包含三个层次的神经网络。 红色的是输入层，绿色的是输出层，紫色的是中间层（也叫隐藏层）。 输入层有3个输入单元，隐藏层有4个单元，输出层有2个单元。 后文中，我们统一使用这种颜色来表达神经网络的结构。 1.1.2 在开始介绍前，有一些知识可以先记在心里 设计一个神经网络时，输入层与输出层的节点数往往是固定的，中间层则可以自由指定； 神经网络结构图中的拓扑与箭头代表着预测过程时数据的流向，跟训练时的数据流有一定的区别； 结构图里的关键不是圆圈（代表“神经元”），而是连接线（代表“神经元”之间的连接）。每个连接线对应一个不同的权重（其值称为权值），这是需要训练得到的。 1.1.3 神经元结构神经元模型是一个包含输入，输出与计算功能的模型。输入可以类比为神经元的树突，而输出可以类比为神经元的轴突，计算则可以类比为细胞核。 下图是一个典型的神经元模型：包含有3个输入，1个输出，以及2个计算功能。注意中间的箭头线。这些线称为“连接”。每个上有一个“权值”。 连接是神经元中最重要的东西。每一个连接上都有一个权重。 一个神经网络的训练算法就是让权重的值调整到最佳，以使得整个网络的预测效果最好。 我们使用a来表示输入，用w来表示权值。一个表示连接的有向箭头可以这样理解：在初端，传递的信号大小仍然是a，端中间有加权参数w，经过这个加权后的信号会变成aw，因此在连接的末端，信号的大小就变成了aw。 在其他绘图模型里，有向箭头可能表示的是值的不变传递。而在神经元模型里，每个有向箭头表示的是值的加权传递。 如果我们将神经元图中的所有变量用符号表示，并且写出输出的计算公式的话，就是下图。 可见z是在输入和权值的线性加权和叠加了一个函数g的值。在MP模型里，函数g是sgn函数，也就是取符号函数。这个函数当输入大于0时，输出1，否则输出0。 下面对神经元模型的图进行一些扩展。首先将sum函数与sgn函数合并到一个圆圈里，代表神经元的内部计算。其次，把输入a与输出z写到连接线的左上方，便于后面画复杂的网络。最后说明，一个神经元可以引出多个代表输出的有向箭头，但值都是一样的。 神经元可以看作一个计算与存储单元。计算是神经元对其的输入进行计算功能。存储是神经元会暂存计算结果，并传递到下一层。 当我们用“神经元”组成网络以后，描述网络中的某个“神经元”时，我们更多地会用“单元”（unit）来指代。同时由于神经网络的表现形式是一个有向图，有时也会用“节点”（node）来表达同样的意思。 1.1.4 神经元模型的使用可以这样理解 我们有一个数据，称之为样本。样本有四个属性，其中三个属性已知，一个属性未知。我们需要做的就是通过三个已知属性预测未知属性。 具体办法就是使用神经元的公式进行计算。三个已知属性的值是a1，a2，a3，未知属性的值是z。z可以通过公式计算出来。 这里，已知的属性称之为特征，未知的属性称之为目标。假设特征与目标之间确实是线性关系，并且我们已经得到表示这个关系的权值w1，w2，w3。那么，我们就可以通过神经元模型预测新样本的目标。 1.2 单层神经网络（感知器）1958年，计算科学家Rosenblatt提出了由两层神经元组成的神经网络。他给它起了一个名字–“感知器”（Perceptron） 感知器是当时首个可以学习的人工神经网络。 1.2.1 感知器模型结构在原来MP模型的“输入”位置添加神经元节点，标志其为“输入单元”。其余不变，于是我们就有了下图：从本图开始，我们将权值w1, w2, w3写到“连接线”的中间。 在“感知器”中，有两个层次。分别是输入层和输出层。输入层里的“输入单元”只负责传输数据，不做计算。输出层里的“输出单元”则需要对前面一层的输入进行计算。 我们把需要计算的层次称之为“计算层”，并把拥有一个计算层的网络称之为“单层神经网络”。有一些文献会按照网络拥有的层数来命名，例如把“感知器”称为两层神经网络。但在本文里，我们根据计算层的数量来命名。 假如我们要预测的目标不再是一个值，而是一个向量，例如[2,3]。那么可以在输出层再增加一个“输出单元”。 可以看到，z1的计算跟原先的z并没有区别。 我们已知一个神经元的输出可以向多个神经元传递，因此z2的计算公式如下图。 可以看到，z2的计算中除了三个新的权值：w4，w5，w6以外，其他与z1是一样的。整个网络的输出如下图。 目前的表达公式有一点不让人满意的就是：w4，w5，w6是后来加的，很难表现出跟原先的w1，w2，w3的关系。 因此我们改用二维的下标，用wx,y来表达一个权值。下标中的x代表后一层神经元的序号，而y代表前一层神经元的序号（序号的顺序从上到下）。 例如，w1,2代表后一层的第1个神经元与前一层的第2个神经元的连接的权值（这种标记方式参照了Andrew Ng的课件）。根据以上方法标记，我们有了下图。 如果我们仔细看输出的计算公式，会发现这两个公式就是线性代数方程组。因此可以用矩阵乘法来表达这两个公式。 例如，输入的变量是[a1，a2，a3]T（代表由a1，a2，a3组成的列向量），用向量a来表示。方程的左边是[z1，z2]T，用向量z来表示。 系数则是矩阵W（2行3列的矩阵，排列形式与公式中的一样）。 于是，输出公式可以改写成： $$g(W * a) = z;$$ 这个公式就是神经网络中从前一层计算后一层的矩阵运算。 1.2.2 效果与神经元模型不同，感知器中的权值是通过训练得到的。因此，根据以前的知识我们知道，感知器类似一个逻辑回归模型，可以做线性分类任务。 我们可以用决策分界来形象的表达分类的效果。决策分界就是在二维的数据平面中划出一条直线，当数据的维度是3维的时候，就是划出一个平面，当数据的维度是n维时，就是划出一个n-1维的超平面。 下图显示了在二维平面中划出决策分界的效果，也就是感知器的分类效果。 感知器只能做简单的线性分类任务。 1.3 两层神经网络（多层感知器）Minsky说过单层神经网络无法解决异或问题。但是当增加一个计算层以后，两层神经网络不仅可以解决异或问题，而且具有非常好的非线性分类效果。不过两层神经网络的计算是一个问题，没有一个较好的解法。 1986年，Rumelhar和Hinton等人提出了反向传播（Backpropagation，BP）算法，解决了两层神经网络所需要的复杂计算量问题，从而带动了业界使用两层神经网络研究的热潮。目前，大量的教授神经网络的教材，都是重点介绍两层（带一个隐藏层）神经网络的内容。 这时候的Hinton还很年轻，30年以后，正是他重新定义了神经网络，带来了神经网络复苏的又一春。 1.3.1 两层神经网络的结构（多层感知器）Minsky说过单层神经网络无法解决异或问题。但是当增加一个计算层以后，两层神经网络不仅可以解决异或问题，而且具有非常好的非线性分类效果。不过两层神经网络的计算是一个问题，没有一个较好的解法。 两层神经网络除了包含一个输入层，一个输出层以外，还增加了一个中间层。此时，中间层和输出层都是计算层。我们扩展上节的单层神经网络，在右边新加一个层次（只含有一个节点）。 现在，我们的权值矩阵增加到了两个，我们用上标来区分不同层次之间的变量。 例如$$a_{x} ^{(y)}$$代表第y层的第x个节点。$$z_{1},z_{2}$$变成了$$a_{1} ^{(2)} , a_{2} ^{(2)}$$。下图给出了$$a_{1} ^{(2)} , a_{2} ^{(2)}$$的计算公式。 计算最终输出z的方式是利用了中间层的$$a_{1} ^{(2)}, a_{2} ^{(2)}$$和第二个权值矩阵计算得到的，如下图。 假设我们的预测目标是一个向量，那么与前面类似，只需要在“输出层”再增加节点即可。 我们使用向量和矩阵来表示层次中的变量。$$a_{1} , a_{2} , z $$是网络中传输的向量数据。$$W^{(1)}, W^{(2)}$$是网络的矩阵参数。如下图。 使用矩阵运算来表达整个计算公式的话如下： $$g(W^{(1)} a^{(1)}) = a^{(2)}; g(W^{(2)} a^{(2)}) = z;$$ 上面写的全是权重w但还未引入偏置。下面我们接着写偏置 由此可见，使用矩阵运算来表达是很简洁的，而且也不会受到节点数增多的影响（无论有多少节点参与运算，乘法两端都只有一个变量）。因此神经网络的教程中大量使用矩阵运算来描述。 需要说明的是，至今为止，我们对神经网络的结构图的讨论中都没有提到偏置节点（bias unit）。事实上，这些节点是默认存在的。它本质上是一个只含有存储功能，且存储值永远为1的单元。在神经网络的每个层次中，除了输出层以外，都会含有这样一个偏置单元。正如线性回归模型与逻辑回归模型中的一样。 偏置单元与后一层的所有节点都有连接，我们设这些参数值为向量b，称之为偏置。如下图。 可以看出，偏置节点很好认，因为其没有输入（前一层中没有箭头指向它）。有些神经网络的结构图中会把偏置节点明显画出来，有些不会。一般情况下，我们都不会明确画出偏置节点。 在考虑了偏置以后的一个神经网络的矩阵运算如下： $$g(W^{(1)} a^{(1)}+b^{(1)}) = a^{(2)}; g(W^{(2)} a^{(2)}+b^{(1)}) = z;$$ 需要说明的是，在两层神经网络中，我们不再使用sgn函数作为函数g，而是使用平滑函数sigmoid作为函数g。我们把函数g也称作激活函数（active function）。 事实上，神经网络的本质就是通过参数与激活函数来拟合特征与目标之间的真实函数关系。初学者可能认为画神经网络的结构图是为了在程序中实现这些圆圈与线，但在一个神经网络的程序中，既没有“线”这个对象，也没有“单元”这个对象。实现一个神经网络最需要的是线性代数库。 1.4 多层神经网络（深度学习）1.4.1 多层神经网络的结构（深度学习）我们延续两层神经网络的方式来设计一个多层神经网络。 在两层神经网络的输出层后面，继续添加层次。原来的输出层变成中间层，新加的层次成为新的输出层。所以可以得到下图。 依照这样的方式不断添加，我们可以得到更多层的多层神经网络。公式推导的话其实跟两层神经网络类似，使用矩阵运算的话就仅仅是加一个公式而已。 在已知输入$$a^{(1)}$$，参数$$W^{(1)},W^{(2)},W^{(3)}$$的情况下，输出z的推导公式如下：$$g(W^{(1)} * a^{(1)}) = a^{(2)}; g(W^{(2)} * a^{(2)}) = a^{(3)}; g(W^{(3)} * a^{(3)}) = z;$$ 多层神经网络中，输出也是按照一层一层的方式来计算。从最外面的层开始，算出所有单元的值以后，再继续计算更深一层。只有当前层所有单元的值都计算完毕以后，才会算下一层。有点像计算向前不断推进的感觉。所以这个过程叫做“正向传播”。 下面讨论一下多层神经网络中的参数。 首先我们看第一张图，可以看出$$W^{(1)}$$中有6个参数，$$W^{(2)}$$中有4个参数，$$W^(3)$$中有6个参数，所以整个神经网络中的参数有16个（这里我们不考虑偏置节点，下同）。 假设我们将中间层的节点数做一下调整。第一个中间层改为3个单元，第二个中间层改为4个单元。 经过调整以后，整个网络的参数变成了33个。 虽然层数保持不变，但是第二个神经网络的参数数量却是第一个神经网络的接近两倍之多，从而带来了更好的表示（represention）能力。表示能力是多层神经网络的一个重要性质，下面会做介绍。 在参数一致的情况下，我们也可以获得一个“更深”的网络。 上图的网络中，虽然参数数量仍然是33，但却有4个中间层，是原来层数的接近两倍。这意味着一样的参数数量，可以用更深的层次去表达。 1.4.2 多层神经网络的效果（深度学习）与两层层神经网络不同。多层神经网络中的层数增加了很多。 增加更多的层次有什么好处？更深入的表示特征，以及更强的函数模拟能力。 更深入的表示特征可以这样理解，随着网络的层数增加，每一层对于前一层次的抽象表示更深入。在神经网络中，每一层神经元学习到的是前一层神经元值的更抽象的表示。例如第一个隐藏层学习到的是“边缘”的特征，第二个隐藏层学习到的是由“边缘”组成的“形状”的特征，第三个隐藏层学习到的是由“形状”组成的“图案”的特征，最后的隐藏层学习到的是由“图案”组成的“目标”的特征。通过抽取更抽象的特征来对事物进行区分，从而获得更好的区分与分类能力。 关于逐层特征学习的例子，可以参考下图。 更强的函数模拟能力是由于随着层数的增加，整个网络的参数就越多。而神经网络其实本质就是模拟特征与目标之间的真实关系函数的方法，更多的参数意味着其模拟的函数可以更加的复杂，可以有更多的容量（capcity）去拟合真正的关系。 通过研究发现，在参数数量一样的情况下，更深的网络往往具有比浅层的网络更好的识别效率。这点也在ImageNet的多次大赛中得到了证实。从2012年起，每年获得ImageNet冠军的深度神经网络的层数逐年增加，2015年最好的方法GoogleNet是一个多达22层的神经网络。 在最新一届的ImageNet大赛上，目前拿到最好成绩的MSRA团队的方法使用的更是一个深达152层的网络！关于这个方法更多的信息有兴趣的可以查阅ImageNet网站。 1.4.3 多层神经网络的训练（深度学习）在单层神经网络时，我们使用的激活函数是sgn函数。到了两层神经网络时，我们使用的最多的是sigmoid函数。而到了多层神经网络时，通过一系列的研究发现，ReLU函数在训练多层神经网络时，更容易收敛，并且预测性能更好。因此，目前在深度学习中，最流行的非线性函数是ReLU函数。ReLU函数不是传统的非线性函数，而是分段线性函数。其表达式非常简单，就是y=max(x,0)。简而言之，在x大于0，输出就是输入，而在x小于0时，输出就保持为0。这种函数的设计启发来自于生物神经元对于激励的线性响应，以及当低于某个阈值后就不再响应的模拟。 在多层神经网络中，训练的主题仍然是优化和泛化。当使用足够强的计算芯片（例如GPU图形加速卡）时，梯度下降算法以及反向传播算法在多层神经网络中的训练中仍然工作的很好。目前学术界主要的研究既在于开发新的算法，也在于对这两个算法进行不断的优化，例如，增加了一种带动量因子（momentum）的梯度下降算法。 在深度学习中，泛化技术变的比以往更加的重要。这主要是因为神经网络的层数增加了，参数也增加了，表示能力大幅度增强，很容易出现过拟合现象。因此正则化技术就显得十分重要。目前，Dropout技术，以及数据扩容（Data-Augmentation）技术是目前使用的最多的正则化技术。 文章参考来源：计算机的潜意识]]></content>
+      <categories>
+        <category>Deep Learning</category>
+      </categories>
+      <tags>
+        <tag>Deep Learning</tag>
+        <tag>Algorithm</tag>
+        <tag>神经网络</tag>
       </tags>
   </entry>
   <entry>
@@ -1022,8 +1035,8 @@
         <category>Deep Learning</category>
       </categories>
       <tags>
-        <tag>Algorithm</tag>
         <tag>Deep Learning</tag>
+        <tag>Algorithm</tag>
         <tag>迭代算法</tag>
       </tags>
   </entry>
@@ -1035,21 +1048,8 @@
         <category>Deep Learning</category>
       </categories>
       <tags>
-        <tag>Algorithm</tag>
         <tag>Deep Learning</tag>
-        <tag>神经网络</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[2.7 神经网络浅学笔记]]></title>
-    <url>%2F%2Fshenjingwanguo%2F</url>
-    <content type="text"><![CDATA[摘要本文主要记录神经网络相关的基础知识 Edit By Porter, 积水成渊,蛟龙生焉。 一、神经网络神经网络是一种模拟人脑的神经网络以期能够实现类人工智能的机器学习技术。 对于神经元的研究由来已久，1904年生物学家就已经知晓了神经元的组成结构。 一个神经元通常具有多个树突，主要用来接受传入信息；而轴突只有一条，轴突尾端有许多轴突末梢可以给其他多个神经元传递信息。轴突末梢跟其他神经元的树突产生连接，从而传递信号。这个连接的位置在生物学上叫做“突触”。 1.1 神经元1.1.1 让我们来看一个经典的神经网络。这是一个包含三个层次的神经网络。 红色的是输入层，绿色的是输出层，紫色的是中间层（也叫隐藏层）。 输入层有3个输入单元，隐藏层有4个单元，输出层有2个单元。 后文中，我们统一使用这种颜色来表达神经网络的结构。 1.1.2 在开始介绍前，有一些知识可以先记在心里 设计一个神经网络时，输入层与输出层的节点数往往是固定的，中间层则可以自由指定； 神经网络结构图中的拓扑与箭头代表着预测过程时数据的流向，跟训练时的数据流有一定的区别； 结构图里的关键不是圆圈（代表“神经元”），而是连接线（代表“神经元”之间的连接）。每个连接线对应一个不同的权重（其值称为权值），这是需要训练得到的。 1.1.3 神经元结构神经元模型是一个包含输入，输出与计算功能的模型。输入可以类比为神经元的树突，而输出可以类比为神经元的轴突，计算则可以类比为细胞核。 下图是一个典型的神经元模型：包含有3个输入，1个输出，以及2个计算功能。注意中间的箭头线。这些线称为“连接”。每个上有一个“权值”。 连接是神经元中最重要的东西。每一个连接上都有一个权重。 一个神经网络的训练算法就是让权重的值调整到最佳，以使得整个网络的预测效果最好。 我们使用a来表示输入，用w来表示权值。一个表示连接的有向箭头可以这样理解：在初端，传递的信号大小仍然是a，端中间有加权参数w，经过这个加权后的信号会变成aw，因此在连接的末端，信号的大小就变成了aw。 在其他绘图模型里，有向箭头可能表示的是值的不变传递。而在神经元模型里，每个有向箭头表示的是值的加权传递。 如果我们将神经元图中的所有变量用符号表示，并且写出输出的计算公式的话，就是下图。 可见z是在输入和权值的线性加权和叠加了一个函数g的值。在MP模型里，函数g是sgn函数，也就是取符号函数。这个函数当输入大于0时，输出1，否则输出0。 下面对神经元模型的图进行一些扩展。首先将sum函数与sgn函数合并到一个圆圈里，代表神经元的内部计算。其次，把输入a与输出z写到连接线的左上方，便于后面画复杂的网络。最后说明，一个神经元可以引出多个代表输出的有向箭头，但值都是一样的。 神经元可以看作一个计算与存储单元。计算是神经元对其的输入进行计算功能。存储是神经元会暂存计算结果，并传递到下一层。 当我们用“神经元”组成网络以后，描述网络中的某个“神经元”时，我们更多地会用“单元”（unit）来指代。同时由于神经网络的表现形式是一个有向图，有时也会用“节点”（node）来表达同样的意思。 1.1.4 神经元模型的使用可以这样理解 我们有一个数据，称之为样本。样本有四个属性，其中三个属性已知，一个属性未知。我们需要做的就是通过三个已知属性预测未知属性。 具体办法就是使用神经元的公式进行计算。三个已知属性的值是a1，a2，a3，未知属性的值是z。z可以通过公式计算出来。 这里，已知的属性称之为特征，未知的属性称之为目标。假设特征与目标之间确实是线性关系，并且我们已经得到表示这个关系的权值w1，w2，w3。那么，我们就可以通过神经元模型预测新样本的目标。 1.2 单层神经网络（感知器）1958年，计算科学家Rosenblatt提出了由两层神经元组成的神经网络。他给它起了一个名字–“感知器”（Perceptron） 感知器是当时首个可以学习的人工神经网络。 1.2.1 感知器模型结构在原来MP模型的“输入”位置添加神经元节点，标志其为“输入单元”。其余不变，于是我们就有了下图：从本图开始，我们将权值w1, w2, w3写到“连接线”的中间。 在“感知器”中，有两个层次。分别是输入层和输出层。输入层里的“输入单元”只负责传输数据，不做计算。输出层里的“输出单元”则需要对前面一层的输入进行计算。 我们把需要计算的层次称之为“计算层”，并把拥有一个计算层的网络称之为“单层神经网络”。有一些文献会按照网络拥有的层数来命名，例如把“感知器”称为两层神经网络。但在本文里，我们根据计算层的数量来命名。 假如我们要预测的目标不再是一个值，而是一个向量，例如[2,3]。那么可以在输出层再增加一个“输出单元”。 可以看到，z1的计算跟原先的z并没有区别。 我们已知一个神经元的输出可以向多个神经元传递，因此z2的计算公式如下图。 可以看到，z2的计算中除了三个新的权值：w4，w5，w6以外，其他与z1是一样的。整个网络的输出如下图。 目前的表达公式有一点不让人满意的就是：w4，w5，w6是后来加的，很难表现出跟原先的w1，w2，w3的关系。 因此我们改用二维的下标，用wx,y来表达一个权值。下标中的x代表后一层神经元的序号，而y代表前一层神经元的序号（序号的顺序从上到下）。 例如，w1,2代表后一层的第1个神经元与前一层的第2个神经元的连接的权值（这种标记方式参照了Andrew Ng的课件）。根据以上方法标记，我们有了下图。 如果我们仔细看输出的计算公式，会发现这两个公式就是线性代数方程组。因此可以用矩阵乘法来表达这两个公式。 例如，输入的变量是[a1，a2，a3]T（代表由a1，a2，a3组成的列向量），用向量a来表示。方程的左边是[z1，z2]T，用向量z来表示。 系数则是矩阵W（2行3列的矩阵，排列形式与公式中的一样）。 于是，输出公式可以改写成： $$g(W * a) = z;$$ 这个公式就是神经网络中从前一层计算后一层的矩阵运算。 1.2.2 效果与神经元模型不同，感知器中的权值是通过训练得到的。因此，根据以前的知识我们知道，感知器类似一个逻辑回归模型，可以做线性分类任务。 我们可以用决策分界来形象的表达分类的效果。决策分界就是在二维的数据平面中划出一条直线，当数据的维度是3维的时候，就是划出一个平面，当数据的维度是n维时，就是划出一个n-1维的超平面。 下图显示了在二维平面中划出决策分界的效果，也就是感知器的分类效果。 感知器只能做简单的线性分类任务。 1.3 两层神经网络（多层感知器）Minsky说过单层神经网络无法解决异或问题。但是当增加一个计算层以后，两层神经网络不仅可以解决异或问题，而且具有非常好的非线性分类效果。不过两层神经网络的计算是一个问题，没有一个较好的解法。 1986年，Rumelhar和Hinton等人提出了反向传播（Backpropagation，BP）算法，解决了两层神经网络所需要的复杂计算量问题，从而带动了业界使用两层神经网络研究的热潮。目前，大量的教授神经网络的教材，都是重点介绍两层（带一个隐藏层）神经网络的内容。 这时候的Hinton还很年轻，30年以后，正是他重新定义了神经网络，带来了神经网络复苏的又一春。 1.3.1 两层神经网络的结构（多层感知器）Minsky说过单层神经网络无法解决异或问题。但是当增加一个计算层以后，两层神经网络不仅可以解决异或问题，而且具有非常好的非线性分类效果。不过两层神经网络的计算是一个问题，没有一个较好的解法。 两层神经网络除了包含一个输入层，一个输出层以外，还增加了一个中间层。此时，中间层和输出层都是计算层。我们扩展上节的单层神经网络，在右边新加一个层次（只含有一个节点）。 现在，我们的权值矩阵增加到了两个，我们用上标来区分不同层次之间的变量。 例如$$a_{x} ^{(y)}$$代表第y层的第x个节点。$$z_{1},z_{2}$$变成了$$a_{1} ^{(2)} , a_{2} ^{(2)}$$。下图给出了$$a_{1} ^{(2)} , a_{2} ^{(2)}$$的计算公式。 计算最终输出z的方式是利用了中间层的$$a_{1} ^{(2)}, a_{2} ^{(2)}$$和第二个权值矩阵计算得到的，如下图。 假设我们的预测目标是一个向量，那么与前面类似，只需要在“输出层”再增加节点即可。 我们使用向量和矩阵来表示层次中的变量。$$a_{1} , a_{2} , z $$是网络中传输的向量数据。$$W^{(1)}, W^{(2)}$$是网络的矩阵参数。如下图。 使用矩阵运算来表达整个计算公式的话如下： $$g(W^{(1)} a^{(1)}) = a^{(2)}; g(W^{(2)} a^{(2)}) = z;$$ 上面写的全是权重w但还未引入偏置。下面我们接着写偏置 由此可见，使用矩阵运算来表达是很简洁的，而且也不会受到节点数增多的影响（无论有多少节点参与运算，乘法两端都只有一个变量）。因此神经网络的教程中大量使用矩阵运算来描述。 需要说明的是，至今为止，我们对神经网络的结构图的讨论中都没有提到偏置节点（bias unit）。事实上，这些节点是默认存在的。它本质上是一个只含有存储功能，且存储值永远为1的单元。在神经网络的每个层次中，除了输出层以外，都会含有这样一个偏置单元。正如线性回归模型与逻辑回归模型中的一样。 偏置单元与后一层的所有节点都有连接，我们设这些参数值为向量b，称之为偏置。如下图。 可以看出，偏置节点很好认，因为其没有输入（前一层中没有箭头指向它）。有些神经网络的结构图中会把偏置节点明显画出来，有些不会。一般情况下，我们都不会明确画出偏置节点。 在考虑了偏置以后的一个神经网络的矩阵运算如下： $$g(W^{(1)} a^{(1)}+b^{(1)}) = a^{(2)}; g(W^{(2)} a^{(2)}+b^{(1)}) = z;$$ 需要说明的是，在两层神经网络中，我们不再使用sgn函数作为函数g，而是使用平滑函数sigmoid作为函数g。我们把函数g也称作激活函数（active function）。 事实上，神经网络的本质就是通过参数与激活函数来拟合特征与目标之间的真实函数关系。初学者可能认为画神经网络的结构图是为了在程序中实现这些圆圈与线，但在一个神经网络的程序中，既没有“线”这个对象，也没有“单元”这个对象。实现一个神经网络最需要的是线性代数库。 1.4 多层神经网络（深度学习）1.4.1 多层神经网络的结构（深度学习）我们延续两层神经网络的方式来设计一个多层神经网络。 在两层神经网络的输出层后面，继续添加层次。原来的输出层变成中间层，新加的层次成为新的输出层。所以可以得到下图。 依照这样的方式不断添加，我们可以得到更多层的多层神经网络。公式推导的话其实跟两层神经网络类似，使用矩阵运算的话就仅仅是加一个公式而已。 在已知输入$$a^{(1)}$$，参数$$W^{(1)},W^{(2)},W^{(3)}$$的情况下，输出z的推导公式如下：$$g(W^{(1)} * a^{(1)}) = a^{(2)}; g(W^{(2)} * a^{(2)}) = a^{(3)}; g(W^{(3)} * a^{(3)}) = z;$$ 多层神经网络中，输出也是按照一层一层的方式来计算。从最外面的层开始，算出所有单元的值以后，再继续计算更深一层。只有当前层所有单元的值都计算完毕以后，才会算下一层。有点像计算向前不断推进的感觉。所以这个过程叫做“正向传播”。 下面讨论一下多层神经网络中的参数。 首先我们看第一张图，可以看出$$W^{(1)}$$中有6个参数，$$W^{(2)}$$中有4个参数，$$W^(3)$$中有6个参数，所以整个神经网络中的参数有16个（这里我们不考虑偏置节点，下同）。 假设我们将中间层的节点数做一下调整。第一个中间层改为3个单元，第二个中间层改为4个单元。 经过调整以后，整个网络的参数变成了33个。 虽然层数保持不变，但是第二个神经网络的参数数量却是第一个神经网络的接近两倍之多，从而带来了更好的表示（represention）能力。表示能力是多层神经网络的一个重要性质，下面会做介绍。 在参数一致的情况下，我们也可以获得一个“更深”的网络。 上图的网络中，虽然参数数量仍然是33，但却有4个中间层，是原来层数的接近两倍。这意味着一样的参数数量，可以用更深的层次去表达。 1.4.2 多层神经网络的效果（深度学习）与两层层神经网络不同。多层神经网络中的层数增加了很多。 增加更多的层次有什么好处？更深入的表示特征，以及更强的函数模拟能力。 更深入的表示特征可以这样理解，随着网络的层数增加，每一层对于前一层次的抽象表示更深入。在神经网络中，每一层神经元学习到的是前一层神经元值的更抽象的表示。例如第一个隐藏层学习到的是“边缘”的特征，第二个隐藏层学习到的是由“边缘”组成的“形状”的特征，第三个隐藏层学习到的是由“形状”组成的“图案”的特征，最后的隐藏层学习到的是由“图案”组成的“目标”的特征。通过抽取更抽象的特征来对事物进行区分，从而获得更好的区分与分类能力。 关于逐层特征学习的例子，可以参考下图。 更强的函数模拟能力是由于随着层数的增加，整个网络的参数就越多。而神经网络其实本质就是模拟特征与目标之间的真实关系函数的方法，更多的参数意味着其模拟的函数可以更加的复杂，可以有更多的容量（capcity）去拟合真正的关系。 通过研究发现，在参数数量一样的情况下，更深的网络往往具有比浅层的网络更好的识别效率。这点也在ImageNet的多次大赛中得到了证实。从2012年起，每年获得ImageNet冠军的深度神经网络的层数逐年增加，2015年最好的方法GoogleNet是一个多达22层的神经网络。 在最新一届的ImageNet大赛上，目前拿到最好成绩的MSRA团队的方法使用的更是一个深达152层的网络！关于这个方法更多的信息有兴趣的可以查阅ImageNet网站。 1.4.3 多层神经网络的训练（深度学习）在单层神经网络时，我们使用的激活函数是sgn函数。到了两层神经网络时，我们使用的最多的是sigmoid函数。而到了多层神经网络时，通过一系列的研究发现，ReLU函数在训练多层神经网络时，更容易收敛，并且预测性能更好。因此，目前在深度学习中，最流行的非线性函数是ReLU函数。ReLU函数不是传统的非线性函数，而是分段线性函数。其表达式非常简单，就是y=max(x,0)。简而言之，在x大于0，输出就是输入，而在x小于0时，输出就保持为0。这种函数的设计启发来自于生物神经元对于激励的线性响应，以及当低于某个阈值后就不再响应的模拟。 在多层神经网络中，训练的主题仍然是优化和泛化。当使用足够强的计算芯片（例如GPU图形加速卡）时，梯度下降算法以及反向传播算法在多层神经网络中的训练中仍然工作的很好。目前学术界主要的研究既在于开发新的算法，也在于对这两个算法进行不断的优化，例如，增加了一种带动量因子（momentum）的梯度下降算法。 在深度学习中，泛化技术变的比以往更加的重要。这主要是因为神经网络的层数增加了，参数也增加了，表示能力大幅度增强，很容易出现过拟合现象。因此正则化技术就显得十分重要。目前，Dropout技术，以及数据扩容（Data-Augmentation）技术是目前使用的最多的正则化技术。 文章参考来源：计算机的潜意识]]></content>
-      <categories>
-        <category>Deep Learning</category>
-      </categories>
-      <tags>
         <tag>Algorithm</tag>
-        <tag>Deep Learning</tag>
         <tag>神经网络</tag>
       </tags>
   </entry>
@@ -1061,8 +1061,8 @@
         <category>Deep Learning</category>
       </categories>
       <tags>
-        <tag>Algorithm</tag>
         <tag>Deep Learning</tag>
+        <tag>Algorithm</tag>
         <tag>KNN</tag>
       </tags>
   </entry>
@@ -1086,9 +1086,9 @@
         <category>Deep Learning</category>
       </categories>
       <tags>
+        <tag>Deep Learning</tag>
         <tag>马尔科夫模型实战</tag>
         <tag>Algorithm</tag>
-        <tag>Deep Learning</tag>
       </tags>
   </entry>
   <entry>
@@ -1209,18 +1209,6 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[Hello World]]></title>
-    <url>%2F%2Fhelloindex%2F</url>
-    <content type="text"><![CDATA[摘要 基于这章节的想法和具体需要完成的任务如下： 首先是基于深度学习的歌曲分类 基于深度学习的目标检测 基于深度学习的手写字计算速度改进 基于深度学习的人脸识别等例子实现界面设计 Edit By Porter, 积水成渊,蛟龙生焉。 优秀学者/资源学者、教授 徐志强副教授(Associate Professor Richard Xu),其 github主页 an AI Professor in Machine Learning at UTS.]]></content>
-      <categories>
-        <category>summary</category>
-      </categories>
-      <tags>
-        <tag>Note</tag>
-        <tag>总结</tag>
-      </tags>
-  </entry>
-  <entry>
     <title><![CDATA[3.1 PyTorch 学习]]></title>
     <url>%2F%2FpytorchNotes%2F</url>
     <content type="text"><![CDATA[摘要本节主要是学习PyTorch相关的学习，主要是基础的学习路线，包括简单的实例笔记等。 Edit By Porter, 积水成渊,蛟龙生焉。 帮助文档见PyTorch官网 一、张量(tensor)和变量(Variable)PyTorch的官方介绍是一个拥有强力GPU加速的张量和动态构建网络的库，其主要构建是张量，所以可以把PyTorch当做Numpy来用，Pytorch的很多操作好比Numpy都是类似的，但是其能够在GPU上运行，所以有着比Numpy快很多倍的速度。 12345678910import torchimport numpy as npnumpy_tensor = np.random.randn(3, 4)pytorch_tensor1 = torch.Tensor(numpy_tensor)pytorch_tensor2 = torch.from_numpy(numpy_tensor)print(pytorch_tensor1)print(pytorch_tensor2) 输出结果： 12345pytorch_tensor1:tensor([[ 1.3511, 0.2016, -0.9728, 0.7997], [-1.0706, -0.0768, -1.3627, -0.8809], [-0.6040, -0.0030, 0.4871, 0.6634]]) 12345pytorch_tensor2:tensor([[ 1.3511, 0.2016, -0.9728, 0.7997], [-1.0706, -0.0768, -1.3627, -0.8809], [-0.6040, -0.0030, 0.4871, 0.6634]], dtype=torch.float64) 使用以上两种方法进行转换的时候，会直接将Numpy ndarray的数据类型转换为对应的Pytorch Tensor数据类型,同时我们也可以使用下面的方法将pytorch tensor转换为numpy ndarray 12345678910111213import torchimport numpy as npnumpy_tensor = np.random.randn(3, 4)pytorch_tensor1 = torch.Tensor(numpy_tensor)pytorch_tensor2 = torch.from_numpy(numpy_tensor)# 如果pytorch tensor在cpu上numpy_array1 = pytorch_tensor1.numpy()numpy_array2 = pytorch_tensor2.cpu().numpy()print(numpy_array1)print(numpy_array2) 1234567891011numpy_array1:[[ 0.9646071 1.0680387 -1.4145772 -1.1733457 ] [ 0.14683424 0.15183815 0.3256755 2.5129247 ] [-1.0027096 0.02551154 -0.60790646 -0.22400694]] numpy_array2:[[-2.09633392 -2.08986247 0.02169762 0.15833546] [ 1.24929483 -1.3953018 1.03153148 -0.06309232] [ 0.24348084 -1.42512446 1.45863934 0.92882537]] 需要注意GPU上的Tensor不能直接转换为Numpy ndarray，需要使用.cpu()先将GPU上的Tensor转到CPU上 PyTorch Tensor 使用GPU加速可以使用下面两种方法将Tensor放到GPU上. 1234567# 第一种方式是定义cuda数据类型dtype = torch.cuda.FloatTensorgpu_tensor = torch.randn(10,20).type(dtype)# 第二种方式更简单，推荐使用gpu_tensor = torch.randn(10,20).cuda(0) # 将tensor放到第一个GPU上gpu_tensor = torch.randn(10,20).cuda(1) # 将tensor放到第二个GPU上 使用第一种方式将tensor放到GPU上的时候会将数据类型转换成定义的类型。 而使用第二种方式能够直接将tensor放到GPU上，类型跟之前保持一致。 推荐在定义tensor的时候就明确数据类型，然后直接使用第二种方法将tensor放到GPU上 我的测试代码： 12345678910111213141516171819202122232425import torchimport numpy as npnumpy_tensor = np.random.randn(3, 4)pytorch_tensor1 = torch.Tensor(numpy_tensor)pytorch_tensor2 = torch.from_numpy(numpy_tensor)# 如果pytorch tensor在cpu上numpy_array1 = pytorch_tensor1.numpy()numpy_array2 = pytorch_tensor2.cpu().numpy()print(numpy_array1)print(numpy_array2)print("输出数据模式1：")# 第一种方式是定义cuda数据类型dtype = torch.cuda.FloatTensorgpu_tensor1 = torch.randn(3,4).type(dtype)print(gpu_tensor1)gpu_tensor2 = torch.randn(3,4).cuda(0) # 将tensor放到第一个GPU上print("输出数据模式2：")print(gpu_tensor2) 二、Torch的数据类型2.1 torch.Tensor torch.Tensor是一种包含单一数据类型元素的多维矩阵。 Torch定义了七种CPU tensor类型和八种GPU tensor类型： Data tyoe CPU tensor GPU tensor 32-bit floating point torch.FloatTensor torch.cuda.FloatTensor 64-bit floating point torch.DoubleTensor torch.cuda.DoubleTensor 16-bit floating point N/A torch.cuda.HalfTensor 8-bit integer (unsigned) torch.ByteTensor torch.cuda.ByteTensor 8-bit integer (signed) torch.CharTensor torch.cuda.CharTensor 16-bit integer (signed) torch.ShortTensor torch.cuda.ShortTensor 32-bit integer (signed) torch.IntTensor torch.cuda.IntTensor 64-bit integer (signed) torch.LongTensor torch.cuda.LongTensor torch.Tensor是默认的tensor类型（torch.FlaotTensor）的简称。 一个张量tensor可以从Python的list或序列构建： 1234&gt;&gt;&gt; torch.FloatTensor([[1, 2, 3], [4, 5, 6]])1 2 34 5 6[torch.FloatTensor of size 2x3] 一个空张量tensor可以通过规定其大小来构建： 1234&gt;&gt;&gt; torch.IntTensor(2, 4).zero_()0 0 0 00 0 0 0[torch.IntTensor of size 2x4] 三、 Torch 的多种数学操作3.1 Torch包torch包含了多维张量的数据结构以及基于其上的多种数学操作。另外，它也提供了多种工具，其中一些可以更有效地对张量和任意类型进行序列化。 它有CUDA 的对应实现，可以在NVIDIA GPU上进行张量运算(计算能力&gt;=2.0)。 3.2 张量 Tensors3.2.1 torch.is_tensor[source]1torch.is_tensor(obj) 如果obj 是一个pytorch张量，则返回True 参数： obj (Object) – 判断对象 3.2.2 torch.is_storage1torch.is_storage(obj) 如何obj 是一个pytorch storage对象，则返回True 参数： input (Object) – 判断对象 3.2.3 torch.set_default_tensor_type[source]1torch.set_default_tensor_type(t) 3.2.4 torch.numel1torch.numel(input)-&gt;int 返回input 张量中的元素个数 例子: 123456&gt;&gt;&gt; a = torch.randn(1,2,3,4,5)&gt;&gt;&gt; torch.numel(a)120&gt;&gt;&gt; a = torch.zeros(4,4)&gt;&gt;&gt; torch.numel(a)16 3.2.5 torch.set_printoptions[source]1torch.set_printoptions(precision=None, threshold=None, edgeitems=None, linewidth=None, profile=None) 设置打印选项。 完全参考自 Numpy。 参数: precision – 浮点数输出的精度位数 (默认为8 ) threshold – 阈值，触发汇总显示而不是完全显示(repr)的数组元素的总数 （默认为1000） edgeitems – 汇总显示中，每维（轴）两端显示的项数（默认值为3） linewidth – 用于插入行间隔的每行字符数（默认为80）。Thresholded matricies will ignore this parameter. profile – pretty打印的完全默认值。 可以覆盖上述所有选项 (默认为short, full) 3.3 创建操作 Creation Ops3.3.1 torch.eye1torch.eye(n, m=None, out=None) 返回一个2维张量，对角线位置全1，其它位置全0 参数: n (int ) – 行数 m (int, optional) – 列数.如果为None,则默认为n out (Tensor, optinal) - Output tensor 返回值: 对角线位置全1，其它位置全0的2维张量 返回值类型: Tensor 例子: 12345&gt;&gt;&gt; torch.eye(3) 1 0 0 0 1 0 0 0 1[torch.FloatTensor of size 3x3] 更多参考Pytorch 文档]]></content>
@@ -1230,6 +1218,18 @@
       <tags>
         <tag>Deep Learning</tag>
         <tag>PyTorch</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Hello World]]></title>
+    <url>%2F%2Fhelloindex%2F</url>
+    <content type="text"><![CDATA[摘要 基于这章节的想法和具体需要完成的任务如下： 首先是基于深度学习的歌曲分类 基于深度学习的目标检测 基于深度学习的手写字计算速度改进 基于深度学习的人脸识别等例子实现界面设计 Edit By Porter, 积水成渊,蛟龙生焉。 优秀学者/资源学者、教授 徐志强副教授(Associate Professor Richard Xu),其 github主页 an AI Professor in Machine Learning at UTS.]]></content>
+      <categories>
+        <category>summary</category>
+      </categories>
+      <tags>
+        <tag>Note</tag>
+        <tag>总结</tag>
       </tags>
   </entry>
   <entry>
@@ -1379,8 +1379,8 @@
         <category>summary</category>
       </categories>
       <tags>
-        <tag>Deep Learning</tag>
         <tag>System Conf</tag>
+        <tag>Deep Learning</tag>
       </tags>
   </entry>
   <entry>
@@ -1393,6 +1393,18 @@
       <tags>
         <tag>System Conf</tag>
         <tag>Gitbook</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[1.6 win10+ubuntu双系统修复ubuntu启动引导]]></title>
+    <url>%2F%2FdoubleSysRepair%2F</url>
+    <content type="text"><![CDATA[摘要本文记录了win10+ubuntu双系统修复ubuntu启动引导，解决最新版win10系统的UEFI快速启动带来的双系统安装启动问题（开机引导无法修复的解决方法）。 Edit By Porter, 积水成渊,蛟龙生焉。 文章同步于: 我的gitbook win10+ubuntu双系统修复ubuntu启动引导摘要我的环境是：uefi启动模式下的win10 + ubutu18.04，其中win10 安装在 128G固态硬盘上，Ubuntu18.04LTS 安装在1T 机械硬盘上，由于我已安装好的ubuntu18 没有UEFI，但是ubuntu18确实是支持UEFI的，难道我必须要重新安装下ubuntu系统吗？（我ubuntu上好不容易安装好了好多软件，此时内心是崩溃的） 一、啥都不用改的解决办法（有点不推荐） 每次打开电脑后狂按F12按键，会进入Boot引导管理，然后选择你的Ubuntu系统进入即可打开ubuntu，如果你要打开window10 你可以按下开机电源后啥都不做就能进入，或者，也是狂按F12进入Boot管理界面，选择windows。 每次开机都得这么累，所以不推荐 二、先进入Ubuntu 然后执行如下命令（就是安装Ubuntu的引导修复工具软件）1234567$ sudo su# sudo add-apt-repository ppa:yannubuntu/boot-repair# apt-get update# apt-get install boot-repair1.在dash中搜索boot-repair2.点recommand repair 之后会自动执行 执行完以上步骤后会出现如下图所示的信息： 然后重启电脑，然后狂按F2,进入BOOT设置界面，设置UEFI 和 Enable。 接下来设置个Supervisor密码，注意后期退出并保存这个boot配置时，要重新设置这个密码，新密码直接全敲回车（这样代表不设置密码，面对你以后密码忘记了）如下图： 设置密码后，下面灰色的选项就可以用了。此时进入 Select an UEFI file as trust executing ,进入的界面如下图 || || || 接下来，回到Boot设置栏，讲EFI 的Ubuntu 重新排序，排到最高优先级，我这排到了我的windows启动选项的前面的，如果你了解你的windows启动标志，直接放到windows启动选项前也就可以的。 到此设置结束，但是不要忘了，把你之前的Security选项里的密码重新清楚掉哦，就是重新设置新密码，新密码内容设置为回车就好了，下次你要使用就会直接提示你输入新密码。 接下来F10保存并退出。然后启动你的电脑，会直接进入linux的引导界面，还包括了Windows的启动界面选项，这时你想进Ubuntu还是windows都是很好选择的。]]></content>
+      <categories>
+        <category>summary</category>
+      </categories>
+      <tags>
+        <tag>System Conf</tag>
+        <tag>系统引导</tag>
       </tags>
   </entry>
   <entry>
@@ -1431,18 +1443,6 @@
         <tag>Deep Learning</tag>
         <tag>MNIST</tag>
         <tag>tensorflow</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[1.6 win10+ubuntu双系统修复ubuntu启动引导]]></title>
-    <url>%2F%2FdoubleSysRepair%2F</url>
-    <content type="text"><![CDATA[摘要本文记录了win10+ubuntu双系统修复ubuntu启动引导，解决最新版win10系统的UEFI快速启动带来的双系统安装启动问题（开机引导无法修复的解决方法）。 Edit By Porter, 积水成渊,蛟龙生焉。 文章同步于: 我的gitbook win10+ubuntu双系统修复ubuntu启动引导摘要我的环境是：uefi启动模式下的win10 + ubutu18.04，其中win10 安装在 128G固态硬盘上，Ubuntu18.04LTS 安装在1T 机械硬盘上，由于我已安装好的ubuntu18 没有UEFI，但是ubuntu18确实是支持UEFI的，难道我必须要重新安装下ubuntu系统吗？（我ubuntu上好不容易安装好了好多软件，此时内心是崩溃的） 一、啥都不用改的解决办法（有点不推荐） 每次打开电脑后狂按F12按键，会进入Boot引导管理，然后选择你的Ubuntu系统进入即可打开ubuntu，如果你要打开window10 你可以按下开机电源后啥都不做就能进入，或者，也是狂按F12进入Boot管理界面，选择windows。 每次开机都得这么累，所以不推荐 二、先进入Ubuntu 然后执行如下命令（就是安装Ubuntu的引导修复工具软件）1234567$ sudo su# sudo add-apt-repository ppa:yannubuntu/boot-repair# apt-get update# apt-get install boot-repair1.在dash中搜索boot-repair2.点recommand repair 之后会自动执行 执行完以上步骤后会出现如下图所示的信息： 然后重启电脑，然后狂按F2,进入BOOT设置界面，设置UEFI 和 Enable。 接下来设置个Supervisor密码，注意后期退出并保存这个boot配置时，要重新设置这个密码，新密码直接全敲回车（这样代表不设置密码，面对你以后密码忘记了）如下图： 设置密码后，下面灰色的选项就可以用了。此时进入 Select an UEFI file as trust executing ,进入的界面如下图 || || || 接下来，回到Boot设置栏，讲EFI 的Ubuntu 重新排序，排到最高优先级，我这排到了我的windows启动选项的前面的，如果你了解你的windows启动标志，直接放到windows启动选项前也就可以的。 到此设置结束，但是不要忘了，把你之前的Security选项里的密码重新清楚掉哦，就是重新设置新密码，新密码内容设置为回车就好了，下次你要使用就会直接提示你输入新密码。 接下来F10保存并退出。然后启动你的电脑，会直接进入linux的引导界面，还包括了Windows的启动界面选项，这时你想进Ubuntu还是windows都是很好选择的。]]></content>
-      <categories>
-        <category>summary</category>
-      </categories>
-      <tags>
-        <tag>System Conf</tag>
-        <tag>系统引导</tag>
       </tags>
   </entry>
   <entry>
