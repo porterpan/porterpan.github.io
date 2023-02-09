@@ -103,17 +103,6 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[2.17vscode新建工程]]></title>
-    <url>%2F%2Fvscodenewproject%2F</url>
-    <content type="text"><![CDATA[摘要 vscode 中新建工程 launch.json 用于设置调试、运行时的东东 task.json 用于设置编译时的东东 launch.json1"program": "$&#123;fileDirname&#125;/$&#123;fileBasenameNoExtension&#125;" 如果你的工程文件结构如下 12345C:\Users\admin\Desktop\test+.vscode ++tasks.json ++launch.json+main.cpp 则有： ${workspaceFolder} :表示当前workspace文件夹路径，也即C:\Users\admin\Desktop\test ${workspaceRootFolderName}:表示workspace的文件夹名，也即test ${file}:文件自身的绝对路径，也即C:\Users\admin\Desktop\test.vscode\launch.json ${relativeFile}:文件在workspace中的路径，也即.vscode\launch.json ${fileBasenameNoExtension}:当前文件的文件名，不带后缀，也即launch ${fileBasename}:当前文件的文件名，launch.json ${fileDirname}:文件所在的文件夹路径，也即C:\Users\admin\Desktop\test.vscode ${fileExtname}:当前文件的后缀，也即.json ${lineNumber}:当前文件光标所在的行号 ${env:PATH}:系统中的环境变量 vocode执行调试命令执行ctrl+shift+P后，执行下面命令： 1&gt;c/c++:build and debug active File]]></content>
-      <categories>
-        <category>summary</category>
-      </categories>
-      <tags>
-        <tag>vscode</tag>
-      </tags>
-  </entry>
-  <entry>
     <title><![CDATA[2.18gcc相关命令]]></title>
     <url>%2F%2Fvscodegcc%2F</url>
     <content type="text"><![CDATA[摘要gcc和g++相关的命令学习笔记 g++g++主要是c++语言编译的相关命令 12345678910111213GCC(1) GNU GCC(1)NAME gcc - GNU project C and C++ compilerSYNOPSIS gcc [-c|-S|-E] [-std=standard] [-g] [-pg] [-Olevel] [-Wwarn...] [-Wpedantic] [-Idir...] [-Ldir...] [-Dmacro[=defn]...] [-Umacro] [-foption...] [-mmachine-option...] [-o outfile] [@file] infile... 1.1 常用命令 gcc -o 指定生成可执行文件的名称，如果不实用-o则会生成a.out 使用方法： 123g++ -o afile file.cpp file.hppg++ -o test test.cppg++ test.cpp -o test gcc -g 可以对程序进行调试，添加gdb调试选项,生成调试信息 使用方法： 1g++ -g -o hello hello.cpp g++ -c 只生成目标文件，只编译步链接 使用方法： g++ -wall 编译后显示警告 g++ -std=c++17 最新的g++6.3已经默认支持c++14 而更高的已经支持c++17标准]]></content>
@@ -122,6 +111,17 @@
       </categories>
       <tags>
         <tag>gcc</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[2.17vscode新建工程]]></title>
+    <url>%2F%2Fvscodenewproject%2F</url>
+    <content type="text"><![CDATA[摘要 vscode 中新建工程 launch.json 用于设置调试、运行时的东东 task.json 用于设置编译时的东东 launch.json1"program": "$&#123;fileDirname&#125;/$&#123;fileBasenameNoExtension&#125;" 如果你的工程文件结构如下 12345C:\Users\admin\Desktop\test+.vscode ++tasks.json ++launch.json+main.cpp 则有： ${workspaceFolder} :表示当前workspace文件夹路径，也即C:\Users\admin\Desktop\test ${workspaceRootFolderName}:表示workspace的文件夹名，也即test ${file}:文件自身的绝对路径，也即C:\Users\admin\Desktop\test.vscode\launch.json ${relativeFile}:文件在workspace中的路径，也即.vscode\launch.json ${fileBasenameNoExtension}:当前文件的文件名，不带后缀，也即launch ${fileBasename}:当前文件的文件名，launch.json ${fileDirname}:文件所在的文件夹路径，也即C:\Users\admin\Desktop\test.vscode ${fileExtname}:当前文件的后缀，也即.json ${lineNumber}:当前文件光标所在的行号 ${env:PATH}:系统中的环境变量 vocode执行调试命令执行ctrl+shift+P后，执行下面命令： 1&gt;c/c++:build and debug active File]]></content>
+      <categories>
+        <category>summary</category>
+      </categories>
+      <tags>
+        <tag>vscode</tag>
       </tags>
   </entry>
   <entry>
@@ -377,18 +377,6 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[anaconda运行出错现象及解决办法]]></title>
-    <url>%2F%2FanacondaError%2F</url>
-    <content type="text"><![CDATA[摘要本文记录ubuntu环境下的anaconda错误的现象及解决办法，为后期作死，做点善事。 出错一、由于ubuntu操作系统更新或者qt版本问题导致（PyQt5分段错误（核心转储））执行如下命令解决 1conda install -c anaconda pyqt]]></content>
-      <categories>
-        <category>summary</category>
-      </categories>
-      <tags>
-        <tag>anaconda</tag>
-        <tag>Error</tag>
-      </tags>
-  </entry>
-  <entry>
     <title><![CDATA[argparse模块使用学习笔记]]></title>
     <url>%2F%2Fargparsenotes%2F</url>
     <content type="text"><![CDATA[摘要argparse是一个命令行参数解析模块，本文主要介绍python的终端交互模块argparse模块的一些简单而常用的使用方法。 首先导入一个简单的例子 123import argparseparser = argparse.ArgumentParser()parser.parse_args() 以上的简单例子，就构成了，一个简单的命令行参数解析的例子。通过执行 1python test.py --help 将会有了参数用法的提示说明输出。 下面开始正式的介绍这个模块的用法 为你的程序添加描述12345import argparseparser = argparse.ArgumentParser()parser.add_argument('--echo')parser.description = '这是个测试脚本'args = parser.parse_args() parser.description 是一个程序的描述性语句。 最终终端输入 1python test.py --help 执行该语句就会有相应的脚本描述被打印出来 必选参数和选择性填入的参数语法123456789import argparseparser = argparse.ArgumentParser()#该参数是必须在终端有输入parser.add_argument("ParA", help="我是A",type=int) #该参数是在终端可以有选择性输入的参数parser.add_argument("--ParB", help="我是A",type=int) args = parser.parse_args()print(args.ParA)print(args.ParB) 在参数的定义前面,未加双横线，表示终端中必须要有的一个参数；加了双横线表示，终端输入中可以不适用该参数。 提取命令行中输入参数的类型123456789import argparseparser = argparse.ArgumentParser()parser.add_argument("ParA", help="我是A",type=int)parser.add_argument("ParB", help="我是B",type=int)args = parser.parse_args()if args.ParA == 1: print('您的ParA参数输入正确，确实是1')else print('请输入正确的参数，参数的输入不应该是&#123;&#125;'%) 对于需要输入int类型的参数，只需要写入type=int. 下面使用一个完整的例子123456import argparseparser = argparse.ArgumentParser()parser.add_argument('--echo')parser.description = '这是个测试脚本'args = parser.parse_args()print(args.echo) 我们针对这个例子，在终端中输入如下命令，将会有相应的效果。]]></content>
@@ -398,6 +386,18 @@
       <tags>
         <tag>python moudle</tag>
         <tag>argparse</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[anaconda运行出错现象及解决办法]]></title>
+    <url>%2F%2FanacondaError%2F</url>
+    <content type="text"><![CDATA[摘要本文记录ubuntu环境下的anaconda错误的现象及解决办法，为后期作死，做点善事。 出错一、由于ubuntu操作系统更新或者qt版本问题导致（PyQt5分段错误（核心转储））执行如下命令解决 1conda install -c anaconda pyqt]]></content>
+      <categories>
+        <category>summary</category>
+      </categories>
+      <tags>
+        <tag>anaconda</tag>
+        <tag>Error</tag>
       </tags>
   </entry>
   <entry>
@@ -527,15 +527,15 @@
         <category>Deep Learning</category>
       </categories>
       <tags>
-        <tag>Deep Learning</tag>
         <tag>Algorithm</tag>
+        <tag>Deep Learning</tag>
         <tag>kmean</tag>
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[1.20 docker 基础]]></title>
-    <url>%2F%2FdockerCommand%2F</url>
-    <content type="text"><![CDATA[摘要 Docker 是一个开源的应用容器引擎，基于 Go 语言 并遵从Apache2.0协议开源。 Docker 可以让开发者打包他们的应用以及依赖包到一个轻量级、可移植的容器中，然后发布到任何流行的 Linux 机器上，也可以实现虚拟化。 容器是完全使用沙箱机制，相互之间不会有任何接口（类似 iPhone 的 app）,更重要的是容器性能开销极低。 docker 常见命令-i (interactive, 交互) 以交互式模式运行容器，一般与t搭配运行 -t (tty, 终端) 为容器重新分配一个伪终端输入，通常与i搭配使用 -P (大写) 随机端口映射 -p (小写) 指定端口映射，有以下四种模式 ip:hostPort:containerPort ip::containerPort hostPort:containerPort containerPort –name=”新容器名字” 为容器指定新的名字 -d 后台运行容器，并返回容器id，也即启动守护模式容器 docker ps 查询docker当前运行的进程有哪些。 docker ps -l 查看上一次运行的容器 docker ps -a 查看历史运行过得所有容器 docker ps -n num 查看历史运行过得前num个容器 docker ps -q 查看当前运行容器的编号ID，其他不显示 docker ps –no-trunc:不截断输出(输出很详细) ctrl+P+Q 暂时离开容器，不退出容器 exit 关闭容器并退出 docker start 容器ID 或者容器名name,运行退出后的容器 docker stop 容器ID 或者容器名name,停止运行容器 docker kill 容器ID 或者容器名name,强制停止容器 docker rm ID 删除容器(容器停止后删除) docker rm -f ID 强制删除容器(容器未停止就删除) docker rm -f $(docker ps -a -q) 一次删除当前的所有容器 docker ps -a -q | xargs docker rm 一次删除当前的所有容器 docker rmi ID 删除镜像 docker run -d 镜像的REPOSITORY|ID 后台运行容器(字节这样的话容器会自动退出的，因为没有前台交互，容器会自动退出) docker logs 容器ID, 查看docker上对应容器的日志 docker logs -t 容器ID ;加时间戳 docker logs -t -f 容器ID; 跟随最新的容器日志打印 docker logs -t -f –tail num 容器ID; 跟随最新的容器日志打印,只显示最后的第num个最新的日志 docker top 容器ID ，查看容器内部正在运行的进程 docker inspect 容器ID， 查看容器内部细节 docker attach 容器ID， 进入你之前没有关闭但临时退出的容器 docker exec -t 容器ID 你要操作内部容器的命令； 就是在容器外面执行容器命令，不用非得进入容器才能运行容器命令 docker cp 容器ID:容器内路径 主机路径；将容器内拷贝文件到主机 docker commit ，提交容器副本使之称为一个新的镜像 docker commit -m=”描述性文字” -a=”作者” 容器ID 要创建目标镜像名:版本号TAG; 提交容器副本 docker run -it -v /宿主机绝对目录:/容器内目录 镜像名； 实现本地的宿主机内文件目录和容器内目录文件的对接，类似于移动硬盘的插入 docker run -it -v /宿主机绝对目录:/容器内目录:ro(read only) 镜像名； 实现本地的宿主机内文件目录和容器内目录文件的对接，类似于移动硬盘的插入, ro 容器只能读，不能写]]></content>
+    <title><![CDATA[2.15 机器学习算法GBDT]]></title>
+    <url>%2F%2FGBDT%2F</url>
+    <content type="text"><![CDATA[摘要 Docker 是一个开源的应用容器引擎，基于 Go 语言 并遵从Apache2.0协议开源。 Docker 可以让开发者打包他们的应用以及依赖包到一个轻量级、可移植的容器中，然后发布到任何流行的 Linux 机器上，也可以实现虚拟化。 容器是完全使用沙箱机制，相互之间不会有任何接口（类似 iPhone 的 app）,更重要的是容器性能开销极低。]]></content>
       <categories>
         <category>summary</category>
       </categories>
@@ -555,9 +555,9 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[2.15 机器学习算法GBDT]]></title>
-    <url>%2F%2FGBDT%2F</url>
-    <content type="text"><![CDATA[摘要 Docker 是一个开源的应用容器引擎，基于 Go 语言 并遵从Apache2.0协议开源。 Docker 可以让开发者打包他们的应用以及依赖包到一个轻量级、可移植的容器中，然后发布到任何流行的 Linux 机器上，也可以实现虚拟化。 容器是完全使用沙箱机制，相互之间不会有任何接口（类似 iPhone 的 app）,更重要的是容器性能开销极低。]]></content>
+    <title><![CDATA[1.20 docker 基础]]></title>
+    <url>%2F%2FdockerCommand%2F</url>
+    <content type="text"><![CDATA[摘要 Docker 是一个开源的应用容器引擎，基于 Go 语言 并遵从Apache2.0协议开源。 Docker 可以让开发者打包他们的应用以及依赖包到一个轻量级、可移植的容器中，然后发布到任何流行的 Linux 机器上，也可以实现虚拟化。 容器是完全使用沙箱机制，相互之间不会有任何接口（类似 iPhone 的 app）,更重要的是容器性能开销极低。 docker 常见命令-i (interactive, 交互) 以交互式模式运行容器，一般与t搭配运行 -t (tty, 终端) 为容器重新分配一个伪终端输入，通常与i搭配使用 -P (大写) 随机端口映射 -p (小写) 指定端口映射，有以下四种模式 ip:hostPort:containerPort ip::containerPort hostPort:containerPort containerPort –name=”新容器名字” 为容器指定新的名字 -d 后台运行容器，并返回容器id，也即启动守护模式容器 docker ps 查询docker当前运行的进程有哪些。 docker ps -l 查看上一次运行的容器 docker ps -a 查看历史运行过得所有容器 docker ps -n num 查看历史运行过得前num个容器 docker ps -q 查看当前运行容器的编号ID，其他不显示 docker ps –no-trunc:不截断输出(输出很详细) ctrl+P+Q 暂时离开容器，不退出容器 exit 关闭容器并退出 docker start 容器ID 或者容器名name,运行退出后的容器 docker stop 容器ID 或者容器名name,停止运行容器 docker kill 容器ID 或者容器名name,强制停止容器 docker rm ID 删除容器(容器停止后删除) docker rm -f ID 强制删除容器(容器未停止就删除) docker rm -f $(docker ps -a -q) 一次删除当前的所有容器 docker ps -a -q | xargs docker rm 一次删除当前的所有容器 docker rmi ID 删除镜像 docker run -d 镜像的REPOSITORY|ID 后台运行容器(字节这样的话容器会自动退出的，因为没有前台交互，容器会自动退出) docker logs 容器ID, 查看docker上对应容器的日志 docker logs -t 容器ID ;加时间戳 docker logs -t -f 容器ID; 跟随最新的容器日志打印 docker logs -t -f –tail num 容器ID; 跟随最新的容器日志打印,只显示最后的第num个最新的日志 docker top 容器ID ，查看容器内部正在运行的进程 docker inspect 容器ID， 查看容器内部细节 docker attach 容器ID， 进入你之前没有关闭但临时退出的容器 docker exec -t 容器ID 你要操作内部容器的命令； 就是在容器外面执行容器命令，不用非得进入容器才能运行容器命令 docker cp 容器ID:容器内路径 主机路径；将容器内拷贝文件到主机 docker commit ，提交容器副本使之称为一个新的镜像 docker commit -m=”描述性文字” -a=”作者” 容器ID 要创建目标镜像名:版本号TAG; 提交容器副本 docker run -it -v /宿主机绝对目录:/容器内目录 镜像名； 实现本地的宿主机内文件目录和容器内目录文件的对接，类似于移动硬盘的插入 docker run -it -v /宿主机绝对目录:/容器内目录:ro(read only) 镜像名； 实现本地的宿主机内文件目录和容器内目录文件的对接，类似于移动硬盘的插入, ro 容器只能读，不能写]]></content>
       <categories>
         <category>summary</category>
       </categories>
@@ -661,17 +661,6 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[1.19 gym_gazabe安装配置]]></title>
-    <url>%2F%2FgymGazabeInstall%2F</url>
-    <content type="text"><![CDATA[摘要本文主要记录gym_gazebo安装的过程，想想每次安装都要一堆的百度，过程很痛苦，所以直接记录下我成功安装的过程，方便后面安装的参考。 具体内容如下： 摘要 解决ubuntu 中安装 gym_gazabe 遇到的各种水土不服 Basic requirements: ROS Kinetic dependencies Install Sophus Gazebo gym Dependencies and libraries Agent dependencies Run the environment with a sample agent 解决ubuntu 中安装 gym_gazabe 遇到的各种水土不服Basic requirements: ROS Kinetic (/rosversion: 1.12.7) Gazebo 8.1.1 Python 3.5.2 OpenCV3, installed from sources for Python 3 (git clone https://github.com/Itseez/opencv.git) OpenAI gym 这部分的安装请自行百度, 但是这部分的内容也要安装上，不然安装gym_gazebo会出错的。 ROS Kinetic dependencies12345678910111213141516171819202122232425262728sudo pip3 install rospkg catkin_pkgsudo apt-get install python3-pyqt4sudo apt-get install \cmake gcc g++ qt4-qmake libqt4-dev \libusb-dev libftdi-dev \python3-defusedxml python3-vcstool \libbluetooth-dev libspnav-dev \pyqt4-dev-tools libcwiid-dev \ros-kinetic-octomap-msgs \ros-kinetic-joy \ros-kinetic-geodesy \ros-kinetic-octomap-ros \ros-kinetic-control-toolbox \ros-kinetic-pluginlib \ros-kinetic-trajectory-msgs \ros-kinetic-control-msgs \ros-kinetic-std-srvs \ros-kinetic-nodelet \ros-kinetic-urdf \ros-kinetic-rviz \ros-kinetic-kdl-conversions \ros-kinetic-eigen-conversions \ros-kinetic-tf2-sensor-msgs \ros-kinetic-pcl-ros \ros-kinetic-navigation \ros-kinetic-ar-track-alvar-msgs Install Sophus123456789cdgit clone https://github.com/stonier/sophus -b release/0.9.1-kineticcd sophusmkdir buildcd buildcmake ..makesudo make installecho "## Sophus installed ##\n" Gazebo gym1234cd git clone https://github.com/erlerobot/gym-gazebocd gym-gazebosudo pip3 install -e . Dependencies and libraries1234567891011sudo pip3 install h5pysudo apt-get install python3-skimage# install Theanocd ~/git clone git://github.com/Theano/Theano.gitcd Theano/sudo python3 setup.py develop#install Kerassudo pip3 install keras Agent dependencies 这部分的安装可以参考我的github 仓库(gazebo.repos 已经修改过,并且在ubuntu16上正确编译安装通过，可以直接clone下来安装,我只修改了gazebo.repos,设置/usr/local/python3.5环境): 这部分的安装需要注意请尽量用”/usr/local/bin/python3.5”如果用anaconda的python环境下安装，会出现Cmake 报错,如果你有解决的办法可以忽略提示 切换python 环境，只需要执行如下命令： 1234vim ~/.bashrc# 修改弹出的文本，将export anaconda这行注释掉，如下所示# added by Anaconda3 4.2.0 installer#export PATH="/home/porter/anaconda3/bin:$PATH" 效果如下： 安装前需要配置下Agent 的gazebo.repos123cd ~/gym-gazebo/gym_gazebo/envs/installation/cp ./gazebo.repos ./gazebo.repos.bakgedit ~/gym-gazebo/gym_gazebo/envs/installation/gazebo.repos gazebo.repos 内容如下 主要修改一些github 仓库对应版本release的分支问题, 解决安装时的错误， 修改后的内容如下： 123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899100101102103104105106107108109110111112113114115116117118119120121122123124125126127128129130131132133134135136137138139140141142143144145146147148149150151152153154155156157158159160161162163164165166167168repositories:# ardupilot_sitl_gazebo_plugin:# type: git# url: https://github.com/erlerobot/ardupilot_sitl_gazebo_plugin## version: master ar_track_alvar: type: git url: https://github.com/ros-perception/ar_track_alvar.git version: kinetic-devel mav_comm: type: git url: https://github.com/ethz-asl/mav_comm.git version: master# ar_track_alvar:# type: git# url: https://github.com/sniekum/ar_track_alvar# version: indigo-devel# ar_track_alvar_msgs:# type: git# url: https://github.com/sniekum/ar_track_alvar_msgs# version: indigo-devel catkin_simple: type: git url: https://github.com/catkin/catkin_simple.git version: master control_toolbox: type: git url: https://github.com/ros-controls/control_toolbox.git version: indigo-devel# drcsim:# type: hg# url: https://bitbucket.org/osrf/drcsim# version: default ecl_core: type: git url: https://github.com/stonier/ecl_core version: release/0.61-indigo-kinetic ecl_lite: type: git url: https://github.com/stonier/ecl_lite version: release/0.61-indigo-kinetic ecl_navigation: type: git url: https://github.com/stonier/ecl_navigation version: devel ecl_tools: type: git url: https://github.com/stonier/ecl_tools version: release/0.61-indigo-kinetic driver_base: type: git url: https://github.com/ros-drivers/driver_common.git version: indigo-devel gazebo_ros_pkgs: type: git url: https://github.com/ros-simulation/gazebo_ros_pkgs version: indigo-devel# glog_catkin:# type: git# url: https://github.com/ethz-asl/glog_catkin.git# version: master hector_gazebo: type: git url: https://github.com/tu-darmstadt-ros-pkg/hector_gazebo/ version: indigo-devel image_common: type: git url: https://github.com/ros-perception/image_common.git version: hydro-devel joystick_drivers: type: git url: https://github.com/ros-drivers/joystick_drivers.git version: master kobuki: type: git url: https://github.com/yujinrobot/kobuki version: indigo kobuki_core: type: git url: https://github.com/yujinrobot/kobuki_core version: indigo kobuki_desktop: type: git url: https://github.com/erlerobot/kobuki_desktop version: indigo kobuki_msgs: type: git url: https://github.com/yujinrobot/kobuki_msgs version: indigo# mavros:# type: git# url: https://github.com/erlerobot/mavros.git# version: gazebo_udp# mav_comm:# type: git# url: https://github.com/PX4/mav_comm.git# version: master navigation: type: git url: https://github.com/ros-planning/navigation version: indigo-devel# osrf-common:# type: hg# url: https://bitbucket.org/osrf/osrf-common# version: default pcl_ros: type: git url: https://github.com/ros-perception/perception_pcl.git version: indigo-devel# python_qt_binding:# type: git# url: https://github.com/ros-visualization/python_qt_binding# version: kinetic-devel# qt_gui_core:# type: git# url: https://github.com/ros-visualization/qt_gui_core# version: groovy-devel realtime_tools: type: git url: https://github.com/ros-controls/realtime_tools version: indigo-devel ros_control: type: git url: https://github.com/ros-controls/ros_control version: indigo-devel roslint: type: git url: https://github.com/ros/roslint version: master# rqt:# type: git# url: https://github.com/ros-visualization/rqt# version: groovy-devel# rqt_common_plugins:# type: git# url: https://github.com/ros-visualization/rqt_common_plugins# version: master# rqt_robot_plugins:# type: git# url: https://github.com/ros-visualization/rqt_robot_plugins# version: master turtlebot: type: git url: https://github.com/turtlebot/turtlebot version: indigo turtlebot_create: type: git url: https://github.com/turtlebot/turtlebot_create version: indigo turtlebot_simulator: type: git url: https://github.com/turtlebot/turtlebot_simulator version: indigo xacro: type: git url: https://github.com/ros/xacro version: indigo-devel yocs_msgs: type: git url: https://github.com/yujinrobot/yocs_msgs version: release/0.6-kinetic yujin_ocs: type: git url: https://github.com/yujinrobot/yujin_ocs version: kinetic 具体的修改地方建议，通过code compare 工具查看，这里推荐一个好用而代码比较工具：Meld Diff 比较好用。 接下来执行如下Agent dependences 12cd gym_gazebo/envs/installationbash setup_kinetic.bash Run the environment with a sample agent12cd gym_gazebo/examples/scripts_turtlebotpython circuit2_turtlebot_lidar_qlearn.py]]></content>
-      <categories>
-        <category>summary</category>
-      </categories>
-      <tags>
-        <tag>gym_gazabe</tag>
-      </tags>
-  </entry>
-  <entry>
     <title><![CDATA[1.18 ubuntu下安装OpenCV 3.4.3]]></title>
     <url>%2F%2Finstallopencvs%2F</url>
     <content type="text"><![CDATA[摘要解决ubuntu 中安装opencv遇到的各种水土不服 下载 安装 ##下载OpenCV 源码 安装依赖包1234567sudo apt-get install build-essentialsudo apt-get install cmake git libgtk2.0-dev pkg-config libavcodec-dev libavformat-dev libswscale-devsudo apt-get install python-dev python-numpy libtbb2 libtbb-dev libjpeg-dev libpng-dev libtiff5-dev libdc1394-22-dev sudo apt-get install libavcodec-dev libavformat-dev libswscale-dev libv4l-dev liblapacke-devsudo apt-get install libxvidcore-dev libx264-dev sudo apt-get install libatlas-base-dev gfortran sudo apt-get install ffmpeg 作者：BlainWu来源：CSDN原文：https://blog.csdn.net/qq_22945165/article/details/84312374版权声明：本文为博主原创文章，转载请附上博文链接！ 下载、安装从第三方源中下载（解决官方github下载网速过慢的问题）123https://ftp.osuosl.org/pub/blfs/conglomeration/opencv/opencv-3.4.3.zip（https://ftp.osuosl.org/pub/blfs/conglomeration/opencv/opencv_contrib-3.4.3.tar.gz）#目前这个control不用下载，以后需要可以下载安装 解压 12cd /你的解压路径/opencv/mkdir ./build cmake 12cd buildcmake -D CMAKE_BUILD_TYPE=Release -D CMAKE_INSTALL_PREFIX=/usr/local .. make 1make -j4 安装 1sudo make install 编译中会出现的问题 ippicv_2017u3_lnx_intel64_general_20180518.tgz下载失败 进入opencv解压的文件路径中 —&gt; 找到你的解压路径/opencv-3.4.3/3rdparty/ippicv/ippicv.cmake的文件。 编辑文件：ippicv.cmake 编辑ippicv.cmake内容,替换如下的内容 123456ocv_download(FILENAME $&#123;OPENCV_ICV_NAME&#125; HASH $&#123;OPENCV_ICV_HASH&#125; URL "$&#123;OPENCV_IPPICV_URL&#125;" "$ENV&#123;OPENCV_IPPICV_URL&#125;" "file:///home/blain/Downloads/"# “file:///home/blain/Downloads/“# 这个为你手动下载的文件所在的路径 需手动下载的包的地址如下，自己手动下载，建议存放在opencv解压后的文件夹中方便管理1https://ftp.osuosl.org/pub/blfs/conglomeration/opencv/ippicv_2017u3_lnx_intel64_general_20180518.tgz 我的下载存放地址就是 home/blain/Downloads 。 修改完成，重新cmake 即可]]></content>
@@ -680,6 +669,17 @@
       </categories>
       <tags>
         <tag>OpenCV</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[1.19 gym_gazabe安装配置]]></title>
+    <url>%2F%2FgymGazabeInstall%2F</url>
+    <content type="text"><![CDATA[摘要本文主要记录gym_gazebo安装的过程，想想每次安装都要一堆的百度，过程很痛苦，所以直接记录下我成功安装的过程，方便后面安装的参考。 具体内容如下： 摘要 解决ubuntu 中安装 gym_gazabe 遇到的各种水土不服 Basic requirements: ROS Kinetic dependencies Install Sophus Gazebo gym Dependencies and libraries Agent dependencies Run the environment with a sample agent 解决ubuntu 中安装 gym_gazabe 遇到的各种水土不服Basic requirements: ROS Kinetic (/rosversion: 1.12.7) Gazebo 8.1.1 Python 3.5.2 OpenCV3, installed from sources for Python 3 (git clone https://github.com/Itseez/opencv.git) OpenAI gym 这部分的安装请自行百度, 但是这部分的内容也要安装上，不然安装gym_gazebo会出错的。 ROS Kinetic dependencies12345678910111213141516171819202122232425262728sudo pip3 install rospkg catkin_pkgsudo apt-get install python3-pyqt4sudo apt-get install \cmake gcc g++ qt4-qmake libqt4-dev \libusb-dev libftdi-dev \python3-defusedxml python3-vcstool \libbluetooth-dev libspnav-dev \pyqt4-dev-tools libcwiid-dev \ros-kinetic-octomap-msgs \ros-kinetic-joy \ros-kinetic-geodesy \ros-kinetic-octomap-ros \ros-kinetic-control-toolbox \ros-kinetic-pluginlib \ros-kinetic-trajectory-msgs \ros-kinetic-control-msgs \ros-kinetic-std-srvs \ros-kinetic-nodelet \ros-kinetic-urdf \ros-kinetic-rviz \ros-kinetic-kdl-conversions \ros-kinetic-eigen-conversions \ros-kinetic-tf2-sensor-msgs \ros-kinetic-pcl-ros \ros-kinetic-navigation \ros-kinetic-ar-track-alvar-msgs Install Sophus123456789cdgit clone https://github.com/stonier/sophus -b release/0.9.1-kineticcd sophusmkdir buildcd buildcmake ..makesudo make installecho "## Sophus installed ##\n" Gazebo gym1234cd git clone https://github.com/erlerobot/gym-gazebocd gym-gazebosudo pip3 install -e . Dependencies and libraries1234567891011sudo pip3 install h5pysudo apt-get install python3-skimage# install Theanocd ~/git clone git://github.com/Theano/Theano.gitcd Theano/sudo python3 setup.py develop#install Kerassudo pip3 install keras Agent dependencies 这部分的安装可以参考我的github 仓库(gazebo.repos 已经修改过,并且在ubuntu16上正确编译安装通过，可以直接clone下来安装,我只修改了gazebo.repos,设置/usr/local/python3.5环境): 这部分的安装需要注意请尽量用”/usr/local/bin/python3.5”如果用anaconda的python环境下安装，会出现Cmake 报错,如果你有解决的办法可以忽略提示 切换python 环境，只需要执行如下命令： 1234vim ~/.bashrc# 修改弹出的文本，将export anaconda这行注释掉，如下所示# added by Anaconda3 4.2.0 installer#export PATH="/home/porter/anaconda3/bin:$PATH" 效果如下： 安装前需要配置下Agent 的gazebo.repos123cd ~/gym-gazebo/gym_gazebo/envs/installation/cp ./gazebo.repos ./gazebo.repos.bakgedit ~/gym-gazebo/gym_gazebo/envs/installation/gazebo.repos gazebo.repos 内容如下 主要修改一些github 仓库对应版本release的分支问题, 解决安装时的错误， 修改后的内容如下： 123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899100101102103104105106107108109110111112113114115116117118119120121122123124125126127128129130131132133134135136137138139140141142143144145146147148149150151152153154155156157158159160161162163164165166167168repositories:# ardupilot_sitl_gazebo_plugin:# type: git# url: https://github.com/erlerobot/ardupilot_sitl_gazebo_plugin## version: master ar_track_alvar: type: git url: https://github.com/ros-perception/ar_track_alvar.git version: kinetic-devel mav_comm: type: git url: https://github.com/ethz-asl/mav_comm.git version: master# ar_track_alvar:# type: git# url: https://github.com/sniekum/ar_track_alvar# version: indigo-devel# ar_track_alvar_msgs:# type: git# url: https://github.com/sniekum/ar_track_alvar_msgs# version: indigo-devel catkin_simple: type: git url: https://github.com/catkin/catkin_simple.git version: master control_toolbox: type: git url: https://github.com/ros-controls/control_toolbox.git version: indigo-devel# drcsim:# type: hg# url: https://bitbucket.org/osrf/drcsim# version: default ecl_core: type: git url: https://github.com/stonier/ecl_core version: release/0.61-indigo-kinetic ecl_lite: type: git url: https://github.com/stonier/ecl_lite version: release/0.61-indigo-kinetic ecl_navigation: type: git url: https://github.com/stonier/ecl_navigation version: devel ecl_tools: type: git url: https://github.com/stonier/ecl_tools version: release/0.61-indigo-kinetic driver_base: type: git url: https://github.com/ros-drivers/driver_common.git version: indigo-devel gazebo_ros_pkgs: type: git url: https://github.com/ros-simulation/gazebo_ros_pkgs version: indigo-devel# glog_catkin:# type: git# url: https://github.com/ethz-asl/glog_catkin.git# version: master hector_gazebo: type: git url: https://github.com/tu-darmstadt-ros-pkg/hector_gazebo/ version: indigo-devel image_common: type: git url: https://github.com/ros-perception/image_common.git version: hydro-devel joystick_drivers: type: git url: https://github.com/ros-drivers/joystick_drivers.git version: master kobuki: type: git url: https://github.com/yujinrobot/kobuki version: indigo kobuki_core: type: git url: https://github.com/yujinrobot/kobuki_core version: indigo kobuki_desktop: type: git url: https://github.com/erlerobot/kobuki_desktop version: indigo kobuki_msgs: type: git url: https://github.com/yujinrobot/kobuki_msgs version: indigo# mavros:# type: git# url: https://github.com/erlerobot/mavros.git# version: gazebo_udp# mav_comm:# type: git# url: https://github.com/PX4/mav_comm.git# version: master navigation: type: git url: https://github.com/ros-planning/navigation version: indigo-devel# osrf-common:# type: hg# url: https://bitbucket.org/osrf/osrf-common# version: default pcl_ros: type: git url: https://github.com/ros-perception/perception_pcl.git version: indigo-devel# python_qt_binding:# type: git# url: https://github.com/ros-visualization/python_qt_binding# version: kinetic-devel# qt_gui_core:# type: git# url: https://github.com/ros-visualization/qt_gui_core# version: groovy-devel realtime_tools: type: git url: https://github.com/ros-controls/realtime_tools version: indigo-devel ros_control: type: git url: https://github.com/ros-controls/ros_control version: indigo-devel roslint: type: git url: https://github.com/ros/roslint version: master# rqt:# type: git# url: https://github.com/ros-visualization/rqt# version: groovy-devel# rqt_common_plugins:# type: git# url: https://github.com/ros-visualization/rqt_common_plugins# version: master# rqt_robot_plugins:# type: git# url: https://github.com/ros-visualization/rqt_robot_plugins# version: master turtlebot: type: git url: https://github.com/turtlebot/turtlebot version: indigo turtlebot_create: type: git url: https://github.com/turtlebot/turtlebot_create version: indigo turtlebot_simulator: type: git url: https://github.com/turtlebot/turtlebot_simulator version: indigo xacro: type: git url: https://github.com/ros/xacro version: indigo-devel yocs_msgs: type: git url: https://github.com/yujinrobot/yocs_msgs version: release/0.6-kinetic yujin_ocs: type: git url: https://github.com/yujinrobot/yujin_ocs version: kinetic 具体的修改地方建议，通过code compare 工具查看，这里推荐一个好用而代码比较工具：Meld Diff 比较好用。 接下来执行如下Agent dependences 12cd gym_gazebo/envs/installationbash setup_kinetic.bash Run the environment with a sample agent12cd gym_gazebo/examples/scripts_turtlebotpython circuit2_turtlebot_lidar_qlearn.py]]></content>
+      <categories>
+        <category>summary</category>
+      </categories>
+      <tags>
+        <tag>gym_gazabe</tag>
       </tags>
   </entry>
   <entry>
@@ -729,8 +729,8 @@
         <category>gym</category>
       </categories>
       <tags>
-        <tag>Deep Learning</tag>
         <tag>Algorithm</tag>
+        <tag>Deep Learning</tag>
         <tag>gym</tag>
       </tags>
   </entry>
@@ -742,8 +742,8 @@
         <category>ROS</category>
       </categories>
       <tags>
-        <tag>Deep Learning</tag>
         <tag>Algorithm</tag>
+        <tag>Deep Learning</tag>
         <tag>ROS</tag>
       </tags>
   </entry>
@@ -772,17 +772,6 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[1.15 ubuntu下goldendict有道爬虫小程序]]></title>
-    <url>%2F%2Fgoldendictsetting%2F</url>
-    <content type="text"><![CDATA[摘要有道翻译 for GoldenDict 半完美取词显示插件说道linux里面好用的取词软件，不得不数goldendict很不错的，比好几年都没更新linux客户端的有道来说好用的多，毕竟ubuntu18下，有道qt已经存在不兼容，要么降qt版本，要么自己折腾对官方提供的deb安装包进行解包，然后进行修改以来环境的代码，再打包，太麻烦了，当然目前也有基于官方的有道词典打包好的支持ubuntu18系统，可以去我的github下载直接安装就好了，但是打包后我发现一个问题，OCR屏幕取词，一天下来Python和取词插件会把你电脑内存占得满满的，结果就是，你的电脑很卡，所以还是转goldendict吧。 下面高能 将解决目前goldendict的网页引入有道的查词，界面各种不整洁，不友好的解决办法。 Edit By Porter, 积水成渊,蛟龙生焉。 原理原理是爬虫的，我是基于：完了，这是真的，原作者的代码我参考，忘了转移到我的github了，如果，原作看到了，记得给我留言，我加上你的参考地址啊，尴尬了 首先效果图如下图]]></content>
-      <categories>
-        <category>summary</category>
-      </categories>
-      <tags>
-        <tag>goldendict</tag>
-      </tags>
-  </entry>
-  <entry>
     <title><![CDATA[1.16 ubuntu18升级后部分应用不能中文输入的问题]]></title>
     <url>%2F%2FinputU18%2F</url>
     <content type="text"><![CDATA[摘要ubuntu18升级后部分应用不能中文输入的问题作者做死尝试新的系统和新的桌面gnome结果悲剧了 问题一：我的爽系统引导失效了，重启直接进入windows不进入ubuntu的登录界面 问题二：我的输入法抽风了，我卸载安装，又卸载安装好多遍，结果还是不能用。本文我们只写如何修复部分应用可以i中文输入，然而像浏览器，啥的并不能英文输入的解决办法 Edit By Porter, 积水成渊,蛟龙生焉。 解决办法是，首先卸载ibus，然后进入系统输入法设置选择输入法为fcitx ，然后重启，开机后就正常了 12345678sudo apt-get remove ibus*sudo apt-get purge ibus*# 卸载～/.cache中的不能中文输入的软件cahe全删除掉sudo rm -rf ~/.cache/gedit/sudo rm -rf ~/.cache/webkitgtk/sudo rm -rf ~/.cache/gnome-software/............sudo rm -rf ~/.cache/google-chrome/ 去官网下载fictx安装的binary 二进制安装文件deb fcitx 12345678910sudo rm -rf ~/.cache/ibus/sudo apt-get install fcitx-binsudo apt-get install fcitx-stablesudo apt-get remove ibussudo apt-get purge ibussudo apt-get remove indicator-keyboardsudo apt-get install fcitxfcitx -r# 下载搜狗官方安装包直接安装，双击或者cd到目录后执行如下代码sudo dpkg -i sogoupinyin_2.2.0.0108_amd64.deb 比如我是x64的，我选择amd64对应的deb，下载后直接双击安装就好 fcitx_4.2.9.6-1_all.deb 建议上面的 sudo apt-get install fcitx-bin sudo apt-get install fcitx-stable 也换成直接官方下载deb包然后安装，在哪可以自己去fcitx官网找到. 最后一步重启，要重启才有用。 然后按照之前那样设置搜狗输入法。 提示，如果你本来就安装了搜狗输入法，你也不用卸载，直接忽略我上面安装搜狗的步骤就好了，效果和重装搜狗一样。笔者是捣鼓的时候，误卸载了搜狗的，所以后面重装了。]]></content>
@@ -791,6 +780,17 @@
       </categories>
       <tags>
         <tag>不能中文输入</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[1.15 ubuntu下goldendict有道爬虫小程序]]></title>
+    <url>%2F%2Fgoldendictsetting%2F</url>
+    <content type="text"><![CDATA[摘要有道翻译 for GoldenDict 半完美取词显示插件说道linux里面好用的取词软件，不得不数goldendict很不错的，比好几年都没更新linux客户端的有道来说好用的多，毕竟ubuntu18下，有道qt已经存在不兼容，要么降qt版本，要么自己折腾对官方提供的deb安装包进行解包，然后进行修改以来环境的代码，再打包，太麻烦了，当然目前也有基于官方的有道词典打包好的支持ubuntu18系统，可以去我的github下载直接安装就好了，但是打包后我发现一个问题，OCR屏幕取词，一天下来Python和取词插件会把你电脑内存占得满满的，结果就是，你的电脑很卡，所以还是转goldendict吧。 下面高能 将解决目前goldendict的网页引入有道的查词，界面各种不整洁，不友好的解决办法。 Edit By Porter, 积水成渊,蛟龙生焉。 原理原理是爬虫的，我是基于：完了，这是真的，原作者的代码我参考，忘了转移到我的github了，如果，原作看到了，记得给我留言，我加上你的参考地址啊，尴尬了 首先效果图如下图]]></content>
+      <categories>
+        <category>summary</category>
+      </categories>
+      <tags>
+        <tag>goldendict</tag>
       </tags>
   </entry>
   <entry>
@@ -861,18 +861,6 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[2.5 梯度下降和最小二乘法]]></title>
-    <url>%2F%2Ftiduxiajiang%2F</url>
-    <content type="text"><![CDATA[摘要本节笔记主要记录梯度下降算法和最小二乘法的相同点和不同点，为了简单的理解和推导，我们暂只讨论一元线性回归下的梯度下降算法和最小二乘。从实现++代码上的最大不同就是梯度下降采用了迭代算法—预先给一个参数设置初始值，然后通过迭代和学习率实现线性方程直线的无限靠近理想函数。最小二乘采用了高中数学求凸函数（下凹）的最小值—即求导数为零的参数方程。 Edit By Porter, 积水成渊,蛟龙生焉。 梯度下降和最小二乘发的相同点和不同点如下： 第一部分、最小二乘法1.1 狭义的最小二乘法：指的是在线性回归下采用最小二乘准则（或者说叫做最小平方），进行线性拟合参数求解的、矩阵形式的公式方法，是线性假设下的一种有闭式解的参数求解方法，最终结果为全局最优； 1.2 广义的最小二乘法：是最小二乘准则，本质上是一种evaluation rule或者说objective funcion。是一种对于偏差程度的评估准则。 梯度下降法，是假设条件更为广泛（无约束）的，一种通过迭代更新来逐步进行的参数优化方法，最终结果为局部最优； 1.3 最小二乘与极大似然的区别 二乘法：即观测值与实际数据误差平方和最小，其没有假设，几何意义上就是距离最小 最大似然估计：估计参数可能值，使样本发生概率最大 1.4 对于回归问题，两者对于最优参数的不同解法假设一元回归方程为 $$f(x_i)=\omega x_i +b$$ 实际中我们会采样得到关于[x,y]的很多样本，此时我们会通过损失函数loss，来求最优$\omega , b$的最优解。 $$loss = (\omega x + b -y)^2$$ 假设$E_(\omega, b)=loss_(\omega, b)$,于是： 为求得最优的$\omega ， b$,即求解$E_(\omega, b)=\sum_{i=1}^{m} (y_i - \omega x_i -b)^2$的最小取值下的$\omega ， b$ 最优解。 注意此时的$E_(\omega, b)$是一个凸函数，注意也就是对应国内教材下凹函数曲线。 1.5 最小二乘法的求解最优的$\omega ， b$的方法直接通过对$E_(\omega, b)$ 对$\omega ， b$ 分别求偏导，并将偏导设为0，求取凸函数取得最小值下的对应$\omega ， b$ 参数。 1.6 最小二乘法的局限性和适用场景 从上面可以看出，最小二乘法适用简洁高效，比梯度下降这样的迭代法似乎方便很多。但是这里我们就聊聊最小二乘法的局限性。 首先，最小二乘法需要计算的逆矩阵，有可能它的逆矩阵不存在，这样就没有办法直接用最小二乘法了，此时梯度下降法仍然可以使用。当然，我们可以通过对样本数据进行整理，去掉冗余特征。让的行列式不为0，然后继续使用最小二乘法。 第二，当样本特征n非常的大的时候，计算的逆矩阵是一个非常耗时的工作（nxn的矩阵求逆），甚至不可行。此时以梯度下降为代表的迭代法仍然可以使用。那这个n到底多大就不适合最小二乘法呢？如果你没有很多的分布式大数据计算资源，建议超过10000个特征就用迭代法吧。或者通过主成分分析降低特征的维度后再用最小二乘法。 第三，如果拟合函数不是线性的，这时无法使用最小二乘法，需要通过一些技巧转化为线性才能使用，此时梯度下降仍然可以用。 第四，讲一些特殊情况。当样本量m很少，小于特征数n的时候，这时拟合方程是欠定的，常用的优化方法都无法去拟合数据。当样本量m等于特征说n的时候，用方程组求解就可以了。当m大于n时，拟合方程是超定的，也就是我们常用与最小二乘法的场景了。 原文地址：http://www.cnblogs.com/pinard/p/5976811.html 第二部分、梯度下降算法2.1 梯度下降算法的求解最优的$\omega ， b$的方法同样，梯度下降算法也是要求最小损失函数 $$loss = (\omega x + b -y)^2$$ 但是方法不一样了，梯度下降算法，在上面的基础上设定一个学习率的参数，假设为:$lr$ 对于待求解的参数$\omega ， b$ 则转化为 –&gt; 求最终待求的$\omega ‘ ， b’$ 关于前一时刻的$\omega ， b$ 的函数，如下 $$\frac{\bigtriangledown loss}{\bigtriangledown \omega} = \frac{2(\omega x+b-y)*x}{N}$$ $$\frac{\bigtriangledown loss}{\bigtriangledown b} = \frac{2(\omega x+b-y)}{N}$$ 2.2 梯度下降算法的算法核心公式对于$\omega$和$b$ , 算法的核心在于如何更新这两个参数，这两个参数的更新不是能用公式可以简单的推到的，但是可以用下面的举例进行理解 $\omega$和$b$ 参数更新的理解，首先我们需要的是最小化这个loss代价函数，这个代价函数是一个下凸函数，所以我们按照凸函数的特点来理解，类似于一个山，人闭着眼往山下走小碎步(这个小碎步就是学习率乘梯度，如下公式) $$lr * \frac{\bigtriangledown loss}{\bigtriangledown \omega}$$ 我们要求解的是，找这个loss的局部最优解，由于我们是针对线性一元的，所以loss是只有一个极小值点，也就是局部解就是最优解，所以接下来理解。 人要走到山下，那么问题来了，我怎么怎么确保我们一直是朝向山谷走的呢，(比如人走在山谷的左边,应该接着忘右边走，才能到达山谷；又如，我们走超了，小碎步跨大了，跨到山谷的左边去了，我们应该要要朝山谷的左边走才能到山谷)，这里就需要个方向，这个在局部最优点的左边还是右边的方向由$\frac{\bigtriangledown loss}{\bigtriangledown \omega}$ 确定。 第三个问题是，人走小碎步时，要的方向是朝着局部最优点(山谷)走的,即loss数值(代价函数)减少的方向，所以我们要在小碎步前乘以负数，来确保，取(点，人)在(山)左边时(左边时梯度=斜率，就是loss的导数为负数,负数乘以负数，就为正数)我们要确保我们需要预测的$\omega , b$所确定的 $$f(x; \omega , b)= \omega * x+b$$ 接近原数据y,所以对于价值函数，人在左边时 $\omega$, 我们要确保人是往loss梯度下降(loss减少)的方向移动, 此时$\omega$ 就可以看作走碎步的人，方向都已确定 $$-lr * \frac{\bigtriangledown loss}{\bigtriangledown \omega}$$ ,现在就是在前一步$\omega_{0}$ 的基础上，走下一步得到 $\omega_{1}$即有 $$\omega_{1} = \omega_{0}+(-lr*\frac{\bigtriangledown loss}{\bigtriangledown \omega})$$ 进一步简化为 $$\omega ‘=\omega - lr * \frac{\bigtriangledown loss}{\bigtriangledown \omega}$$ 同理： 人，走碎步(小碎步的步长是$- lr * \frac{\bigtriangledown loss}{\bigtriangledown b}$)，上一步是b, 方向是$\frac{\bigtriangledown loss}{\bigtriangledown \omega}$ ,走到的下一步就是$b^{‘}$ ,即得到 $$b ‘=b - lr * \frac{\bigtriangledown loss}{\bigtriangledown b}$$ 根据上面的式子，假设学习率lr的初始值为0，然后通过for循环进行迭代，此时求解的关于$\omega ， b$ 的曲线会随着迭代的次数增加，一步步无限的靠近最优的解，理论上会求解到最优的$\omega ， b$ 。 这里我相信题主对梯度下降法的整体理念是认可的，只是不清楚这个更新公式的实质含义。首先这个梯度更新公式确实不是推导而是创造出来的，所以只能从概念上去理解。设想下有个函数，你的目标是：找到一个参数 使得它的值 最小。但它很复杂，你无法找到这个参数的解析解，所以你希望通过梯度下降法去猜这个参数。 问题是怎么猜？对于多数有连续性的函数来说，显然不可能把每个 都试一遍。所以只能先随机取一个 ，然后看看怎么调整它最有可能使得 变小。把这个过程重复n遍，自然最后得到的 的估值会越来越小。 作者：老董链接：https://www.zhihu.com/question/57747902/answer/240695458 来源：知乎 针对上面的一元回归梯度下降算法的代码实现，如下： 12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455import numpy as np# y = wx + bdef compute_error_for_line_given_points(b, w, points): totalError = 0 for i in range(0, len(points)): x = points[i, 0] y = points[i, 1] totalError += (y - (w * x + b)) ** 2 return totalError / float(len(points))def step_gradient(b_current, w_current, points, learningRate): b_gradient = 0 w_gradient = 0 N = float(len(points)) for i in range(0, len(points)): x = points[i, 0] y = points[i, 1] b_gradient += -(2/N) * (y - ((w_current * x) + b_current)) w_gradient += -(2/N) * x * (y - ((w_current * x) + b_current)) new_b = b_current - (learningRate * b_gradient) new_m = w_current - (learningRate * w_gradient) return [new_b, new_m]def gradient_descent_runner(points, starting_b, starting_m, learning_rate, num_iterations): b = starting_b m = starting_m for i in range(num_iterations): b, m = step_gradient(b, m, np.array(points), learning_rate) return [b, m]def run(): points = np.genfromtxt("data.csv", delimiter=",") learning_rate = 0.0001 initial_b = 0 # initial y-intercept guess initial_m = 0 # initial slope guess num_iterations = 1000 print("Starting gradient descent at b = &#123;0&#125;, m = &#123;1&#125;, error = &#123;2&#125;" .format(initial_b, initial_m, compute_error_for_line_given_points(initial_b, initial_m, points)) ) print("Running...") [b, m] = gradient_descent_runner(points, initial_b, initial_m, learning_rate, num_iterations) print("After &#123;0&#125; iterations b = &#123;1&#125;, m = &#123;2&#125;, error = &#123;3&#125;". format(num_iterations, b, m, compute_error_for_line_given_points(b, m, points)) )if __name__ == '__main__': run() 对应的数据集如下(data.csv)： 12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061626364656667686970717273747576777879808182838485868788899091929394959697989910032.502345269453031,31.7070058465699253.426804033275019,68.7775959816389161.530358025636438,62.56238229794580347.475639634786098,71.54663223356777759.813207869512318,87.23092513368739355.142188413943821,78.21151827079923252.211796692214001,79.6419730498087439.299566694317065,59.17148932186950848.10504169176825,75.33124229706305652.550014442733818,71.30087988685035345.419730144973755,55.16567714595912354.351634881228918,82.47884675749791944.164049496773352,62.00892324572582558.16847071685779,75.39287042599495756.727208057096611,81.4361921588786448.955888566093719,60.72360244067396544.687196231480904,82.89250373145371560.297326851333466,97.37989686216607845.618643772955828,48.84715331735507238.816817537445637,56.87721318626850666.189816606752601,83.87856466460276365.41605174513407,118.5912173025224947.48120860786787,57.25181946226896941.57564261748702,51.39174407983230751.84518690563943,75.38065166531235759.370822011089523,74.76556403215137457.31000343834809,95.45505292257473763.615561251453308,95.22936601755530746.737619407976972,79.05240616956558650.556760148547767,83.43207142132371252.223996085553047,63.35879031749787835.567830047746632,41.41288530370056342.436476944055642,76.61734128007404458.16454011019286,96.76956642610819957.504447615341789,74.08413011660252345.440530725319981,66.58814441422859461.89622268029126,77.76848241779302433.093831736163963,50.71958891231208436.436009511386871,62.12457081807178137.675654860850742,60.81024664990221144.555608383275356,52.68298336638778143.318282631865721,58.56982471769286750.073145632289034,82.90598148507051243.870612645218372,61.42470980433912362.997480747553091,115.2441528007952932.669043763467187,45.57058882337608540.166899008703702,54.08405479622361253.575077531673656,87.99445275811041333.864214971778239,52.72549437590042564.707138666121296,93.57611869265824138.119824026822805,80.16627544737096444.502538064645101,65.10171157056032640.599538384552318,65.56230126040037541.720676356341293,65.28088692082282351.088634678336796,73.43464154632430155.078095904923202,71.1397278586189441.377726534895203,79.10282968354985762.494697427269791,86.52053844034715349.203887540826003,84.74269780782621841.102685187349664,59.35885024862493341.182016105169822,61.68403752483362750.186389494880601,69.84760415824918352.378446219236217,86.09829120577410350.135485486286122,59.10883926769964333.644706006191782,69.8996816436276339.557901222906828,44.86249071116439856.130388816875467,85.49806777884022357.362052133238237,95.53668684646721960.269214393997906,70.25193441977158735.678093889410732,52.72173496477498831.588116998132829,50.39267013507989653.66093226167304,63.64239877565775346.682228649471917,72.24725106866236543.107820219102464,57.81251297618140270.34607561504933,104.2571015854382244.492855880854073,86.64202031882200657.50453330326841,91.48677800011013536.930076609191808,55.23166088621283655.805733357942742,79.55043667850760938.954769073377065,44.84712424246760156.901214702247074,80.20752313968276356.868900661384046,83.1427497920434634.33312470421609,55.72348926054391459.04974121466681,77.63418251167786457.788223993230673,99.05141484174826954.282328705967409,79.12064627468002751.088719898979143,69.58889785111847550.282836348230731,69.51050331149438944.211741752090113,73.68756431831728538.005488008060688,61.36690453724013132.940479942618296,67.17065576899511853.691639571070056,85.66820314500154268.76573426962166,114.8538712339139446.230966498310252,90.12357206996742368.319360818255362,97.91982103524284850.030174340312143,81.53699078301502849.239765342753763,72.11183246961566350.039575939875988,85.23200734232567348.149858891028863,66.22495788805463225.128484647772304,53.454394214850524 总结以上就是关于简单的一元回归的关于梯度下降和最小二乘的区别，对于代码中，的迭代的实现下一小节中会有详细的介绍，会通过代码来直观例说迭代算法和递归算法的差异和原理。 无聊时刻看部综艺：]]></content>
-      <categories>
-        <category>Deep Learning</category>
-      </categories>
-      <tags>
-        <tag>Algorithm</tag>
-        <tag>梯度下降和最小二乘法</tag>
-      </tags>
-  </entry>
-  <entry>
     <title><![CDATA[2.4 Decision tree]]></title>
     <url>%2F%2Fdecisiontree%2F</url>
     <content type="text"><![CDATA[摘要决策树是在已知各种情况发生的概率的基础上，通过决策树来求取净现值的期望值大于或等于零的概率，从而评价项目风险，判断其可能性的决策分析方法，是直观的运用概率分析的一种图解方法。由于决策树画成的图像就像一棵树的树干，故称决策树。在机器学习中决策树是一种预测模型，他表示对象属性和对象之间的一种映射关系。决策树是一种判断其可行性的决策分析的方法，也是一种能够直观运用概率分析的一种图解法。 Edit By Porter, 积水成渊,蛟龙生焉。 决策树是一种树形结构，其中每个内部节点表示一个属性上的测试，每个分支代表一个测试输出，每个叶节点代表一种类别。 分类树（决策树）是一种十分常用的分类方法。他是一种监管学习，所谓监管学习就是给定一堆样本，每个样本都有一组属性和一个类别，这些类别是事先确定的，那么通过学习得到一个分类器，这个分类器能够对新出现的对象给出正确的分类。这样的机器学习就被称之为监督学习。 参考自百度百科：决策树 一、组成 决策树是一种树形的结构图，在计算机预测模型中，其中每个内部节点代表一个属性上的测试，每个分支代表一个测试输出（可能的属性值），每个叶节点代表一种类别。他由分支来对该类型的对象依靠属性进行分类。当不能在进行分割或一个单独的类可以被应用于某一分支时，递归过程就完成了。 A、先画一个方框作为出发点，又称决策节点； B、从出发点向右引出若干条直线，这些直线叫做方案枝； C、在每个方案枝的末端画一个圆圈，这个圆圈称为概率分叉点，或自然状态点； D、从自然状态点引出代表各自然状态的分枝，称为概率分枝； E、如果问题只需要一级决策，则概率分枝末端画三角形，表示终点 。 二、 决策树的作用 尽可能最大化地规避项目风险。 能够直观地通过图示的方式传达信息背后的价值。 显示出项目所有可供选择的行动方案，行动方案之间的关系，行动方案的后果以及发生的概率，甚至是每种方案的损益期望值。 具体的决策树绘制方法与很多，下面给一个国内的强大绘图软件：亿方图软件绘制决策树的方法。 三、实例理解还是纯粹的理论有点不好理解，接下来进行实例，来进一步了解决策树算法。 第一个例子是引用百科的。 3.1 案例一为了适应市场的需要，某地准备扩大电视机生产。市场预测表明：产品销路好的概率为0.7；销路差的概率为0.3。 [ ] 备选方案有三个：第一个方案是建设大工厂，需要投资600万元，可使用10年；如销路好，每年可赢利200万元；如销路不好，每年会亏损40万元。 [ ] 第二个方案是建设小工厂，需投资280万元；如销路好，每年可赢利80万元；如销路不好，每年也会赢利60万元。 [ ] 第三个方案也是先建设小工厂，但是如销路好，3年后扩建，扩建需投资400万元，可使用7年，扩建后每年会赢利190万元。 根据如上绘制决策树如下图所示： 各点期望： 点②：0.7×200×10+0.3×（-40）×10-600（投资）=680（万元） 点⑤：1.0×190×7-400=930（万元） 点⑥：1.0×80×7=560（万元） 比较决策点4的情况可以看到，由于点⑤（930万元）与点⑥（560万元）相比，点⑤的期望利润值较大，因此应采用扩建的方案，而舍弃不扩建的方案。把点⑤的930万元移到点4来，可计算出点③的期望利润值。 点③：0.7×80×3+0.7×930+0.3×60×（3+7）-280 = 719（万元） 最后比较决策点1的情况。由于点③（719万元）与点②（680万元）相比，点③的期望利润值较大，因此取点③而舍点②。这样，相比之下，建设大工厂的方案不是最优方案，合理的策略应采用前3年建小工厂，如销路好，后7年进行扩建的方案。 3.2 实例学习2假设有一项工程，施工管理人员需要决定下月是否开工。如果开工后天气好，则可为国家创收4万元，若开工后天气坏，将给国家造成损失1万元，不开工则损失1000元。根据过去的统计资料，下月天气好的概率是0.3,天气坏的概率是0.7。请做出决策。现采用决策树方法进行决策。 解： 第一步：将题意表格化 自然状态 概率 行动方案 行动方案 开工 不开工 天气好 0.3 40000 -1000 天气坏 0.7 -10000 -1000 第二步：画决策树形，根据第一步所列的表格，在绘制决策树，如下图： 第三步：计算期望值 一般按反向的时间程序逐步计算，将各方案的几种可能结果的数值和它们各自的概率相乘，并汇总所得之和，其和就是该方案的期望值。 第四步：确定决策方案 在比较方案考虑的是收益值时，则取最大期望值；若考虑的是损失时，则取最小期望值。根据计算出的期望值分析，本题采取开工方案较好。 更多的可以参考这个PPT]]></content>
@@ -882,6 +870,18 @@
       <tags>
         <tag>Algorithm</tag>
         <tag>决策树</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[2.5 梯度下降和最小二乘法]]></title>
+    <url>%2F%2Ftiduxiajiang%2F</url>
+    <content type="text"><![CDATA[摘要本节笔记主要记录梯度下降算法和最小二乘法的相同点和不同点，为了简单的理解和推导，我们暂只讨论一元线性回归下的梯度下降算法和最小二乘。从实现++代码上的最大不同就是梯度下降采用了迭代算法—预先给一个参数设置初始值，然后通过迭代和学习率实现线性方程直线的无限靠近理想函数。最小二乘采用了高中数学求凸函数（下凹）的最小值—即求导数为零的参数方程。 Edit By Porter, 积水成渊,蛟龙生焉。 梯度下降和最小二乘发的相同点和不同点如下： 第一部分、最小二乘法1.1 狭义的最小二乘法：指的是在线性回归下采用最小二乘准则（或者说叫做最小平方），进行线性拟合参数求解的、矩阵形式的公式方法，是线性假设下的一种有闭式解的参数求解方法，最终结果为全局最优； 1.2 广义的最小二乘法：是最小二乘准则，本质上是一种evaluation rule或者说objective funcion。是一种对于偏差程度的评估准则。 梯度下降法，是假设条件更为广泛（无约束）的，一种通过迭代更新来逐步进行的参数优化方法，最终结果为局部最优； 1.3 最小二乘与极大似然的区别 二乘法：即观测值与实际数据误差平方和最小，其没有假设，几何意义上就是距离最小 最大似然估计：估计参数可能值，使样本发生概率最大 1.4 对于回归问题，两者对于最优参数的不同解法假设一元回归方程为 $$f(x_i)=\omega x_i +b$$ 实际中我们会采样得到关于[x,y]的很多样本，此时我们会通过损失函数loss，来求最优$\omega , b$的最优解。 $$loss = (\omega x + b -y)^2$$ 假设$E_(\omega, b)=loss_(\omega, b)$,于是： 为求得最优的$\omega ， b$,即求解$E_(\omega, b)=\sum_{i=1}^{m} (y_i - \omega x_i -b)^2$的最小取值下的$\omega ， b$ 最优解。 注意此时的$E_(\omega, b)$是一个凸函数，注意也就是对应国内教材下凹函数曲线。 1.5 最小二乘法的求解最优的$\omega ， b$的方法直接通过对$E_(\omega, b)$ 对$\omega ， b$ 分别求偏导，并将偏导设为0，求取凸函数取得最小值下的对应$\omega ， b$ 参数。 1.6 最小二乘法的局限性和适用场景 从上面可以看出，最小二乘法适用简洁高效，比梯度下降这样的迭代法似乎方便很多。但是这里我们就聊聊最小二乘法的局限性。 首先，最小二乘法需要计算的逆矩阵，有可能它的逆矩阵不存在，这样就没有办法直接用最小二乘法了，此时梯度下降法仍然可以使用。当然，我们可以通过对样本数据进行整理，去掉冗余特征。让的行列式不为0，然后继续使用最小二乘法。 第二，当样本特征n非常的大的时候，计算的逆矩阵是一个非常耗时的工作（nxn的矩阵求逆），甚至不可行。此时以梯度下降为代表的迭代法仍然可以使用。那这个n到底多大就不适合最小二乘法呢？如果你没有很多的分布式大数据计算资源，建议超过10000个特征就用迭代法吧。或者通过主成分分析降低特征的维度后再用最小二乘法。 第三，如果拟合函数不是线性的，这时无法使用最小二乘法，需要通过一些技巧转化为线性才能使用，此时梯度下降仍然可以用。 第四，讲一些特殊情况。当样本量m很少，小于特征数n的时候，这时拟合方程是欠定的，常用的优化方法都无法去拟合数据。当样本量m等于特征说n的时候，用方程组求解就可以了。当m大于n时，拟合方程是超定的，也就是我们常用与最小二乘法的场景了。 原文地址：http://www.cnblogs.com/pinard/p/5976811.html 第二部分、梯度下降算法2.1 梯度下降算法的求解最优的$\omega ， b$的方法同样，梯度下降算法也是要求最小损失函数 $$loss = (\omega x + b -y)^2$$ 但是方法不一样了，梯度下降算法，在上面的基础上设定一个学习率的参数，假设为:$lr$ 对于待求解的参数$\omega ， b$ 则转化为 –&gt; 求最终待求的$\omega ‘ ， b’$ 关于前一时刻的$\omega ， b$ 的函数，如下 $$\frac{\bigtriangledown loss}{\bigtriangledown \omega} = \frac{2(\omega x+b-y)*x}{N}$$ $$\frac{\bigtriangledown loss}{\bigtriangledown b} = \frac{2(\omega x+b-y)}{N}$$ 2.2 梯度下降算法的算法核心公式对于$\omega$和$b$ , 算法的核心在于如何更新这两个参数，这两个参数的更新不是能用公式可以简单的推到的，但是可以用下面的举例进行理解 $\omega$和$b$ 参数更新的理解，首先我们需要的是最小化这个loss代价函数，这个代价函数是一个下凸函数，所以我们按照凸函数的特点来理解，类似于一个山，人闭着眼往山下走小碎步(这个小碎步就是学习率乘梯度，如下公式) $$lr * \frac{\bigtriangledown loss}{\bigtriangledown \omega}$$ 我们要求解的是，找这个loss的局部最优解，由于我们是针对线性一元的，所以loss是只有一个极小值点，也就是局部解就是最优解，所以接下来理解。 人要走到山下，那么问题来了，我怎么怎么确保我们一直是朝向山谷走的呢，(比如人走在山谷的左边,应该接着忘右边走，才能到达山谷；又如，我们走超了，小碎步跨大了，跨到山谷的左边去了，我们应该要要朝山谷的左边走才能到山谷)，这里就需要个方向，这个在局部最优点的左边还是右边的方向由$\frac{\bigtriangledown loss}{\bigtriangledown \omega}$ 确定。 第三个问题是，人走小碎步时，要的方向是朝着局部最优点(山谷)走的,即loss数值(代价函数)减少的方向，所以我们要在小碎步前乘以负数，来确保，取(点，人)在(山)左边时(左边时梯度=斜率，就是loss的导数为负数,负数乘以负数，就为正数)我们要确保我们需要预测的$\omega , b$所确定的 $$f(x; \omega , b)= \omega * x+b$$ 接近原数据y,所以对于价值函数，人在左边时 $\omega$, 我们要确保人是往loss梯度下降(loss减少)的方向移动, 此时$\omega$ 就可以看作走碎步的人，方向都已确定 $$-lr * \frac{\bigtriangledown loss}{\bigtriangledown \omega}$$ ,现在就是在前一步$\omega_{0}$ 的基础上，走下一步得到 $\omega_{1}$即有 $$\omega_{1} = \omega_{0}+(-lr*\frac{\bigtriangledown loss}{\bigtriangledown \omega})$$ 进一步简化为 $$\omega ‘=\omega - lr * \frac{\bigtriangledown loss}{\bigtriangledown \omega}$$ 同理： 人，走碎步(小碎步的步长是$- lr * \frac{\bigtriangledown loss}{\bigtriangledown b}$)，上一步是b, 方向是$\frac{\bigtriangledown loss}{\bigtriangledown \omega}$ ,走到的下一步就是$b^{‘}$ ,即得到 $$b ‘=b - lr * \frac{\bigtriangledown loss}{\bigtriangledown b}$$ 根据上面的式子，假设学习率lr的初始值为0，然后通过for循环进行迭代，此时求解的关于$\omega ， b$ 的曲线会随着迭代的次数增加，一步步无限的靠近最优的解，理论上会求解到最优的$\omega ， b$ 。 这里我相信题主对梯度下降法的整体理念是认可的，只是不清楚这个更新公式的实质含义。首先这个梯度更新公式确实不是推导而是创造出来的，所以只能从概念上去理解。设想下有个函数，你的目标是：找到一个参数 使得它的值 最小。但它很复杂，你无法找到这个参数的解析解，所以你希望通过梯度下降法去猜这个参数。 问题是怎么猜？对于多数有连续性的函数来说，显然不可能把每个 都试一遍。所以只能先随机取一个 ，然后看看怎么调整它最有可能使得 变小。把这个过程重复n遍，自然最后得到的 的估值会越来越小。 作者：老董链接：https://www.zhihu.com/question/57747902/answer/240695458 来源：知乎 针对上面的一元回归梯度下降算法的代码实现，如下： 12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455import numpy as np# y = wx + bdef compute_error_for_line_given_points(b, w, points): totalError = 0 for i in range(0, len(points)): x = points[i, 0] y = points[i, 1] totalError += (y - (w * x + b)) ** 2 return totalError / float(len(points))def step_gradient(b_current, w_current, points, learningRate): b_gradient = 0 w_gradient = 0 N = float(len(points)) for i in range(0, len(points)): x = points[i, 0] y = points[i, 1] b_gradient += -(2/N) * (y - ((w_current * x) + b_current)) w_gradient += -(2/N) * x * (y - ((w_current * x) + b_current)) new_b = b_current - (learningRate * b_gradient) new_m = w_current - (learningRate * w_gradient) return [new_b, new_m]def gradient_descent_runner(points, starting_b, starting_m, learning_rate, num_iterations): b = starting_b m = starting_m for i in range(num_iterations): b, m = step_gradient(b, m, np.array(points), learning_rate) return [b, m]def run(): points = np.genfromtxt("data.csv", delimiter=",") learning_rate = 0.0001 initial_b = 0 # initial y-intercept guess initial_m = 0 # initial slope guess num_iterations = 1000 print("Starting gradient descent at b = &#123;0&#125;, m = &#123;1&#125;, error = &#123;2&#125;" .format(initial_b, initial_m, compute_error_for_line_given_points(initial_b, initial_m, points)) ) print("Running...") [b, m] = gradient_descent_runner(points, initial_b, initial_m, learning_rate, num_iterations) print("After &#123;0&#125; iterations b = &#123;1&#125;, m = &#123;2&#125;, error = &#123;3&#125;". format(num_iterations, b, m, compute_error_for_line_given_points(b, m, points)) )if __name__ == '__main__': run() 对应的数据集如下(data.csv)： 12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061626364656667686970717273747576777879808182838485868788899091929394959697989910032.502345269453031,31.7070058465699253.426804033275019,68.7775959816389161.530358025636438,62.56238229794580347.475639634786098,71.54663223356777759.813207869512318,87.23092513368739355.142188413943821,78.21151827079923252.211796692214001,79.6419730498087439.299566694317065,59.17148932186950848.10504169176825,75.33124229706305652.550014442733818,71.30087988685035345.419730144973755,55.16567714595912354.351634881228918,82.47884675749791944.164049496773352,62.00892324572582558.16847071685779,75.39287042599495756.727208057096611,81.4361921588786448.955888566093719,60.72360244067396544.687196231480904,82.89250373145371560.297326851333466,97.37989686216607845.618643772955828,48.84715331735507238.816817537445637,56.87721318626850666.189816606752601,83.87856466460276365.41605174513407,118.5912173025224947.48120860786787,57.25181946226896941.57564261748702,51.39174407983230751.84518690563943,75.38065166531235759.370822011089523,74.76556403215137457.31000343834809,95.45505292257473763.615561251453308,95.22936601755530746.737619407976972,79.05240616956558650.556760148547767,83.43207142132371252.223996085553047,63.35879031749787835.567830047746632,41.41288530370056342.436476944055642,76.61734128007404458.16454011019286,96.76956642610819957.504447615341789,74.08413011660252345.440530725319981,66.58814441422859461.89622268029126,77.76848241779302433.093831736163963,50.71958891231208436.436009511386871,62.12457081807178137.675654860850742,60.81024664990221144.555608383275356,52.68298336638778143.318282631865721,58.56982471769286750.073145632289034,82.90598148507051243.870612645218372,61.42470980433912362.997480747553091,115.2441528007952932.669043763467187,45.57058882337608540.166899008703702,54.08405479622361253.575077531673656,87.99445275811041333.864214971778239,52.72549437590042564.707138666121296,93.57611869265824138.119824026822805,80.16627544737096444.502538064645101,65.10171157056032640.599538384552318,65.56230126040037541.720676356341293,65.28088692082282351.088634678336796,73.43464154632430155.078095904923202,71.1397278586189441.377726534895203,79.10282968354985762.494697427269791,86.52053844034715349.203887540826003,84.74269780782621841.102685187349664,59.35885024862493341.182016105169822,61.68403752483362750.186389494880601,69.84760415824918352.378446219236217,86.09829120577410350.135485486286122,59.10883926769964333.644706006191782,69.8996816436276339.557901222906828,44.86249071116439856.130388816875467,85.49806777884022357.362052133238237,95.53668684646721960.269214393997906,70.25193441977158735.678093889410732,52.72173496477498831.588116998132829,50.39267013507989653.66093226167304,63.64239877565775346.682228649471917,72.24725106866236543.107820219102464,57.81251297618140270.34607561504933,104.2571015854382244.492855880854073,86.64202031882200657.50453330326841,91.48677800011013536.930076609191808,55.23166088621283655.805733357942742,79.55043667850760938.954769073377065,44.84712424246760156.901214702247074,80.20752313968276356.868900661384046,83.1427497920434634.33312470421609,55.72348926054391459.04974121466681,77.63418251167786457.788223993230673,99.05141484174826954.282328705967409,79.12064627468002751.088719898979143,69.58889785111847550.282836348230731,69.51050331149438944.211741752090113,73.68756431831728538.005488008060688,61.36690453724013132.940479942618296,67.17065576899511853.691639571070056,85.66820314500154268.76573426962166,114.8538712339139446.230966498310252,90.12357206996742368.319360818255362,97.91982103524284850.030174340312143,81.53699078301502849.239765342753763,72.11183246961566350.039575939875988,85.23200734232567348.149858891028863,66.22495788805463225.128484647772304,53.454394214850524 总结以上就是关于简单的一元回归的关于梯度下降和最小二乘的区别，对于代码中，的迭代的实现下一小节中会有详细的介绍，会通过代码来直观例说迭代算法和递归算法的差异和原理。 无聊时刻看部综艺：]]></content>
+      <categories>
+        <category>Deep Learning</category>
+      </categories>
+      <tags>
+        <tag>Algorithm</tag>
+        <tag>梯度下降和最小二乘法</tag>
       </tags>
   </entry>
   <entry>
@@ -918,8 +918,8 @@
         <category>Deep Learning</category>
       </categories>
       <tags>
-        <tag>Deep Learning</tag>
         <tag>Algorithm</tag>
+        <tag>Deep Learning</tag>
         <tag>logistic regression</tag>
       </tags>
   </entry>
@@ -931,8 +931,8 @@
         <category>Deep Learning</category>
       </categories>
       <tags>
-        <tag>Deep Learning</tag>
         <tag>Algorithm</tag>
+        <tag>Deep Learning</tag>
         <tag>LRN</tag>
       </tags>
   </entry>
@@ -944,8 +944,8 @@
         <category>Deep Learning</category>
       </categories>
       <tags>
-        <tag>Deep Learning</tag>
         <tag>Algorithm</tag>
+        <tag>Deep Learning</tag>
         <tag>Bayes</tag>
       </tags>
   </entry>
@@ -957,8 +957,8 @@
         <category>Deep Learning</category>
       </categories>
       <tags>
-        <tag>Deep Learning</tag>
         <tag>Algorithm</tag>
+        <tag>Deep Learning</tag>
         <tag>最大似然估计</tag>
       </tags>
   </entry>
@@ -970,22 +970,9 @@
         <category>Deep Learning</category>
       </categories>
       <tags>
-        <tag>Deep Learning</tag>
         <tag>Algorithm</tag>
+        <tag>Deep Learning</tag>
         <tag>ROS</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[2.1.2 最大熵模型]]></title>
-    <url>%2F%2Fzuidashangmoxing%2F</url>
-    <content type="text"><![CDATA[摘要本篇文章笔记总结来自网络和书本，引用部分都有来源，内容主要介绍最大熵相关实际应用搞得入门例子，很简单，但是能说明最大熵的原理相关。 Edit By Porter, 积水成渊,蛟龙生焉。 文章同步于: 我的gitbook 2.1.2 隐马尔科夫HMM在讲HMM前先看看什么是熵的概念 一、什么是熵(Entropy)信息熵的概念这个得从 热熵 开始说起，信熵是香农老先生从热力学引进来的，为了表示把信息中排除了冗余后的平均信息量称为“信息熵”。 热力学中的热熵是表示分子状态混乱程度的物理量。香农用信息熵的概念来描述信源的不确定度。 1.1 热力学中–热熵从能量角度来看,熵定律意味着自然进行的能量转化过程总是由有序度高的能量向有序度低的能量转化,这个过程必定朝着熵增加的方向进行。 高温物体所有分子的平均能量要高于低温物体,所以相接触时总是从高温物体向低温物体传递热量,因为碰撞使它们的状态向平衡过渡,系统才会稳定; 热熵是向着熵增大的方向进行。从宇宙形成到地球诞生以及地球生命的形成,热熵一直有缓慢变大的趋势。 热熵改变是指在某个空间内热量分布的变化。 1、在热力学中熵是对热量状态的描述，空间内热量分布差异越大则熵越小，做功的能力越强；空间内热量分布差异越小则熵越大，做功的能力越弱。热熵改变是指在某个空间内热量分布的变化，熵越大则热量分布的差异越小。正常情况下熵会从小到大的变化，最终熵达到最大而呈热寂。 2、根据热力学第二定律，作为一个“孤立”的系统，宇宙的熵会随着时间的流逝而增加，由有序向无序，当宇宙的熵达到最大值时，宇宙中的其他有效能量已经全数转化为热能，所有物质温度达到热平衡。这种状态称为热寂。这样的宇宙中再也没有任何可以维持运动或是生命的能量存在。 3、热熵改变的本质是热量分布由有序向无序发展，所以也可以看成系统混乱程度的改变。 4、熵最初是根据热力学第二定律引出的一个反映自发过程不可逆性的物质状态参量。热力学第二定律是根据大量观察结果总结出来的规律，有下述表述方式：热量总是从高温物体传到低温物体，不可能作相反的传递而不引起其他的变化；功可以全部转化为热，但任何热机不能全部地，连续不断地把所接受的热量转变为功；在孤立系统中，实际发生过程总使整个系统的熵值增大，此即熵增原理。 简单总结：热熵是熵增的过程，热量由有序的状态，转移，或是机械能，或是向其他低温物体转移，产生的影响是，最终达到系统平衡的目的，但也使得整个系统不再是以前清晰的状态，相反是变成了另一种混乱的状态，可以这样白话理解。 1.2 信息论中的信息熵–信熵 香农用信息熵的概念来描述信源的不确定度。 信息量信息量：一个事件发生的概率越小，信息量越大，所以信息量应该为概率的减函数，对于相互独立的两个事有p(xy)=p(x)p(y)，对于这两个事件信息量应满足h(xy)=h(x)+h(y)，那么信息量应为对数函数： 信息熵根据Charles H. Bennett对Maxwell’s Demon的重新解释，对信息的销毁是一个不可逆过程，所以销毁信息是符合热力学第二定律的。而产生信息，则是为系统引入负（热力学）熵的过程。所以信息熵的符号与热力学熵应该是相反的。 假设离散随机变量X的概率分布为P(x)，则其熵为： H(x) = E[I(xi)] = E[ log(2,1/p(xi)) ] = -∑p(xi)log(2,p(xi)) (i=1,2,..n) 其中，x表示随机变量，与之相对应的是所有可能输出的集合，定义为符号集,随机变量的输出用x表示。P(x)表示输出概率函数。变量的不确定性越大，熵也就越大 ，把它搞清楚所需要的信息量也就越大. 能量角度，高温向低温转变，一般是熵增的过程；而信息论中，为了最大可能接收到正确的（发出==收到）的信息，我们处理（优化）系统，是一种熵减的过程，信熵越小，系统有用信息量越大。 信息熵：信息的基本作用就是消除人们对事物的不确定性 。多数粒子组合之后，在它似像非像的形态上押上有价值的数码，具体地说，这就是一个在博弈对局中现象信息的混乱。 举个例子-(p1log(2,p1) + p2 log(2,p2) + ．．． +p32 *log(2,p32))，其中，p1，p2 ， ．．．，p32 分别是这 32 个球队夺冠的概率。香农把它称为“信息熵” (Entropy)，一般用符号 H 表示，单位是比特。 有兴趣的读者可以推算一下当 32 个球队夺冠概率相同时，对应的信息熵等于五比特。有数学基础的读者还可以证明上面公式的值不可能大于五。因为得冠军的频率相同代表整个系统信息量最小。 熵是随机变量不确定性的度量，不确定性越大，熵值就越大；若随机变量退化成定值，熵为0。均匀分布(信熵最大)是“最不确定”的分布。 熵最早来原于物理学. 德国物理学家鲁道夫·克劳修斯首次提出熵的概念，用来表示任何一种能量在空间中分布的均匀程度，能量分布得越均匀，熵就越大。 总结：香农，描述一个信息系统的时候就借用了熵的概念，这里熵表示的是这个信息系统的平均信息量(平均不确定程度),信熵越小，系统信息不确定程度越低，反之，系统信息输出越混乱，有用信息越不容易被确认。 1.3 联合熵联合熵是一集变量之间不确定性的衡量手段。两个变量和的联合信息熵定义为： 一集变量的联合熵大于或等于这集变量中任一个的独立熵。 少于独立熵的和 这表明，两个变量关联之后不确定性会增大，但是又由于相互有制约关系，不确定小于单独两个变量的不确定度之和。 1.4 条件熵 条件熵H(X|Y) = H(X,Y) - H(Y) X在条件Y下的条件熵 条件熵 H(Y|X) 表示在已知随机变量 X 的条件下随机变量 Y 的不确定性。条件熵 H(Y|X) 定义为 X 给定条件下 Y 的条件概率分布的熵对 X 的数学期望： 证明如下： 条件熵 H(Y|X) 相当于联合熵 H(X,Y) 减去单独的熵 H(X)，即 举个例子，比如环境温度是低还是高，和我穿短袖还是外套这两个事件可以组成联合概率分布 H(X,Y)，因为两个事件加起来的信息量肯定是大于单一事件的信息量的。假设 H(X) 对应着今天环境温度的信息量，由于今天环境温度和今天我穿什么衣服这两个事件并不是独立分布的，所以在已知今天环境温度的情况下，我穿什么衣服的信息量或者说不确定性是被减少了(条件熵减少，联合熵是不变)。当已知 H(X) 这个信息量的时候，H(X,Y) 剩下的信息量就是条件熵： H(Y|X)=H(X,Y)−H(X) 1.5 相对熵与互信息 相对熵 (Relative entropy)，也称KL散度 (Kullback–Leibler divergence) 设p(x),q(x)是X中取值的两个概率分布，则p对q的相对熵是： 性质： 1、如果 p(x) 和 q(x) 两个分布相同，那么相对熵等于0 2、 ,相对熵具有不对称性。大家可以举个简单例子算一下。 3、DKL(p||q)≥0 证明如下（利用Jensen不等式https://en.wikipedia.org/wiki/Jensen%27s_inequality）： 因为： 所以： 总结：相对熵可以用来衡量两个概率分布之间的差异，上面公式的意义就是求 p 与 q 之间的对数差在 p 上的期望值。 相对熵，两者相同，那么相对熵等于0，两者差距越大，则相对熵值越大。 互信息两个随机变量X，Y的联合分布与独立分布乘积的相对熵，即： 1.6 交叉熵 (Cross entropy)熵的公式：$$H(p)=-\displaystyle\sum_{x}p(x)logp(x)$$ 相对熵的公式： $$H(p,q)=\displaystyle\sum _{x}p(x)log\frac{1}{q(x)}=-\sum _{x}p(x)logq(x)$$ 所以有： $$D_{KL}(p||q)=H(p,q)-H(p)$$ 当用非真实分布 q(x) 得到的平均码长比真实分布 p(x) 得到的平均码长多出的比特数就是相对熵） 并且当 H(p) 为常量时（注：在机器学习中，训练数据分布是固定的），最小化相对熵 DKL(p||q) 等价于最小化交叉熵 H(p,q) 也等价于最大化似然估计（具体参考Deep Learning 5.5）。 在机器学习中，我们希望在训练数据上模型学到的分布 P(model) 和真实数据的分布 P(real) 越接近越好，所以我们可以使其相对熵最小。 信息熵是衡量随机变量分布的混乱程度，是随机分布各事件发生的信息量的期望值，随机变量的取值个数越多，状态数也就越多，信息熵就越大，混乱程度就越大。当随机分布为均匀分布时，熵最大；信息熵推广到多维领域，则可得到联合信息熵；条件熵表示的是在 X 给定条件下，Y 的条件概率分布的熵对 X的期望。 相对熵可以用来衡量两个概率分布之间的差异。 交叉熵可以来衡量在给定的真实分布下，使用非真实分布所指定的策略消除系统的不确定性所需要付出的努力的大小。 几种熵的关系： 二、最大熵模型 最大熵模型在形式上是最漂亮的统计模型，而在实现上是最复杂的模型之一。最大熵模型，可以说是集简与繁于一体，形式简单，实现复杂。值得一提的是，在Google的很多产品中，比如机器翻译，都直接或间接地用到了最大熵模型。 达拉皮垂兄弟等科学家在那里，用于最大熵模型和其他一些先进的数学工具对股票预测，获得了巨大的成功。(值得一提的是，信息处理的很多数学手段，包括隐含马尔可夫模型、子波变换、贝叶斯网络等等，在华尔街多有直接的应用。由此可见，数学模型的作用)。 我们平常说的最大熵模型，只是运用最大熵思想的多分类模型，最大熵的思想却是一种通用的思维方法。所以，理解最大熵模型只需要搞清楚两件事就可以： 最大熵思想是什么 最大熵模型是如何运用最大熵思想的 2.1 最大熵思想我们知道，分类模型有判别模型和生成模型两种，判别模型是要学习一个条件概率分布 P(y|x)。举例说明 ，设：x是病人身体指标，体温、血压、血糖，y是各种可能的疾病，可简化为小病、中病、大病三种。 现在，我们有一个样本x1={体温：30，血压：160，血糖：60}，那么P(y|x1)就是一个概率分布，该分布的值就是上面简化的三种，小病、中病、大病。可能的概率分布如下所示： 之前参考样本\病况 小病 中病 大病 假设之前有和X1一样的情况有1/2的患者为小病，则此时的最大熵参考样本为 1/2 1/4 1/4 先前12个人和X1一样，结果有3个小病，4个中病的患者，则5个大病 1/4 1/3 5/12 无先前参考样本，假设取最大熵的概率 1/3 1/3 1/3 当然，这样的分布有无数种，上面只是举例说明而已。那么，问题来了，在这无数种概率分布中，哪一个才是好的呢？ 1、也就是说我们没有过往的经验可以参考，那么，就直接选一个熵最大的分布就是，也就是上面表格中的第三个分布，因为均匀分布总是同类分布中熵最大的分布。 2、如果查看以往病例后，我们得到一个经验，指标x1={体温：30，血压：160，血糖：60}有1/2的概率是小病，于是我们有了一定的经验知识，此时，最好的分布就是符合这个经验知识的前提下，熵最大的分布，显然，第一个分布就是最好的分布。 以上，我们就是运用了 最大熵的思想 。总结来说，最大熵的思想是，当你要猜一个概率分布时，如果你对这个分布一无所知，那就猜熵最大的均匀分布，如果你对这个分布知道一些情况，那么，就猜满足这些情况的熵最大的分布。 2.2 运用最大熵思想来做多分类问题 最大熵原理认为，学习概率模型时，在所有可能的概率模型（分布）中，上最大的模型是最好 的模型。 假设离散随机变量X的概率分布是P(X)，则其熵是： 熵取值范围为（当且仅当X是均匀分布时右边的等号成立）： 直观的，最大熵原理认为，要选择的概率模型首先必须要满足已有的事实，即约束条件后，对那些不确定的部分进行等可能概率分配。最大熵原理通过熵的最大化来表示为约束部分等可能性。 最大熵定义 2.3 最大熵的例题解说题：假设随机变量X有5个取值{A,B,C,D,E}, 要估计取各个值的概率P(A),P(B),P(C),P(D),P(E). 假设约束条件如下： 满足上述两个约束条件的可能取值任然很多，于是在求最大熵的过程中，为了得到最大熵，认为为约束的概率分布为等概率分布（等概率分布能确定为最大熵） 解：有约束条件和概率分布知识可知, $$min -H(P) = \sum_{i=1}^{5}P(y_{i})logP(y_{i})$$ 1s.t. P(y_&#123;1&#125;)+P(y_&#123;2&#125;)=\widetilde&#123;P(y_&#123;1&#125;)&#125;+\widetilde&#123;P(y_&#123;2&#125;)&#125;=\frac&#123;3&#125;&#123;10&#125; 1\sum_&#123;i=1&#125;^&#123;5&#125;P(y_&#123;i&#125;) = \sum_&#123;i=1&#125;^&#123;5&#125;\widetilde&#123;P(y_&#123;i&#125;)&#125;=1 其中带波浪的是实际经验分布概率函数。 引进拉格朗日乘子、 。由上面的约束条件得到的三个方程式结合拉格朗日乘子得到如下拉格朗日函数L(P,w)的表达式。 1L(P,w)=-H(P)+\omega _&#123;0&#125;(\sum_&#123;y&#125;^&#123; &#125;)P(y|x))+\sum_&#123;i=1&#125;^&#123;n&#125;\omega_&#123;1&#125;(E_&#123;\widetilde&#123;P&#125;&#125;(f_&#123;i&#125;)-E_&#123;P&#125;(f_&#123;i&#125;))=\sum_&#123;x,y&#125;\widetilde&#123;P(x)&#125;P(y|x)logP(y|x)+\omega_&#123;0&#125;(1-\sum_&#123;y&#125;^&#123; &#125;P(y|x))+\sum_&#123;i=1&#125;^&#123;n&#125;\omega_1(\sum_&#123;x,y&#125;\widetilde&#123;P(x,y)&#125;-\sum_&#123;x,y&#125;^&#123; &#125;\widetilde&#123;P(x)&#125;P(y|x)f_&#123;i&#125;(x,y)) 带入题干信息可得如下的拉格朗日函数对应本题的表达式： 1L(P,w)=-H(P)+\omega_&#123;0&#125;(1-\sum_&#123;y&#125;^&#123; &#125;P(y|x))+\sum_&#123;i=1&#125;^&#123;n&#125;\omega_&#123;i&#125;(E_&#123;\widetilde&#123;P&#125;&#125;(f_&#123;i&#125;)-E_&#123;P&#125;(f_&#123;i&#125;))=\sum_&#123;i=1&#125;^&#123;5&#125;P(y_&#123;i&#125;)logP(y_&#123;i&#125;)+\omega_&#123;1&#125;(P(y_&#123;1&#125;)+P(y_&#123;2&#125;)-\frac&#123;3&#125;&#123;10&#125;)+\omega_&#123;0&#125;(\sum_&#123;i=1&#125;^&#123;5&#125;P(y_&#123;i&#125;)-1) 这里只有3个限制条件，所以带入三个变量w得： 原始问题和对偶问题 根据拉格朗日函数（Ｌ)的对偶性，可以通过求解Ｌ(w)函数的对偶最优化问题得到我们原是函数（Ｌ(p))的最优解。即： 即，对于构造的Ｌ函数，求Ｐ的最小值问题对应ｗ参数的最大值最优解问题，Ｐ是要求的原始问题。Ｐ是原始问题的对偶问题的求解函数变量。 接下来开始求解了原始问题和对偶问题的最优解问题，步骤如下： 第一步先将原始问题（Ｐ参数的Ｌ函数）的最优解换化出来，即 令各偏导数等于0，解得： 于是， 第二步，将原始问题对应的对偶问题（ｗ参数，对应Ｌ函数的最优解）的最优解解出来，即 $$L(P_{w},w)$$ 关于$$w$$的极大化问题。 $$\max_{\omega}L(P_{w},w)=-2e^{-w_{1}-w_{0}-1}-3e^{-w_{1}-1}-\frac{3}{10}w_{1}-w_{0}$$ 分别求$$L(P_{w},w)$$关于$$w_{0},w_{1}$$的偏导数并令其为0，得到： $$e^{-w_{1}-w_{0}-1}=\frac{3}{20},e^{-w_{0}-1}=\frac{7}{30}$$ 于是得到所要求的概率分布为： $$P(y_{1})=P(y_{2})=\frac{3}{20},P(y_{3})=P(y_{4})=P(y_{5})=\frac{7}{30}$$ 总结：最大熵模型，形式简单，但是训练的代价太大，比如最原始的最大熵训练模型GIS（通用迭代算法）和IIS（改进迭代算法），每次迭代时间都很长，而且每步需要迭代很多次，实现复杂了。 追加 ：此处记录下拉格朗日函数的相关性质： 拉格朗日中值定理： 如果函数f(x)满足：（1）在闭区间[a, b]上连续；（2）在开区间[a, b]内可导；那么在开区间(a, b)内至少有一点 使等式 成立。 拉格朗日差值法： 1、两点确定一条直线，这条直线就是线性插值 2、 ，这个$$P_{1}(x)$$函数就是线性插值函数 为了和后面公式进行对比，上面公式可以转化为下面表达式， 这两个都是叫做线性插值的基函数 . 得到的插值效果如下： 线性插值仅仅利用两个节点信息，精确度很低，故接下来讲二次差值(考察曲线问题) 3、拉格朗日二次插值 如果按照线性插值的形式，以每3个相邻点做插值，就得到了二次插值(3个点：xi,xi+1,xi+2)： 得到的曲线效果是： 二次插值在每段二次曲线内是光滑的，但在每条曲线的连接处其光滑性可能甚至比线性插值还差。二次插值只适合3个节点的情形，当节点数超过3个时，就需要分段插值了。 4、拉格朗日多项式插值 一个n次的拉格朗日插值函数可以绘制经过(n+1)个节点的曲线，但运算量非常大。而且在次数比较高时，容易产生剧烈的震荡（龙格现象）。所以要选择位置特殊的节点（比如切比雪夫多项式的零点）进行插值，或使用多个次数较低的拉格朗日函数分段插值。（关于拉格朗日多项式和龙格现象，详见维基百科链接） 使用4次拉格朗日多项式分段插值： 如果直接使用20次的拉格朗日插值，得到的图像如下： 等，更多的插值，[请参考这里] 数值分析（拟合、插值和逼近）之数据插值方法（线性插值、二次插值、Cubic插值、埃米尔特、拉格朗日多项式插值、牛顿插值、样条插值 参考地址1参考地址2参考地址3]]></content>
-      <categories>
-        <category>Deep Learning</category>
-      </categories>
-      <tags>
-        <tag>Deep Learning</tag>
-        <tag>Algorithm</tag>
-        <tag>最大熵模型</tag>
       </tags>
   </entry>
   <entry>
@@ -996,8 +983,8 @@
         <category>Deep Learning</category>
       </categories>
       <tags>
-        <tag>Deep Learning</tag>
         <tag>Algorithm</tag>
+        <tag>Deep Learning</tag>
         <tag>隐马尔科夫HMM</tag>
       </tags>
   </entry>
@@ -1009,8 +996,8 @@
         <category>Deep Learning</category>
       </categories>
       <tags>
-        <tag>Deep Learning</tag>
         <tag>Algorithm</tag>
+        <tag>Deep Learning</tag>
         <tag>线性回归</tag>
       </tags>
   </entry>
@@ -1022,8 +1009,8 @@
         <category>Deep Learning</category>
       </categories>
       <tags>
-        <tag>Deep Learning</tag>
         <tag>Algorithm</tag>
+        <tag>Deep Learning</tag>
         <tag>迭代算法</tag>
       </tags>
   </entry>
@@ -1035,8 +1022,8 @@
         <category>Deep Learning</category>
       </categories>
       <tags>
-        <tag>Deep Learning</tag>
         <tag>Algorithm</tag>
+        <tag>Deep Learning</tag>
         <tag>神经网络</tag>
       </tags>
   </entry>
@@ -1048,9 +1035,22 @@
         <category>Deep Learning</category>
       </categories>
       <tags>
-        <tag>Deep Learning</tag>
         <tag>Algorithm</tag>
+        <tag>Deep Learning</tag>
         <tag>神经网络</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[2.1.2 最大熵模型]]></title>
+    <url>%2F%2Fzuidashangmoxing%2F</url>
+    <content type="text"><![CDATA[摘要本篇文章笔记总结来自网络和书本，引用部分都有来源，内容主要介绍最大熵相关实际应用搞得入门例子，很简单，但是能说明最大熵的原理相关。 Edit By Porter, 积水成渊,蛟龙生焉。 文章同步于: 我的gitbook 2.1.2 隐马尔科夫HMM在讲HMM前先看看什么是熵的概念 一、什么是熵(Entropy)信息熵的概念这个得从 热熵 开始说起，信熵是香农老先生从热力学引进来的，为了表示把信息中排除了冗余后的平均信息量称为“信息熵”。 热力学中的热熵是表示分子状态混乱程度的物理量。香农用信息熵的概念来描述信源的不确定度。 1.1 热力学中–热熵从能量角度来看,熵定律意味着自然进行的能量转化过程总是由有序度高的能量向有序度低的能量转化,这个过程必定朝着熵增加的方向进行。 高温物体所有分子的平均能量要高于低温物体,所以相接触时总是从高温物体向低温物体传递热量,因为碰撞使它们的状态向平衡过渡,系统才会稳定; 热熵是向着熵增大的方向进行。从宇宙形成到地球诞生以及地球生命的形成,热熵一直有缓慢变大的趋势。 热熵改变是指在某个空间内热量分布的变化。 1、在热力学中熵是对热量状态的描述，空间内热量分布差异越大则熵越小，做功的能力越强；空间内热量分布差异越小则熵越大，做功的能力越弱。热熵改变是指在某个空间内热量分布的变化，熵越大则热量分布的差异越小。正常情况下熵会从小到大的变化，最终熵达到最大而呈热寂。 2、根据热力学第二定律，作为一个“孤立”的系统，宇宙的熵会随着时间的流逝而增加，由有序向无序，当宇宙的熵达到最大值时，宇宙中的其他有效能量已经全数转化为热能，所有物质温度达到热平衡。这种状态称为热寂。这样的宇宙中再也没有任何可以维持运动或是生命的能量存在。 3、热熵改变的本质是热量分布由有序向无序发展，所以也可以看成系统混乱程度的改变。 4、熵最初是根据热力学第二定律引出的一个反映自发过程不可逆性的物质状态参量。热力学第二定律是根据大量观察结果总结出来的规律，有下述表述方式：热量总是从高温物体传到低温物体，不可能作相反的传递而不引起其他的变化；功可以全部转化为热，但任何热机不能全部地，连续不断地把所接受的热量转变为功；在孤立系统中，实际发生过程总使整个系统的熵值增大，此即熵增原理。 简单总结：热熵是熵增的过程，热量由有序的状态，转移，或是机械能，或是向其他低温物体转移，产生的影响是，最终达到系统平衡的目的，但也使得整个系统不再是以前清晰的状态，相反是变成了另一种混乱的状态，可以这样白话理解。 1.2 信息论中的信息熵–信熵 香农用信息熵的概念来描述信源的不确定度。 信息量信息量：一个事件发生的概率越小，信息量越大，所以信息量应该为概率的减函数，对于相互独立的两个事有p(xy)=p(x)p(y)，对于这两个事件信息量应满足h(xy)=h(x)+h(y)，那么信息量应为对数函数： 信息熵根据Charles H. Bennett对Maxwell’s Demon的重新解释，对信息的销毁是一个不可逆过程，所以销毁信息是符合热力学第二定律的。而产生信息，则是为系统引入负（热力学）熵的过程。所以信息熵的符号与热力学熵应该是相反的。 假设离散随机变量X的概率分布为P(x)，则其熵为： H(x) = E[I(xi)] = E[ log(2,1/p(xi)) ] = -∑p(xi)log(2,p(xi)) (i=1,2,..n) 其中，x表示随机变量，与之相对应的是所有可能输出的集合，定义为符号集,随机变量的输出用x表示。P(x)表示输出概率函数。变量的不确定性越大，熵也就越大 ，把它搞清楚所需要的信息量也就越大. 能量角度，高温向低温转变，一般是熵增的过程；而信息论中，为了最大可能接收到正确的（发出==收到）的信息，我们处理（优化）系统，是一种熵减的过程，信熵越小，系统有用信息量越大。 信息熵：信息的基本作用就是消除人们对事物的不确定性 。多数粒子组合之后，在它似像非像的形态上押上有价值的数码，具体地说，这就是一个在博弈对局中现象信息的混乱。 举个例子-(p1log(2,p1) + p2 log(2,p2) + ．．． +p32 *log(2,p32))，其中，p1，p2 ， ．．．，p32 分别是这 32 个球队夺冠的概率。香农把它称为“信息熵” (Entropy)，一般用符号 H 表示，单位是比特。 有兴趣的读者可以推算一下当 32 个球队夺冠概率相同时，对应的信息熵等于五比特。有数学基础的读者还可以证明上面公式的值不可能大于五。因为得冠军的频率相同代表整个系统信息量最小。 熵是随机变量不确定性的度量，不确定性越大，熵值就越大；若随机变量退化成定值，熵为0。均匀分布(信熵最大)是“最不确定”的分布。 熵最早来原于物理学. 德国物理学家鲁道夫·克劳修斯首次提出熵的概念，用来表示任何一种能量在空间中分布的均匀程度，能量分布得越均匀，熵就越大。 总结：香农，描述一个信息系统的时候就借用了熵的概念，这里熵表示的是这个信息系统的平均信息量(平均不确定程度),信熵越小，系统信息不确定程度越低，反之，系统信息输出越混乱，有用信息越不容易被确认。 1.3 联合熵联合熵是一集变量之间不确定性的衡量手段。两个变量和的联合信息熵定义为： 一集变量的联合熵大于或等于这集变量中任一个的独立熵。 少于独立熵的和 这表明，两个变量关联之后不确定性会增大，但是又由于相互有制约关系，不确定小于单独两个变量的不确定度之和。 1.4 条件熵 条件熵H(X|Y) = H(X,Y) - H(Y) X在条件Y下的条件熵 条件熵 H(Y|X) 表示在已知随机变量 X 的条件下随机变量 Y 的不确定性。条件熵 H(Y|X) 定义为 X 给定条件下 Y 的条件概率分布的熵对 X 的数学期望： 证明如下： 条件熵 H(Y|X) 相当于联合熵 H(X,Y) 减去单独的熵 H(X)，即 举个例子，比如环境温度是低还是高，和我穿短袖还是外套这两个事件可以组成联合概率分布 H(X,Y)，因为两个事件加起来的信息量肯定是大于单一事件的信息量的。假设 H(X) 对应着今天环境温度的信息量，由于今天环境温度和今天我穿什么衣服这两个事件并不是独立分布的，所以在已知今天环境温度的情况下，我穿什么衣服的信息量或者说不确定性是被减少了(条件熵减少，联合熵是不变)。当已知 H(X) 这个信息量的时候，H(X,Y) 剩下的信息量就是条件熵： H(Y|X)=H(X,Y)−H(X) 1.5 相对熵与互信息 相对熵 (Relative entropy)，也称KL散度 (Kullback–Leibler divergence) 设p(x),q(x)是X中取值的两个概率分布，则p对q的相对熵是： 性质： 1、如果 p(x) 和 q(x) 两个分布相同，那么相对熵等于0 2、 ,相对熵具有不对称性。大家可以举个简单例子算一下。 3、DKL(p||q)≥0 证明如下（利用Jensen不等式https://en.wikipedia.org/wiki/Jensen%27s_inequality）： 因为： 所以： 总结：相对熵可以用来衡量两个概率分布之间的差异，上面公式的意义就是求 p 与 q 之间的对数差在 p 上的期望值。 相对熵，两者相同，那么相对熵等于0，两者差距越大，则相对熵值越大。 互信息两个随机变量X，Y的联合分布与独立分布乘积的相对熵，即： 1.6 交叉熵 (Cross entropy)熵的公式：$$H(p)=-\displaystyle\sum_{x}p(x)logp(x)$$ 相对熵的公式： $$H(p,q)=\displaystyle\sum _{x}p(x)log\frac{1}{q(x)}=-\sum _{x}p(x)logq(x)$$ 所以有： $$D_{KL}(p||q)=H(p,q)-H(p)$$ 当用非真实分布 q(x) 得到的平均码长比真实分布 p(x) 得到的平均码长多出的比特数就是相对熵） 并且当 H(p) 为常量时（注：在机器学习中，训练数据分布是固定的），最小化相对熵 DKL(p||q) 等价于最小化交叉熵 H(p,q) 也等价于最大化似然估计（具体参考Deep Learning 5.5）。 在机器学习中，我们希望在训练数据上模型学到的分布 P(model) 和真实数据的分布 P(real) 越接近越好，所以我们可以使其相对熵最小。 信息熵是衡量随机变量分布的混乱程度，是随机分布各事件发生的信息量的期望值，随机变量的取值个数越多，状态数也就越多，信息熵就越大，混乱程度就越大。当随机分布为均匀分布时，熵最大；信息熵推广到多维领域，则可得到联合信息熵；条件熵表示的是在 X 给定条件下，Y 的条件概率分布的熵对 X的期望。 相对熵可以用来衡量两个概率分布之间的差异。 交叉熵可以来衡量在给定的真实分布下，使用非真实分布所指定的策略消除系统的不确定性所需要付出的努力的大小。 几种熵的关系： 二、最大熵模型 最大熵模型在形式上是最漂亮的统计模型，而在实现上是最复杂的模型之一。最大熵模型，可以说是集简与繁于一体，形式简单，实现复杂。值得一提的是，在Google的很多产品中，比如机器翻译，都直接或间接地用到了最大熵模型。 达拉皮垂兄弟等科学家在那里，用于最大熵模型和其他一些先进的数学工具对股票预测，获得了巨大的成功。(值得一提的是，信息处理的很多数学手段，包括隐含马尔可夫模型、子波变换、贝叶斯网络等等，在华尔街多有直接的应用。由此可见，数学模型的作用)。 我们平常说的最大熵模型，只是运用最大熵思想的多分类模型，最大熵的思想却是一种通用的思维方法。所以，理解最大熵模型只需要搞清楚两件事就可以： 最大熵思想是什么 最大熵模型是如何运用最大熵思想的 2.1 最大熵思想我们知道，分类模型有判别模型和生成模型两种，判别模型是要学习一个条件概率分布 P(y|x)。举例说明 ，设：x是病人身体指标，体温、血压、血糖，y是各种可能的疾病，可简化为小病、中病、大病三种。 现在，我们有一个样本x1={体温：30，血压：160，血糖：60}，那么P(y|x1)就是一个概率分布，该分布的值就是上面简化的三种，小病、中病、大病。可能的概率分布如下所示： 之前参考样本\病况 小病 中病 大病 假设之前有和X1一样的情况有1/2的患者为小病，则此时的最大熵参考样本为 1/2 1/4 1/4 先前12个人和X1一样，结果有3个小病，4个中病的患者，则5个大病 1/4 1/3 5/12 无先前参考样本，假设取最大熵的概率 1/3 1/3 1/3 当然，这样的分布有无数种，上面只是举例说明而已。那么，问题来了，在这无数种概率分布中，哪一个才是好的呢？ 1、也就是说我们没有过往的经验可以参考，那么，就直接选一个熵最大的分布就是，也就是上面表格中的第三个分布，因为均匀分布总是同类分布中熵最大的分布。 2、如果查看以往病例后，我们得到一个经验，指标x1={体温：30，血压：160，血糖：60}有1/2的概率是小病，于是我们有了一定的经验知识，此时，最好的分布就是符合这个经验知识的前提下，熵最大的分布，显然，第一个分布就是最好的分布。 以上，我们就是运用了 最大熵的思想 。总结来说，最大熵的思想是，当你要猜一个概率分布时，如果你对这个分布一无所知，那就猜熵最大的均匀分布，如果你对这个分布知道一些情况，那么，就猜满足这些情况的熵最大的分布。 2.2 运用最大熵思想来做多分类问题 最大熵原理认为，学习概率模型时，在所有可能的概率模型（分布）中，上最大的模型是最好 的模型。 假设离散随机变量X的概率分布是P(X)，则其熵是： 熵取值范围为（当且仅当X是均匀分布时右边的等号成立）： 直观的，最大熵原理认为，要选择的概率模型首先必须要满足已有的事实，即约束条件后，对那些不确定的部分进行等可能概率分配。最大熵原理通过熵的最大化来表示为约束部分等可能性。 最大熵定义 2.3 最大熵的例题解说题：假设随机变量X有5个取值{A,B,C,D,E}, 要估计取各个值的概率P(A),P(B),P(C),P(D),P(E). 假设约束条件如下： 满足上述两个约束条件的可能取值任然很多，于是在求最大熵的过程中，为了得到最大熵，认为为约束的概率分布为等概率分布（等概率分布能确定为最大熵） 解：有约束条件和概率分布知识可知, $$min -H(P) = \sum_{i=1}^{5}P(y_{i})logP(y_{i})$$ 1s.t. P(y_&#123;1&#125;)+P(y_&#123;2&#125;)=\widetilde&#123;P(y_&#123;1&#125;)&#125;+\widetilde&#123;P(y_&#123;2&#125;)&#125;=\frac&#123;3&#125;&#123;10&#125; 1\sum_&#123;i=1&#125;^&#123;5&#125;P(y_&#123;i&#125;) = \sum_&#123;i=1&#125;^&#123;5&#125;\widetilde&#123;P(y_&#123;i&#125;)&#125;=1 其中带波浪的是实际经验分布概率函数。 引进拉格朗日乘子、 。由上面的约束条件得到的三个方程式结合拉格朗日乘子得到如下拉格朗日函数L(P,w)的表达式。 1L(P,w)=-H(P)+\omega _&#123;0&#125;(\sum_&#123;y&#125;^&#123; &#125;)P(y|x))+\sum_&#123;i=1&#125;^&#123;n&#125;\omega_&#123;1&#125;(E_&#123;\widetilde&#123;P&#125;&#125;(f_&#123;i&#125;)-E_&#123;P&#125;(f_&#123;i&#125;))=\sum_&#123;x,y&#125;\widetilde&#123;P(x)&#125;P(y|x)logP(y|x)+\omega_&#123;0&#125;(1-\sum_&#123;y&#125;^&#123; &#125;P(y|x))+\sum_&#123;i=1&#125;^&#123;n&#125;\omega_1(\sum_&#123;x,y&#125;\widetilde&#123;P(x,y)&#125;-\sum_&#123;x,y&#125;^&#123; &#125;\widetilde&#123;P(x)&#125;P(y|x)f_&#123;i&#125;(x,y)) 带入题干信息可得如下的拉格朗日函数对应本题的表达式： 1L(P,w)=-H(P)+\omega_&#123;0&#125;(1-\sum_&#123;y&#125;^&#123; &#125;P(y|x))+\sum_&#123;i=1&#125;^&#123;n&#125;\omega_&#123;i&#125;(E_&#123;\widetilde&#123;P&#125;&#125;(f_&#123;i&#125;)-E_&#123;P&#125;(f_&#123;i&#125;))=\sum_&#123;i=1&#125;^&#123;5&#125;P(y_&#123;i&#125;)logP(y_&#123;i&#125;)+\omega_&#123;1&#125;(P(y_&#123;1&#125;)+P(y_&#123;2&#125;)-\frac&#123;3&#125;&#123;10&#125;)+\omega_&#123;0&#125;(\sum_&#123;i=1&#125;^&#123;5&#125;P(y_&#123;i&#125;)-1) 这里只有3个限制条件，所以带入三个变量w得： 原始问题和对偶问题 根据拉格朗日函数（Ｌ)的对偶性，可以通过求解Ｌ(w)函数的对偶最优化问题得到我们原是函数（Ｌ(p))的最优解。即： 即，对于构造的Ｌ函数，求Ｐ的最小值问题对应ｗ参数的最大值最优解问题，Ｐ是要求的原始问题。Ｐ是原始问题的对偶问题的求解函数变量。 接下来开始求解了原始问题和对偶问题的最优解问题，步骤如下： 第一步先将原始问题（Ｐ参数的Ｌ函数）的最优解换化出来，即 令各偏导数等于0，解得： 于是， 第二步，将原始问题对应的对偶问题（ｗ参数，对应Ｌ函数的最优解）的最优解解出来，即 $$L(P_{w},w)$$ 关于$$w$$的极大化问题。 $$\max_{\omega}L(P_{w},w)=-2e^{-w_{1}-w_{0}-1}-3e^{-w_{1}-1}-\frac{3}{10}w_{1}-w_{0}$$ 分别求$$L(P_{w},w)$$关于$$w_{0},w_{1}$$的偏导数并令其为0，得到： $$e^{-w_{1}-w_{0}-1}=\frac{3}{20},e^{-w_{0}-1}=\frac{7}{30}$$ 于是得到所要求的概率分布为： $$P(y_{1})=P(y_{2})=\frac{3}{20},P(y_{3})=P(y_{4})=P(y_{5})=\frac{7}{30}$$ 总结：最大熵模型，形式简单，但是训练的代价太大，比如最原始的最大熵训练模型GIS（通用迭代算法）和IIS（改进迭代算法），每次迭代时间都很长，而且每步需要迭代很多次，实现复杂了。 追加 ：此处记录下拉格朗日函数的相关性质： 拉格朗日中值定理： 如果函数f(x)满足：（1）在闭区间[a, b]上连续；（2）在开区间[a, b]内可导；那么在开区间(a, b)内至少有一点 使等式 成立。 拉格朗日差值法： 1、两点确定一条直线，这条直线就是线性插值 2、 ，这个$$P_{1}(x)$$函数就是线性插值函数 为了和后面公式进行对比，上面公式可以转化为下面表达式， 这两个都是叫做线性插值的基函数 . 得到的插值效果如下： 线性插值仅仅利用两个节点信息，精确度很低，故接下来讲二次差值(考察曲线问题) 3、拉格朗日二次插值 如果按照线性插值的形式，以每3个相邻点做插值，就得到了二次插值(3个点：xi,xi+1,xi+2)： 得到的曲线效果是： 二次插值在每段二次曲线内是光滑的，但在每条曲线的连接处其光滑性可能甚至比线性插值还差。二次插值只适合3个节点的情形，当节点数超过3个时，就需要分段插值了。 4、拉格朗日多项式插值 一个n次的拉格朗日插值函数可以绘制经过(n+1)个节点的曲线，但运算量非常大。而且在次数比较高时，容易产生剧烈的震荡（龙格现象）。所以要选择位置特殊的节点（比如切比雪夫多项式的零点）进行插值，或使用多个次数较低的拉格朗日函数分段插值。（关于拉格朗日多项式和龙格现象，详见维基百科链接） 使用4次拉格朗日多项式分段插值： 如果直接使用20次的拉格朗日插值，得到的图像如下： 等，更多的插值，[请参考这里] 数值分析（拟合、插值和逼近）之数据插值方法（线性插值、二次插值、Cubic插值、埃米尔特、拉格朗日多项式插值、牛顿插值、样条插值 参考地址1参考地址2参考地址3]]></content>
+      <categories>
+        <category>Deep Learning</category>
+      </categories>
+      <tags>
+        <tag>Algorithm</tag>
+        <tag>Deep Learning</tag>
+        <tag>最大熵模型</tag>
       </tags>
   </entry>
   <entry>
@@ -1061,22 +1061,9 @@
         <category>Deep Learning</category>
       </categories>
       <tags>
-        <tag>Deep Learning</tag>
         <tag>Algorithm</tag>
+        <tag>Deep Learning</tag>
         <tag>KNN</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[2.1.1 马尔科夫简单模型预测实战笔记]]></title>
-    <url>%2F%2Fmaerkefuyuce%2F</url>
-    <content type="text"><![CDATA[摘要本篇文章笔记总结来自网络和书本，引用部分都有来源，内容主要介绍马尔科夫相关实际应用搞得入门例子，很简单，但是能说明马尔科夫的原理相关。 Edit By Porter, 积水成渊,蛟龙生焉。 文章同步于: 我的gitbook 马尔科夫简单模型预测实战笔记一、基于马尔可夫链的公交停靠站乘客数预测1.1 题设 假设站点乘客数的状态具有马尔可夫性，当某一时刻有公交车停靠时， 会有一些乘客上车， 则下一时刻车辆到达时停靠站的乘客数与这一时刻剩余的乘客相关， 这一特征符合了马尔可夫链的马尔可夫性，同时在任意时刻的候车乘客只与上一时刻的乘客数相关， 而与候车时间无关。—-满足马尔科夫。 数据 以该停靠站点的候车乘客数为统计对象， 按照离散时间， 在状态转移中将以时间间隔为五分钟而对停靠站点的乘客数进行计数。以工作日某一天的上午8∶ 00 ～ 10∶ 00 的两小时为统计的时间段， 其中第一组数据为时刻 8∶05 时的乘客数， 可得到 24 组数据。如下图所示： 图1-1 8-10点的24组数据 由表 1 可知， 该站点的乘客数区间为［12， 27］，为保证预测的准确性， 根据建模步骤可将站点的乘客数分为 3 种状态， 即状态空间为( E1， E2， E3 ) ， 其中 E1 表示乘客数为 11 ～ 16， E2 表示乘客数为 17 ～22， E3 表示乘客数为 23 ～ 28， 因此有乘客数状态空间的频数分布， 如表 2 所示。 于是得到对应上表的如下状态分布表 表二 时间点 乘客人数 时间表 乘客人数 时间表 乘客人数 时间表 乘客人数 1 E1 7 E2 13 E1 9 E2 2 E1 8 E3 14 E2 20 E1 3 E2 9 E2 15 E2 21 E1 4 E2 10 E2 16 E3 22 E1 5 E2 11 E1 17 E3 22 E1 6 E2 12 E2 18 E2 24 E1 于是可以得到状态转移频次表如下表所示： 表三 单位(人) E1 E2 E3 E1 5 3 0 E2 3 7 2 E3 0 2 1 1.2 计算模型根据马尔可夫变量的特征， 结合变量状态转移概率矩阵， 对站点乘客数的预测步骤如下: 统计时需注意: 引起乘客数状态变化的转入包括下车后仍留在站点候车的乘客; 引起乘客数状态变化的转出则包括经过停靠车辆后上车的乘客， 则有表 1。 由表二可统计得到如下信息： E1 E2 E3 当前统计总数(人) 8 12 3 由此可得到表三对应的转移概率矩阵，如下 转移概率 E1 E2 E3 E1 5/8 3/8 0/8 E2 3/12 7/12 2/12 E3 0/3 2/3 1/3 即： 转移概率 E1 E2 E3 E1 0.625 0.375 0 E2 0.25 0.58 0.17 E3 0 0.67 0.33 设初始时刻的状态分布为10点的时刻。由于10点出行人数是14人，在E1(11~16)之间，故设出事时刻的概率分布为: N(0)=(1, 0, 0) 由N(1)=N(0).*P(1)=(0.625, 0.375, 0) 12345678910111213import numpy as npdef markov(): init_array = np.array([1, 0, 0]) transfer_matrix = np.array([[0.625, 0.375, 0], [0.25, 0.58, 0.17], [0, 0.67, 0.33]]) restmp = init_array for i in range(25): res = np.dot(restmp, transfer_matrix) print('N(',i+1,')', "\t", res ) restmp = res markov() N(0), 代表10：00的乘客数。N(1)代表10:05分的乘客数.N(2)代表10:10分的乘客数，以此类推。 取上面设定的状态范围（11~16）， （17-22）， （18~28），分别对上面的取值区间做中值得到13.5， 19.5， 25.5； 设 E1=13.5, E2=19.5, E3=25.5. 由10:05分的站点乘客数量状态分布，N(1)=[0.625, 0.375, 0],和E=[13.5, 19.5, 25.5]可求得10:05的期望值Ex $$E_{x}=\sum_{i=1}^{3} (N(1,i)*E(i)) = 0.625\times 13.5 + 0.375\times19.5 + 0\times25.5 = 15.75$$ 在概率论和统计学中，数学期望(mean)（或均值，亦简称期望）是试验中每次可能结果的概率乘以其结果的总和，是最基本的数学特征之一。它反映随机变量平均取值的大小。 即，在10:05的时刻，车站人数最可能有15.75个人在等车。 同理在10:10分，N(2)=[0.484375, 0.451875, 0.06375], 则此时刻（10:05），车站最可能（该时刻的期望值）出现的候车人数经计算为： 16.7503125（人），具体计算过程如下： $$E_{x}=\sum_{i=1}^{3} (N(1,i)*E(i)) = 0.484375\times 13.5 + 0.451875\times19.5 + 0.06375\times25.5 = 16.7503125$$ 推荐下在线Latex公式编辑网站 10:15时刻，10:20时刻，10:25时刻，……计算方法一次类推，于是可得到整个时间段站台候车人数的预测表，如下表： 时刻 状态 转移率 站台乘客数预测值 站台人数实际值 E1 0.625 — — 10:05 E2 0.375 15.75 14 E3 0 — — — — — — — E1 0.484375 — — 10:10 E2 0.50358792 16.7503125 16 E3 0.09785625 — — — — — — — E1 0.38142461 — — 10:15 E2 0.50358792 17.90137716 17 E3 0.11498747 — — — — — — — E1 0.36428736 — — 10:20 E2 0.51215683 18.0556107 18 E3 0.12355581 — — — — — — — E1 0.35571881 — — 10:25 E2 0.51644111 18.13272762 18 E3 0.12784008 — — — — — — — E1 0.35143453 — — 10:30 E2 0.51858325 18.17128614 18 E3 0.12998222 — — 以上的基于马尔科夫的模型预测和实际值的趋势图如下图所示： 图像在线生成：推荐下在线绘图做表的网站 预测结果表明在马尔可夫链理论下的预测会受到时间长短的影响， 在短时间内的统计， 预测结果与实际值间的误差较为明显， 当统计量足够多时， 预测的趋势会更加符合实际情况。 C-K方程( Chapman- Kolmogorov方程)-马尔可夫链定义如下: 参考文献：[1]刘哲华.基于马尔可夫链的公交停靠站乘客数预测[J].黑龙江交通科技,2018,41(11):155-157. 二、最佳经营策略应用]]></content>
-      <categories>
-        <category>Deep Learning</category>
-      </categories>
-      <tags>
-        <tag>Deep Learning</tag>
-        <tag>马尔科夫模型实战</tag>
-        <tag>Algorithm</tag>
       </tags>
   </entry>
   <entry>
@@ -1089,6 +1076,19 @@
       <tags>
         <tag>马尔科夫模型实战</tag>
         <tag>Algorithm</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[2.1.1 马尔科夫简单模型预测实战笔记]]></title>
+    <url>%2F%2Fmaerkefuyuce%2F</url>
+    <content type="text"><![CDATA[摘要本篇文章笔记总结来自网络和书本，引用部分都有来源，内容主要介绍马尔科夫相关实际应用搞得入门例子，很简单，但是能说明马尔科夫的原理相关。 Edit By Porter, 积水成渊,蛟龙生焉。 文章同步于: 我的gitbook 马尔科夫简单模型预测实战笔记一、基于马尔可夫链的公交停靠站乘客数预测1.1 题设 假设站点乘客数的状态具有马尔可夫性，当某一时刻有公交车停靠时， 会有一些乘客上车， 则下一时刻车辆到达时停靠站的乘客数与这一时刻剩余的乘客相关， 这一特征符合了马尔可夫链的马尔可夫性，同时在任意时刻的候车乘客只与上一时刻的乘客数相关， 而与候车时间无关。—-满足马尔科夫。 数据 以该停靠站点的候车乘客数为统计对象， 按照离散时间， 在状态转移中将以时间间隔为五分钟而对停靠站点的乘客数进行计数。以工作日某一天的上午8∶ 00 ～ 10∶ 00 的两小时为统计的时间段， 其中第一组数据为时刻 8∶05 时的乘客数， 可得到 24 组数据。如下图所示： 图1-1 8-10点的24组数据 由表 1 可知， 该站点的乘客数区间为［12， 27］，为保证预测的准确性， 根据建模步骤可将站点的乘客数分为 3 种状态， 即状态空间为( E1， E2， E3 ) ， 其中 E1 表示乘客数为 11 ～ 16， E2 表示乘客数为 17 ～22， E3 表示乘客数为 23 ～ 28， 因此有乘客数状态空间的频数分布， 如表 2 所示。 于是得到对应上表的如下状态分布表 表二 时间点 乘客人数 时间表 乘客人数 时间表 乘客人数 时间表 乘客人数 1 E1 7 E2 13 E1 9 E2 2 E1 8 E3 14 E2 20 E1 3 E2 9 E2 15 E2 21 E1 4 E2 10 E2 16 E3 22 E1 5 E2 11 E1 17 E3 22 E1 6 E2 12 E2 18 E2 24 E1 于是可以得到状态转移频次表如下表所示： 表三 单位(人) E1 E2 E3 E1 5 3 0 E2 3 7 2 E3 0 2 1 1.2 计算模型根据马尔可夫变量的特征， 结合变量状态转移概率矩阵， 对站点乘客数的预测步骤如下: 统计时需注意: 引起乘客数状态变化的转入包括下车后仍留在站点候车的乘客; 引起乘客数状态变化的转出则包括经过停靠车辆后上车的乘客， 则有表 1。 由表二可统计得到如下信息： E1 E2 E3 当前统计总数(人) 8 12 3 由此可得到表三对应的转移概率矩阵，如下 转移概率 E1 E2 E3 E1 5/8 3/8 0/8 E2 3/12 7/12 2/12 E3 0/3 2/3 1/3 即： 转移概率 E1 E2 E3 E1 0.625 0.375 0 E2 0.25 0.58 0.17 E3 0 0.67 0.33 设初始时刻的状态分布为10点的时刻。由于10点出行人数是14人，在E1(11~16)之间，故设出事时刻的概率分布为: N(0)=(1, 0, 0) 由N(1)=N(0).*P(1)=(0.625, 0.375, 0) 12345678910111213import numpy as npdef markov(): init_array = np.array([1, 0, 0]) transfer_matrix = np.array([[0.625, 0.375, 0], [0.25, 0.58, 0.17], [0, 0.67, 0.33]]) restmp = init_array for i in range(25): res = np.dot(restmp, transfer_matrix) print('N(',i+1,')', "\t", res ) restmp = res markov() N(0), 代表10：00的乘客数。N(1)代表10:05分的乘客数.N(2)代表10:10分的乘客数，以此类推。 取上面设定的状态范围（11~16）， （17-22）， （18~28），分别对上面的取值区间做中值得到13.5， 19.5， 25.5； 设 E1=13.5, E2=19.5, E3=25.5. 由10:05分的站点乘客数量状态分布，N(1)=[0.625, 0.375, 0],和E=[13.5, 19.5, 25.5]可求得10:05的期望值Ex $$E_{x}=\sum_{i=1}^{3} (N(1,i)*E(i)) = 0.625\times 13.5 + 0.375\times19.5 + 0\times25.5 = 15.75$$ 在概率论和统计学中，数学期望(mean)（或均值，亦简称期望）是试验中每次可能结果的概率乘以其结果的总和，是最基本的数学特征之一。它反映随机变量平均取值的大小。 即，在10:05的时刻，车站人数最可能有15.75个人在等车。 同理在10:10分，N(2)=[0.484375, 0.451875, 0.06375], 则此时刻（10:05），车站最可能（该时刻的期望值）出现的候车人数经计算为： 16.7503125（人），具体计算过程如下： $$E_{x}=\sum_{i=1}^{3} (N(1,i)*E(i)) = 0.484375\times 13.5 + 0.451875\times19.5 + 0.06375\times25.5 = 16.7503125$$ 推荐下在线Latex公式编辑网站 10:15时刻，10:20时刻，10:25时刻，……计算方法一次类推，于是可得到整个时间段站台候车人数的预测表，如下表： 时刻 状态 转移率 站台乘客数预测值 站台人数实际值 E1 0.625 — — 10:05 E2 0.375 15.75 14 E3 0 — — — — — — — E1 0.484375 — — 10:10 E2 0.50358792 16.7503125 16 E3 0.09785625 — — — — — — — E1 0.38142461 — — 10:15 E2 0.50358792 17.90137716 17 E3 0.11498747 — — — — — — — E1 0.36428736 — — 10:20 E2 0.51215683 18.0556107 18 E3 0.12355581 — — — — — — — E1 0.35571881 — — 10:25 E2 0.51644111 18.13272762 18 E3 0.12784008 — — — — — — — E1 0.35143453 — — 10:30 E2 0.51858325 18.17128614 18 E3 0.12998222 — — 以上的基于马尔科夫的模型预测和实际值的趋势图如下图所示： 图像在线生成：推荐下在线绘图做表的网站 预测结果表明在马尔可夫链理论下的预测会受到时间长短的影响， 在短时间内的统计， 预测结果与实际值间的误差较为明显， 当统计量足够多时， 预测的趋势会更加符合实际情况。 C-K方程( Chapman- Kolmogorov方程)-马尔可夫链定义如下: 参考文献：[1]刘哲华.基于马尔可夫链的公交停靠站乘客数预测[J].黑龙江交通科技,2018,41(11):155-157. 二、最佳经营策略应用]]></content>
+      <categories>
+        <category>Deep Learning</category>
+      </categories>
+      <tags>
+        <tag>马尔科夫模型实战</tag>
+        <tag>Algorithm</tag>
+        <tag>Deep Learning</tag>
       </tags>
   </entry>
   <entry>
@@ -1379,8 +1379,8 @@
         <category>summary</category>
       </categories>
       <tags>
-        <tag>System Conf</tag>
         <tag>Deep Learning</tag>
+        <tag>System Conf</tag>
       </tags>
   </entry>
   <entry>
@@ -1393,18 +1393,6 @@
       <tags>
         <tag>System Conf</tag>
         <tag>Gitbook</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[1.6 win10+ubuntu双系统修复ubuntu启动引导]]></title>
-    <url>%2F%2FdoubleSysRepair%2F</url>
-    <content type="text"><![CDATA[摘要本文记录了win10+ubuntu双系统修复ubuntu启动引导，解决最新版win10系统的UEFI快速启动带来的双系统安装启动问题（开机引导无法修复的解决方法）。 Edit By Porter, 积水成渊,蛟龙生焉。 文章同步于: 我的gitbook win10+ubuntu双系统修复ubuntu启动引导摘要我的环境是：uefi启动模式下的win10 + ubutu18.04，其中win10 安装在 128G固态硬盘上，Ubuntu18.04LTS 安装在1T 机械硬盘上，由于我已安装好的ubuntu18 没有UEFI，但是ubuntu18确实是支持UEFI的，难道我必须要重新安装下ubuntu系统吗？（我ubuntu上好不容易安装好了好多软件，此时内心是崩溃的） 一、啥都不用改的解决办法（有点不推荐） 每次打开电脑后狂按F12按键，会进入Boot引导管理，然后选择你的Ubuntu系统进入即可打开ubuntu，如果你要打开window10 你可以按下开机电源后啥都不做就能进入，或者，也是狂按F12进入Boot管理界面，选择windows。 每次开机都得这么累，所以不推荐 二、先进入Ubuntu 然后执行如下命令（就是安装Ubuntu的引导修复工具软件）1234567$ sudo su# sudo add-apt-repository ppa:yannubuntu/boot-repair# apt-get update# apt-get install boot-repair1.在dash中搜索boot-repair2.点recommand repair 之后会自动执行 执行完以上步骤后会出现如下图所示的信息： 然后重启电脑，然后狂按F2,进入BOOT设置界面，设置UEFI 和 Enable。 接下来设置个Supervisor密码，注意后期退出并保存这个boot配置时，要重新设置这个密码，新密码直接全敲回车（这样代表不设置密码，面对你以后密码忘记了）如下图： 设置密码后，下面灰色的选项就可以用了。此时进入 Select an UEFI file as trust executing ,进入的界面如下图 || || || 接下来，回到Boot设置栏，讲EFI 的Ubuntu 重新排序，排到最高优先级，我这排到了我的windows启动选项的前面的，如果你了解你的windows启动标志，直接放到windows启动选项前也就可以的。 到此设置结束，但是不要忘了，把你之前的Security选项里的密码重新清楚掉哦，就是重新设置新密码，新密码内容设置为回车就好了，下次你要使用就会直接提示你输入新密码。 接下来F10保存并退出。然后启动你的电脑，会直接进入linux的引导界面，还包括了Windows的启动界面选项，这时你想进Ubuntu还是windows都是很好选择的。]]></content>
-      <categories>
-        <category>summary</category>
-      </categories>
-      <tags>
-        <tag>System Conf</tag>
-        <tag>系统引导</tag>
       </tags>
   </entry>
   <entry>
@@ -1443,6 +1431,18 @@
         <tag>Deep Learning</tag>
         <tag>MNIST</tag>
         <tag>tensorflow</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[1.6 win10+ubuntu双系统修复ubuntu启动引导]]></title>
+    <url>%2F%2FdoubleSysRepair%2F</url>
+    <content type="text"><![CDATA[摘要本文记录了win10+ubuntu双系统修复ubuntu启动引导，解决最新版win10系统的UEFI快速启动带来的双系统安装启动问题（开机引导无法修复的解决方法）。 Edit By Porter, 积水成渊,蛟龙生焉。 文章同步于: 我的gitbook win10+ubuntu双系统修复ubuntu启动引导摘要我的环境是：uefi启动模式下的win10 + ubutu18.04，其中win10 安装在 128G固态硬盘上，Ubuntu18.04LTS 安装在1T 机械硬盘上，由于我已安装好的ubuntu18 没有UEFI，但是ubuntu18确实是支持UEFI的，难道我必须要重新安装下ubuntu系统吗？（我ubuntu上好不容易安装好了好多软件，此时内心是崩溃的） 一、啥都不用改的解决办法（有点不推荐） 每次打开电脑后狂按F12按键，会进入Boot引导管理，然后选择你的Ubuntu系统进入即可打开ubuntu，如果你要打开window10 你可以按下开机电源后啥都不做就能进入，或者，也是狂按F12进入Boot管理界面，选择windows。 每次开机都得这么累，所以不推荐 二、先进入Ubuntu 然后执行如下命令（就是安装Ubuntu的引导修复工具软件）1234567$ sudo su# sudo add-apt-repository ppa:yannubuntu/boot-repair# apt-get update# apt-get install boot-repair1.在dash中搜索boot-repair2.点recommand repair 之后会自动执行 执行完以上步骤后会出现如下图所示的信息： 然后重启电脑，然后狂按F2,进入BOOT设置界面，设置UEFI 和 Enable。 接下来设置个Supervisor密码，注意后期退出并保存这个boot配置时，要重新设置这个密码，新密码直接全敲回车（这样代表不设置密码，面对你以后密码忘记了）如下图： 设置密码后，下面灰色的选项就可以用了。此时进入 Select an UEFI file as trust executing ,进入的界面如下图 || || || 接下来，回到Boot设置栏，讲EFI 的Ubuntu 重新排序，排到最高优先级，我这排到了我的windows启动选项的前面的，如果你了解你的windows启动标志，直接放到windows启动选项前也就可以的。 到此设置结束，但是不要忘了，把你之前的Security选项里的密码重新清楚掉哦，就是重新设置新密码，新密码内容设置为回车就好了，下次你要使用就会直接提示你输入新密码。 接下来F10保存并退出。然后启动你的电脑，会直接进入linux的引导界面，还包括了Windows的启动界面选项，这时你想进Ubuntu还是windows都是很好选择的。]]></content>
+      <categories>
+        <category>summary</category>
+      </categories>
+      <tags>
+        <tag>System Conf</tag>
+        <tag>系统引导</tag>
       </tags>
   </entry>
   <entry>
