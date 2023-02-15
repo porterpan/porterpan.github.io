@@ -1,3 +1,99 @@
-// build time:Tue Feb 14 2023 15:01:44 GMT+0800 (GMT+08:00)
-var searchFunc=function(e,t,r){"use strict";$.ajax({url:e,dataType:"xml",success:function(e){var a=$("entry",e).map(function(){return{title:$("title",this).text(),content:$("content",this).text(),url:$("url",this).text()}}).get();var n=document.getElementById(t);var i=document.getElementById(r);n.addEventListener("input",function(){var e='<ul class="search-result-list">';var t=this.value.trim().toLowerCase().split(/[\s\-]+/);i.innerHTML="";if(this.value.trim().length<=0){return}a.forEach(function(r){var a=true;var n=[];var i=r.title.trim().toLowerCase();var l=r.content.trim().replace(/<[^>]+>/g,"").toLowerCase();var c=r.url;var s=-1;var o=-1;var u=-1;if(i!=""&&l!=""){t.forEach(function(e,t){s=i.indexOf(e);o=l.indexOf(e);if(s<0&&o<0){a=false}else{if(o<0){o=0}if(t==0){u=o}}})}if(a){var f="<li><a href='"+c+"' class='search-result-title' target='_blank'>"+"> "+i+"</a>";console.log(f);f=f.replace("//",top.location.href+"/");f=f.replace("archives","/");f=f.replace("%2F%2F",top.location.href+"%2F");f=f.replace("archives","/");e+=f;console.log(e);var v=r.content.trim().replace(/<[^>]+>/g,"");if(u>=0){var h=u-6;var p=u+6;if(h<0){h=0}if(h==0){p=10}if(p>v.length){p=v.length}var g=v.substr(h,p);t.forEach(function(e){var t=new RegExp(e,"gi");g=g.replace(t,'<em class="search-keyword">'+e+"</em>")});e+='<p class="search-result">'+g+"...</p>"}}});i.innerHTML=e})}})};
-//rebuild by neat 
+// A local search script with the help of [hexo-generator-search](https://github.com/PaicHyperionDev/hexo-generator-search)
+// Copyright (C) 2015 
+// Joseph Pan <http://github.com/wzpan>
+// Shuhao Mao <http://github.com/maoshuhao>
+// Edited by MOxFIVE <http://github.com/MOxFIVE>
+
+var searchFunc = function(path, search_id, content_id) {
+    'use strict';
+    $.ajax({
+        url: path,
+        dataType: "xml",
+        success: function( xmlResponse ) {
+            // get the contents from search data
+            var datas = $( "entry", xmlResponse ).map(function() {
+                return {
+                    title: $( "title", this ).text(),
+                    content: $("content",this).text(),
+                    url: $( "url" , this).text()
+                };
+            }).get();
+            var $input = document.getElementById(search_id);
+            var $resultContent = document.getElementById(content_id);
+            $input.addEventListener('input', function(){
+                var str='<ul class=\"search-result-list\">';                
+                var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                $resultContent.innerHTML = "";
+                if (this.value.trim().length <= 0) {
+                    return;
+                }
+                // perform local searching
+                datas.forEach(function(data) {
+                    var isMatch = true;
+                    var content_index = [];
+                    var data_title = data.title.trim().toLowerCase();
+                    var data_content = data.content.trim().replace(/<[^>]+>/g,"").toLowerCase();
+                    var data_url = data.url;
+                    var index_title = -1;
+                    var index_content = -1;
+                    var first_occur = -1;
+                    // only match artiles with not empty titles and contents
+                    if(data_title != '' && data_content != '') {
+                        keywords.forEach(function(keyword, i) {
+                            index_title = data_title.indexOf(keyword);
+                            index_content = data_content.indexOf(keyword);
+                            if( index_title < 0 && index_content < 0 ){
+                                isMatch = false;
+                            } else {
+                                if (index_content < 0) {
+                                    index_content = 0;
+                                }
+                                if (i == 0) {
+                                    first_occur = index_content;
+                                }
+                            }
+                        });
+                    }
+                    // show search results
+                    if (isMatch) {
+                        var temp_url = "<li><a href='"+ data_url +"' class='search-result-title' target='_blank'>"+ "> " + data_title +"</a>";
+                        console.log(temp_url);
+                        
+                        temp_url =  temp_url.replace("//",  top.location.href+"/");     
+                        temp_url =  temp_url.replace("archives",  "/");    
+                        temp_url =  temp_url.replace("%2F%2F",  top.location.href+"%2F");     
+                        temp_url =  temp_url.replace("archives",  "/"); 
+                                    
+                        // str += "<li><a href='"+ data_url +"' class='search-result-title' target='_blank'>"+ "> " + data_title +"</a>";
+                        str += temp_url;
+                        console.log(str);
+                        var content = data.content.trim().replace(/<[^>]+>/g,"");
+                        if (first_occur >= 0) {
+                            // cut out characters
+                            var start = first_occur - 6;
+                            var end = first_occur + 6;
+                            if(start < 0){
+                                start = 0;
+                            }
+                            if(start == 0){
+                                end = 10;
+                            }
+                            if(end > content.length){
+                                end = content.length;
+                            }
+                            var match_content = content.substr(start, end); 
+                            // highlight all keywords
+                            keywords.forEach(function(keyword){
+                                var regS = new RegExp(keyword, "gi");
+                                match_content = match_content.replace(regS, "<em class=\"search-keyword\">"+keyword+"</em>");
+                            });
+                            
+                            str += "<p class=\"search-result\">" + match_content +"...</p>"
+                        }
+                    }
+                });
+                $resultContent.innerHTML = str;
+            });
+        }
+    });
+}
