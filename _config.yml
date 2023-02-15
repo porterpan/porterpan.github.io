@@ -103,14 +103,14 @@ neat_html:
   enable: true
   exclude:
     - '**/index.h'
-    - '**/myResume/*'  
+ 
 # 压缩css  
 neat_css:
   enable: true
   exclude:
     - '**/*.min.css'
     - '**/*cntl.css'
-    - '**/myResume/*.*'
+    
 # 压缩js
 neat_js:
   enable: true
@@ -125,6 +125,3 @@ neat_js:
     - '**/love.js'
     - 'loader.js'
     - '**/helpers.js'
-    - '**/myResume/*.*'
-    - '**/myResume/*.js'
-    - '**/myResume/*.js'
