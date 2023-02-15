@@ -5013,9 +5013,9 @@ y_{coor}=y_{p}(1+k_{1}r^{2}+k_{2}r^{4}+k_{3}r^{6})
 <p>单目相机标定，就是标定相机的内参、畸变和外参(相机相对于每张棋盘格的像素坐标转棋盘格上的坐标转换关系)。</p>
 <p>单目相机的外参标定，就是标定相机和标定物之间的关系，比如棋盘格上标定物，每个棋盘格有9*6=54个坐标定，假设棋盘格左上角为坐标原点，则通过这一张棋盘格照片，可以标定出相机外参(棋盘格上的世界坐标和相机像素坐标之间的关系)。</p>
 <h1 id="3-参考文献"><a class="markdownIt-Anchor" href="#3-参考文献"></a> 3. 参考文献</h1>
-<p><a href="https://blog.csdn.net/liangjiubujiu/article/details/96305231">matlab标定，opencv使用标定结果案例</a></p>
-<p><a href="https://blog.csdn.net/weixin_37857892/article/details/106319379/">一起做双目测距-USB_CAMERA检测人脸距离系列(2)-双目相机标定</a></p>
-<p><a href="http://www.eepw.com.cn/zhuanlan/194756.html">一文详解双目相机标定理论</a></p>
+<p><a href="https://blog.csdn.net/liangjiubujiu/article/details/96305231">1. matlab标定，opencv使用标定结果案例</a></p>
+<p><a href="https://blog.csdn.net/weixin_37857892/article/details/106319379/">2. 一起做双目测距-USB_CAMERA检测人脸距离系列(2)-双目相机标定</a></p>
+<p><a href="http://www.eepw.com.cn/zhuanlan/194756.html">3. 一文详解双目相机标定理论</a></p>
 ]]></content>
       <categories>
         <category>vision</category>
