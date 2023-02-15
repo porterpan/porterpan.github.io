@@ -56,7 +56,17 @@ var searchFunc = function(path, search_id, content_id) {
                     }
                     // show search results
                     if (isMatch) {
-                        str += "<li><a href='"+ data_url +"' class='search-result-title' target='_blank'>"+ "> " + data_title +"</a>";
+                        var temp_url = "<li><a href='"+ data_url +"' class='search-result-title' target='_blank'>"+ "> " + data_title +"</a>";
+                        console.log(temp_url);
+                        
+                        temp_url =  temp_url.replace("//",  top.location.href+"/");     
+                        temp_url =  temp_url.replace("archives",  "/");    
+                        temp_url =  temp_url.replace("%2F%2F",  top.location.href+"%2F");     
+                        temp_url =  temp_url.replace("archives",  "/"); 
+                                    
+                        // str += "<li><a href='"+ data_url +"' class='search-result-title' target='_blank'>"+ "> " + data_title +"</a>";
+                        str += temp_url;
+                        console.log(str);
                         var content = data.content.trim().replace(/<[^>]+>/g,"");
                         if (first_occur >= 0) {
                             // cut out characters

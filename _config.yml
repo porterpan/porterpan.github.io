@@ -83,7 +83,8 @@ theme: yelee
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git 
-  repository: https://github.com/porterpan/porterpan.github.io.git
+  repository: git@github.com:porterpan/porterpan.github.io.git
+#  repository: https://github.com/porterpan/porterpan.github.io.git
 #  repository: https://git.dev.tencent.com/porterpan/porterpan.git
   branch: master
 
