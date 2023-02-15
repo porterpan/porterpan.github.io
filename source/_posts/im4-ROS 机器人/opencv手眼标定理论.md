@@ -48,16 +48,16 @@ $_{}^{g}{T}_c$ 表示 $c \rightarrow g$ , 相机坐标系到机械臂工具坐�
 
 即，基座标 = [工具坐标下的基座标变换矩阵]*工具坐标；
 
-$$
+$
 \begin{bmatrix} X_c\\ Y_c\\ Z_c\\ 1 \end{bmatrix} = \begin{bmatrix} _{}^{c}\textrm{R}_t & _{}^{c}\textrm{t}_t \\ 0_{1 \times 3} & 1 \end{bmatrix} \begin{bmatrix} X_t\\ Y_t\\ Z_t\\ 1 \end{bmatrix}
-$$
+$
 
 即，相机坐标=[标定板下的相机坐标旋转矩阵]*标定板上的坐标
 
 
-$$
+$
 \begin{bmatrix} X_g\\ Y_g\\ Z_g\\ 1 \end{bmatrix} = \begin{bmatrix} _{}^{g}\textrm{R}_c & _{}^{g}\textrm{t}_c \\ 0_{1 \times 3} & 1 \end{bmatrix} \begin{bmatrix} X_c\\ Y_c\\ Z_c\\ 1 \end{bmatrix}
-$$
+$
 
 即，机械臂工具坐标=[带求解的相机下的机械臂工具坐标矩阵]*相机坐标
 

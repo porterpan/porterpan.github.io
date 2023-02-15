@@ -1,0 +1,1820 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <link rel="shortcut icon" href="img/favicon.ico">
+    <title>Porter Pan</title>
+
+    <!-- Global stylesheets -->
+    <link href="css/bootstrap/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/devicons/css/devicons.min.css" rel="stylesheet">
+    <link href="css/simple-line-icons/css/simple-line-icons.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <!-- CSS for basic page styling, not related to example -->
+    <link href="./pdf/examples.css" rel="stylesheet" />
+    <style>
+    /*
+PDFObject appends the classname "pdfobject-container" to the target element.
+This enables you to style the element differently depending on whether the embed was successful.
+*/
+	/*PDF阅览器的宽和高定格*/
+    .pdfobject-container {
+        width: 100%;
+        max-width: auto;/* 设置PDF预览框占满父类容器 */
+        /*max-width: 900px;*/
+        height: 500px;
+        margin: 2em 0;
+
+        margin-top: 0;
+        margin-bottom: 0;
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
+
+    /* PDFObject automatically assigns the class name "pdfobject" to the <embed> element */
+    /*PDF阅览器的边框样式*/
+    .pdfobject {
+        border: solid 1px #666;
+    }
+    </style>
+
+    <script type="text/javascript">
+      function disp_alert()
+      {
+      alert("暂时不给这个的联系方式，可以尝试其他 *-^_^-* ！")
+      }
+
+    </script>
+</head>
+
+<body id="page-top">
+    
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
+      <!-- <a class="navbar-brand js-scroll-trigger" href="#page-top"> -->
+      	<a class="navbar-brand js-scroll-trigger" href="./index.html">
+        <span class="d-block d-lg-none  mx-0 px-0"><img src="img/logo-white.png" alt="" class="img-fluid"></span>
+        <span class="d-none d-lg-block">
+          <img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="img/profile.jpg" alt="" title="回到首页起点#*^V^*#">
+        </span>
+      </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger" href="#about">关于我</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger" href="#experience">经历/经验</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger" href="#portfolio">作品</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger" href="#skills">技能</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger" href="#awards">成果</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger" href="#contact">联系我</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger" href="./readpdf.html">查看更多</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container-fluid p-0">
+
+    <!--====================================================
+                        ABOUT
+    ======================================================-->
+      <section class="resume-section p-3 p-lg-5 d-flex d-column" id="about">
+          <div class="my-auto" >
+              <img src="img/logo-s.png" class="img-fluid mb-3" alt="">
+              <h1 class="mb-0">Porter
+                <span class="text-primary">Pan</span>
+              </h1>
+              <div class="subheading mb-5">THE NEXT BIG IDEA IS WAITING FOR ITS NEXT BIG CHANGER WITH 
+                  <a href="#">THEMSBIT</a>
+              </div>
+              <p class="mb-5" style="max-width: 500px;" >&hearts;&emsp;人最先衰老的：不是容貌，而是那份不顾一切的闯劲。<br />
+			  
+			  <font size="4" color="red">&clubs;&emsp;<strong>目前专注于机器视觉、机器学习、深度学习</strong></font><br /><font color="blue">&spades;&emsp;之前对视觉图像处理、物联网、单片机、嵌入式软/硬件、网站前后端、服务器、linux、windows客户端开发都有一些浅到的理解。</font><br />提示：本页面建议电脑端浏览器打开查看！
+			</p>
+              <ul class="list-inline list-social-icons mb-0">
+                  <li class="list-inline-item">
+                      <a href="#" onclick="disp_alert()" title="Facebook">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+                  </li>
+                  <li class="list-inline-item">
+                      <a href="https://twitter.com/zf_Porter" title="Twitter">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+                  </li>
+                  <li class="list-inline-item">
+                      <a href="#" onclick="disp_alert()" title="Linkedin">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+                  </li>
+                  <li class="list-inline-item">
+                      <a href="https://github.com/porterpan" title="Github">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+                  </li>
+
+                  <li class="list-inline-item">
+                      <a href="https://blogs.porterpan.top/about/contactme.html" title="Wechat">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-weixin fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+                  </li>
+              </ul>
+          </div>
+      </section>
+
+    <!--====================================================
+                        EXPERIENCE
+    ======================================================-->      
+      <section class="resume-section p-3 p-lg-5 " id="experience">
+          <div class="row my-auto">
+              <div class="col-12">
+                <h2 class="  text-center">经历/经验</h2>
+                <div class="mb-5 heading-border"></div>
+              </div>
+              <div class="resume-item col-md-6 col-sm-12 " > 
+                <div class="card mx-0 p-4 mb-5" style="border-color: #17a2b8; box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.21);">
+                  <div class=" resume-content mr-auto">
+                      <h4 class="mb-3"><i class="fa fa-globe mr-3 text-info"></i> <a href="https://blogs.porterpan.top/%E9%99%84%E5%BD%95-Python-%E5%B8%AE%E5%8A%A9%E6%96%87%E6%A1%A3%E6%A3%80%E7%B4%A2%E6%96%B9%E6%B3%95/">  矿下钢架受力系统开发</a></h4>
+                      <p>
+							基于物联网的软硬件项目：
+							<ul>
+							  <li>基于STM32的UCOSII系统</li>
+							  <li>高精度AD+高灵敏度低温飘的应力传感器</li>
+							  <li>接入以太网，能在线监测，本地也带TF卡数据备份</li>
+							  <li>手机端和电脑端均可直接访问服务器实现远程监测，系统支持微信和其他方式监测报警</li>
+							</ul>
+					  </p>
+                  </div>
+                  <div class="resume-date text-md-right">
+                      <span class="text-primary">March 2019 - Present</span>
+                  </div>
+                </div>  
+              </div>
+              <div class="resume-item col-md-6 col-sm-12">
+                <div class="card mx-0 p-4 mb-5" style="border-color: #ffc107; box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.21);">
+                  <div class="resume-content mr-auto">
+                      <h4 class="mb-3"><i class="fa fa-laptop mr-3 text-warning"></i>  <a href="https://blogs.porterpan.top">博客网站设计</a></h4>
+                      <p>
+							&emsp;&emsp;一个简单的博客网站设计，主要有个人优秀学术网站导航，相关技术博文，相关软件配置说明，项目工程描述说明，博客的目的不是用来装逼，主要是用来激励自己做笔记，每天看自己学习进度的一种自我提高的方式。
+					  </p>
+                  </div>
+                  <div class="resume-date text-md-right">
+                      <span class="text-primary">December 2018 - March 2019</span>
+                  </div>
+                </div>  
+              </div>
+              <div class="resume-item col-md-6 col-sm-12">
+                <div class="card mx-0 p-4 mb-5" style="border-color: #28a745; box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.21);">
+                  <div class="resume-content mr-auto">
+                      <h4 class="mb-3"><i class="fa fa-camera mr-3 text-success"></i> 深度学习之目标检测</h4>
+                      <p> 本项目的描述在博客文章中，主要实现的功能是无人区行人检测。当无人区出现行人，则进行报警，应用场景，包括上下货的码头，可以减少不必要的人员伤亡。</p>
+                  </div>
+                  <div class="resume-date text-md-right">
+                      <span class="text-primary">July 2017 - December 2018</span>
+                  </div>
+                </div>  
+              </div>
+              <div class="resume-item col-md-6 col-sm-12">
+                <div class="card mx-0 p-4 mb-5" style="border-color: #2196f3; box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.21);">
+                  <div class="resume-content mr-auto">
+                      <h4 class="mb-3"><i class="fa fa-area-chart mr-3 text-primary"></i> Python、C++、C语言、CSS、JAVA 学习</h4>
+                      <p>
+						主要是本人现阶段的学习状况，主要学习编程语言和软硬件设计，这里不瞎讲了，无事乱写简历。</p>
+                  </div>
+                  <div class="resume-date text-md-right">
+                      <span class="text-primary">September 2018 - June 2019</span>
+                  </div>
+                </div>  
+              </div>
+              <div class="col-12">
+				<h2 class="  text-center">
+              			简历PDF文档预览
+				</h2>
+			  </div>
+				<hr />
+				<p>简历文档可供下载打印，如果您对我方向感兴趣，可以通过我的简历文档进一步了解我 。</p>
+        <p>提示，仅支持电脑端在线查看PDF，手机端需要点击内容区域下载后方可查看 。</p>
+				<div id="pdf1-view1"></div>
+			    <script src="./pdf/pdfobject.min.js"></script>
+			    <script>
+			    var options = {
+			        page: 3,
+			        pdfOpenParams: {
+			            navpanes: 1,
+			            view: "FitH",
+			            pagemode: "thumbs"
+			        }
+			    };
+			    PDFObject.embed("./pdf/porterResume.pdf", "#pdf1-view1", options);
+			    </script>
+          </div>
+      </section>
+     <!--- <div class="tlinks">Collect from <a href="http://www.cssmoban.com/"  title="网站模板">网站模板</a></div> --->
+<!-- <section class="resume-pdf-section" id="portfolio">
+	
+
+
+</section> -->
+    <!--====================================================
+                        PORTFOLIO
+    ======================================================-->      
+      <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="portfolio"> 
+          <div class="row my-auto">
+              <div class="col-12">
+                <h2 class="  text-center">代表作品</h2>
+                <div class="mb-5 heading-border"></div>
+              </div>
+              <div class="col-md-12">
+                <div class="port-head-cont">
+                  <button class="btn btn-general btn-green filter-b" data-filter="all">All</button>
+                  <button class="btn btn-general btn-green filter-b" data-filter="deepLearning">Machine Learning</button>
+                  <button class="btn btn-general btn-green filter-b" data-filter="Embedded">Embedded System</button>
+                  <button class="btn btn-general btn-green filter-b" data-filter="webDesign">Web Design</button>
+                </div>
+              </div>
+          </div>
+          <div class="row my-auto">
+
+
+
+
+			<!-- deeplearning part -->
+              <div class="col-sm-4 portfolio-item filter deepLearning">
+                  <a class="portfolio-link" href="#deeplModal1" data-toggle="modal">
+                      <div class="caption-port">
+                          <div class="caption-port-content">
+                              <i class="fa fa-search-plus fa-3x"></i>
+                          </div>
+                      </div>
+                      <img class="img-fluid" src="img/deeplearning/deeplearning1-1.png" alt="">
+                  </a>
+              </div>              
+              <div class="col-sm-4 portfolio-item filter deepLearning">
+                  <a class="portfolio-link" href="#deeplModal2" data-toggle="modal">
+                      <div class="caption-port">
+                          <div class="caption-port-content">
+                              <i class="fa fa-search-plus fa-3x"></i>
+                          </div>
+                      </div>
+                      <img class="img-fluid" src="img/deeplearning/flappy_bird_demp.jpg" alt="">
+                  </a>
+              </div>
+              <div class="col-sm-4 portfolio-item filter deepLearning">
+                  <a class="portfolio-link" href="#deeplModal3" data-toggle="modal">
+                      <div class="caption-port">
+                          <div class="caption-port-content">
+                              <i class="fa fa-search-plus fa-3x"></i>
+                          </div>
+                      </div>
+                      <img class="img-fluid" src="img/deeplearning/deeplearning2-1.png" alt="">
+                  </a>
+              </div>
+              <div class="col-sm-4 portfolio-item filter deepLearning">
+                  <a class="portfolio-link" href="#deeplModal4" data-toggle="modal">
+                      <div class="caption-port">
+                          <div class="caption-port-content">
+                              <i class="fa fa-search-plus fa-3x"></i>
+                          </div>
+                      </div>
+                      <img class="img-fluid" src="img/deeplearning/deeplearning4.jpg" alt="">
+                  </a>
+              </div>
+
+
+
+			<!-- Embedded Part -->
+              <div class="col-sm-4 portfolio-item filter Embedded">
+                  <a class="portfolio-link" href="#EmbeddedModal1" data-toggle="modal" title="粮油理包系统">
+                      <div class="caption-port">
+                          <div class="caption-port-content">
+                              <i class="fa fa-search-plus fa-3x"></i>
+                          </div>
+                      </div>
+                      <img class="img-fluid" src="img/embedded/p-embedded-1.jpg" alt="" height=“150”>
+                  </a>
+              </div>
+
+              <div class="col-sm-4 portfolio-item filter Embedded">
+                  <a class="portfolio-link" href="#EmbeddedModal2" data-toggle="modal" title="平板导热仪项目">
+                      <div class="caption-port">
+                          <div class="caption-port-content">
+                              <i class="fa fa-search-plus fa-3x"></i>
+                          </div>
+                      </div>
+                      <img class="img-fluid" src="img/embedded/p-embedded-2.jpg" alt="" height=“150”>
+                  </a>
+              </div>
+
+              <div class="col-sm-4 portfolio-item filter Embedded">
+                  <a class="portfolio-link" href="#EmbeddedModal3" data-toggle="modal" title="机器人主控板项目">
+                      <div class="caption-port">
+                          <div class="caption-port-content">
+                              <i class="fa fa-search-plus fa-3x"></i>
+                          </div>
+                      </div>
+                      <img class="img-fluid" src="img/embedded/p-embedded-3.jpg" alt="" height=“150”>
+                  </a>
+              </div> 
+
+
+			<div class="col-sm-4 portfolio-item filter Embedded">
+                  <a class="portfolio-link" href="#EmbeddedModal4" data-toggle="modal" title="无线充电项目">
+                      <div class="caption-port">
+                          <div class="caption-port-content">
+                              <i class="fa fa-search-plus fa-3x"></i>
+                          </div>
+                      </div>
+                      <img class="img-fluid" src="img/embedded/p-embedded-4.jpg" alt="" height=“150”>
+                  </a>
+              </div> 
+
+			<div class="col-sm-4 portfolio-item filter Embedded">
+                  <a class="portfolio-link" href="#EmbeddedModal5" data-toggle="modal" title="矿场地下钢架梁受力监测项目">
+                      <div class="caption-port">
+                          <div class="caption-port-content">
+                              <i class="fa fa-search-plus fa-3x"></i>
+                          </div>
+                      </div>
+                      <img class="img-fluid" src="img/embedded/p-embedded-5.jpg" alt="" height=“150”>
+                  </a>
+              </div> 
+
+		<div class="col-sm-4 portfolio-item filter Embedded">
+                  <a class="portfolio-link" href="#EmbeddedModal6" data-toggle="modal" title="政府的物联网项目">
+                      <div class="caption-port">
+                          <div class="caption-port-content">
+                              <i class="fa fa-search-plus fa-3x"></i>
+                          </div>
+                      </div>
+                      <img class="img-fluid" src="img/embedded/p-embedded-6.jpg" alt="" height=“150”>
+                  </a>
+              </div> 
+
+              <div class="col-sm-4 portfolio-item filter Embedded">
+                  <a class="portfolio-link" href="#EmbeddedModal7" data-toggle="modal" title="图书馆站位上位机软件">
+                      <div class="caption-port">
+                          <div class="caption-port-content">
+                              <i class="fa fa-search-plus fa-3x"></i>
+                          </div>
+                      </div>
+                      <img class="img-fluid" src="img/embedded/liberary.jpg" alt="" height=“150”>
+                  </a>
+              </div> 
+		<div class="col-sm-4 portfolio-item filter Embedded">
+                  <a class="portfolio-link" href="#EmbeddedModal8" data-toggle="modal" title="文本转语音合成Qt5上位机软件">
+                      <div class="caption-port">
+                          <div class="caption-port-content">
+                              <i class="fa fa-search-plus fa-3x"></i>
+                          </div>
+                      </div>
+                      <img class="img-fluid" src="img/embedded/TxtToSpeech_GUI.png" alt="" height=“150”>
+                  </a>
+              </div> 
+
+
+			<!-- web designed part -->
+              <div class="col-sm-4 portfolio-item filter webDesign">
+                  <a class="portfolio-link" href="#webDModal1" data-toggle="modal" title="个人的博客页面">
+                      <div class="caption-port">
+                          <div class="caption-port-content">
+                              <i class="fa fa-search-plus fa-3x"></i>
+                          </div>
+                      </div>
+                      <img class="img-fluid" src="img/webdesigned/webdesigned1.jpg" alt="">
+                  </a>
+              </div>
+              <div class="col-sm-4 portfolio-item filter webDesign">
+                  <a class="portfolio-link" href="#webDModal2" data-toggle="modal" title="个人的作品展示网页">
+                      <div class="caption-port">
+                          <div class="caption-port-content">
+                              <i class="fa fa-search-plus fa-3x"></i>
+                          </div>
+                      </div>
+                      <img class="img-fluid" src="img/webdesigned/webdesigned2.jpg" alt="">
+                  </a>
+              </div>
+              <div class="col-sm-4 portfolio-item filter webDesign">
+                  <a class="portfolio-link" href="#webDModal3" data-toggle="modal" title="挂个人简介的网页">
+                      <div class="caption-port">
+                          <div class="caption-port-content">
+                              <i class="fa fa-search-plus fa-3x"></i>
+                          </div>
+                      </div>
+                      <img class="img-fluid" src="img/webdesigned/webdesigned3.jpg" alt="">
+                  </a>
+              </div>
+
+          </div>
+      </section>
+
+    <!--====================================================
+                        SKILLS
+    ======================================================-->       
+      <section class=" d-flex flex-column" id="skills">
+         <div class="p-lg-5 p-3 skill-cover">
+          <h3 class="text-center text-white">Coding Skills</h3>
+          <div class="row text-center my-auto "> 
+              <div class="col-md-3 col-sm-6">
+                  <div class="skill-item">
+                      <i class="fa fa-html5 fa-5x"></i>
+                      <h2><span class="counter"> 74 </span><span>%</span></h2>
+                      <p>python</p>
+                  </div>
+              </div>
+              <div class="col-md-3 col-sm-6">
+                  <div class="skill-item">
+                      <i class="fa fa-css3 fa-5x"></i>
+                      <h2><span class="counter"> 90 </span><span>%</span></h2>
+                      <p>C语言</p>
+                  </div>
+              </div>
+              <div class="col-md-3 col-sm-6">
+                  <div class="skill-item">
+                      <i class="fa fa-code fa-5x"></i>
+                      <h2><span class="counter"> 65 </span><span>%</span></h2>
+                      <p>C++</p>
+                  </div>
+              </div>
+              <div class="col-md-3 col-sm-6">
+                  <div class="skill-item">
+                      <i class="fa fa-globe fa-5x"></i>
+                      <h2><span class="counter"> 60 </span><span>%</span></h2>
+                      <p>JAVA</p>
+                  </div>
+              </div>
+              <div class="col-md-3 col-sm-6">
+                  <div class="skill-item">
+                      <i class="fa fa-ravelry fa-5x"></i>
+                      <h2><span class="counter"> 30 </span><span>%</span></h2>
+                      <p>C#</p>
+                  </div>
+              </div>
+              <div class="col-md-3 col-sm-6">
+                  <div class="skill-item">
+                      <i class="fa fa-wpexplorer fa-5x"></i>
+                      <h2><span class="counter"> 50 </span><span>%</span></h2>
+                      <p>Matlab</p>
+                  </div>
+              </div>
+              <div class="col-md-3 col-sm-6">
+                  <div class="skill-item">
+                      <i class="fa fa-circle-o-notch fa-5x"></i>
+                      <h2><span class="counter"> 40 </span><span>%</span></h2>
+                      <p>VB</p>
+                  </div>
+              </div>
+              <div class="col-md-3 col-sm-6">
+                  <div class="skill-item">
+                      <i class="fa fa-cloud-upload fa-5x"></i>
+                      <h2><span class="counter"> 40 </span><span>%</span></h2>
+                      <p>汇编</p>
+                  </div>
+              </div>
+              <div class="col-md-3 col-sm-6">
+                  <div class="skill-item">
+                      <i class="fa fa-certificate fa-5x"></i>
+                      <h2><span class="counter"> 40 </span><span>%</span></h2>
+                      <p>html</p>
+                  </div>
+              </div>
+              <div class="col-md-3 col-sm-6">
+                  <div class="skill-item">
+                      <i class="fa fa-cogs fa-5x"></i>
+                      <h2><span class="counter"> 40 </span><span>%</span></h2>
+                      <p>CSS</p>
+                  </div>
+              </div>
+              <div class="col-md-3 col-sm-6">
+                  <div class="skill-item">
+                      <i class="fa fa-bicycle fa-5x"></i>
+                      <h2><span class="counter"> 50 </span><span>%</span></h2>
+                      <p>电路设计</p>
+                  </div>
+              </div>
+              <div class="col-md-3 col-sm-6">
+                  <div class="skill-item">
+                      <i class="fa fa-diamond fa-5x"></i>
+                      <h2><span class="counter"> 50 </span><span>%</span></h2>
+                      <p>芯片代码设计</p>
+                  </div>
+              </div>
+          </div>
+         </div> 
+      </section>
+
+    <!--====================================================
+                           AWARDS
+    ======================================================-->       
+      <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="awards">
+          <div class="row my-auto">
+              <div class="col-12">
+                <h2 class="  text-center">Awards</h2>
+                <div class="mb-5 heading-border"></div>
+              </div> 
+              <div class="main-award" id="award-box">
+
+              	<div class="award">
+                      <div class="award-icon"></div>
+                      <div class="award-content">
+                          <span class="date">begain-2014年</span>
+                          <h5 class="title">积极参加学校各类社团活动</h5>
+                          <p class="description">
+                              参加了科技创新基地、创业基地、学生会三个社团的活动，分别作为社团活动成员，完成社团内的各项工作任务，积极参加社团举办的各类活动。
+                          </p>
+                      </div>
+                  </div>
+
+
+                  <div class="award">
+                      <div class="award-icon"></div>
+                      <div class="award-content">
+                          <span class="date">Apr 2014</span>
+                          <h5 class="title">江苏省高校第十一届“天上春前杯”--磁耦合共振无线输电作品二等奖</h5>
+                          <p class="description">
+                              磁耦合无线输电作品，主要利用无线电中的谐振原理，实现高效率的无线充电功能。由主从线圈组成，组线圈发射137KHZ信号，从机通过从线圈和电容稳压等原件进行无线输电，从机整个电路固有频率也调节为接收信号相同频率，从而达到谐振。
+                          </p>
+                      </div>
+                  </div>
+
+                  <div class="award">
+                      <div class="award-icon"></div>
+                      <div class="award-content">
+                          <span class="date">Apr 2014</span>
+                          <h5 class="title">学院科技创新基地技术部部长</h5>
+                          <p class="description">
+                              主要工作是，带领学院对电子创新感兴趣的同学，参与科技创新训练计划的项目实战，并教一些基本的知识给后来而同学，学校带领的电子竞赛团队大多都是我们技术部出来的，主功技术创新。
+                          </p>
+                      </div>
+                  </div>
+
+				 <div class="award">
+                      <div class="award-icon"></div>
+                      <div class="award-content">
+                          <span class="date"> 2014 年 12 月</span>
+                          <h5 class="title">学院数学竞赛一等奖</h5>
+                          <p class="description">
+                              主要和2个队友一起搞数学建模。
+                          </p>
+                      </div>
+                  </div>
+
+                  
+
+				<div class="award">
+                      <div class="award-icon"></div>
+                      <div class="award-content">
+                          <span class="date"> 2014 年</span>
+                          <h5 class="title">工商银行奖学金</h5>
+                          <p class="description">
+                              工商银行奖学金
+                          </p>
+                      </div>
+                 </div>
+
+                  <div class="award">
+                      <div class="award-icon"></div>
+                      <div class="award-content">
+                          <span class="date"> 2014 年</span>
+                          <h5 class="title">课外科技活动先进个人一等奖学金</h5>
+                          <p class="description">
+                              课外科技活动先进个人一等奖学金
+                          </p>
+                      </div>
+                  </div>
+				<div class="award">
+                      <div class="award-icon"></div>
+                      <div class="award-content">
+                          <span class="date"> 2014 年 8 月 </span>
+                          <h5 class="title">”2014年中国机器人大赛暨 RoboCup公开赛“ 一等奖</h5>
+                          <p class="description">
+                              ”2014年中国机器人大赛暨 RoboCup公开赛“中获机器人竞技工程体操赛 项目一等奖
+                          </p>
+                      </div>
+                  </div>
+
+				<div class="award">
+                      <div class="award-icon"></div>
+                      <div class="award-content">
+                          <span class="date"> 2014 年 8 月 </span>
+                          <h5 class="title">”2014年中国机器人大赛暨 RoboCup公开赛“ 一等奖</h5>
+                          <p class="description">
+                              ”2014年中国机器人大赛暨 RoboCup公开赛“中获机器人竞技工程窄足竞步赛 项目一等奖
+                          </p>
+                      </div>
+                  </div>
+
+                  <div class="award">
+                      <div class="award-icon"></div>
+                      <div class="award-content">
+                          <span class="date"> 2015 年 4 月</span>
+                          <h5 class="title">蓝桥杯大赛二等奖</h5>
+                          <p class="description">
+                              荣获第六届蓝桥杯全国软件和信息技术专业人才大赛嵌入式与开发组二等奖。
+                          </p>
+                      </div>
+                  </div>
+
+                  <div class="award">
+                      <div class="award-icon"></div>
+                      <div class="award-content">
+                          <span class="date"> 2015 年 7 月</span>
+                          <h5 class="title">江苏省大学生创新创业训练计划项目 结项证书</h5>
+                          <p class="description">
+                              参与的2014年江苏省大学生创新创业训练计划项目：建筑物管线检测仪（项目编号：201413579008Y),经验收，圆满完成研究任务，同意结项。特发此证，以资鼓励。
+                          </p>
+                      </div>
+                  </div>
+
+				<div class="award">
+                      <div class="award-icon"></div>
+                      <div class="award-content">
+                          <span class="date">2015 年</span>
+                          <h5 class="title">课外科技活动先进个人一等奖学金</h5>
+                          <p class="description">
+                              课外科技活动先进个人一等奖学金
+                          </p>
+                      </div>
+                  </div>
+                  <div class="award">
+                      <div class="award-icon"></div>
+                      <div class="award-content">
+                          <span class="date"> 2015 年 8 月 </span>
+                          <h5 class="title">”2014年中国机器人大赛暨 RoboCup公开赛“ 二等奖</h5>
+                          <p class="description">
+                              ”2014年中国机器人大赛暨 RoboCup公开赛“中获机器人竞技工程项目竞技上坡赛 项目二等奖
+                          </p>
+                      </div>
+                  </div>
+                  <div class="award">
+                      <div class="award-icon"></div>
+                      <div class="award-content">
+                          <span class="date"> 2016 年</span>
+                          <h5 class="title">第十届挑战杯江苏大学生课外科学技术作品二等奖</h5>
+                          <p class="description">
+                              主要是四旋翼无人机的相关比赛
+                          </p>
+                      </div>
+                  </div>
+                  <div class="award">
+                      <div class="award-icon"></div>
+                      <div class="award-content">
+                          <span class="date"> 2016 年</span>
+                          <h5 class="title">课外科技活动先进个人一等奖学金</h5>
+                          <p class="description">
+                              课外科技活动先进个人一等奖学金
+                          </p>
+                      </div>
+                  </div>
+				<div class="award">
+                      <div class="award-icon"></div>
+                      <div class="award-content">
+                          <span class="date"> end - 大学(本科)</span>
+                          <h5 class="title">以上是大学的情况</h5>
+                          <p class="description">
+                              参加并通过了全国计算机的二级VB、C 、C++ 和三级嵌入式工程师、英语等级等考试
+                          </p>
+                      </div>
+                  </div>
+
+                  <div class="award">
+                      <div class="award-icon"></div>
+                      <div class="award-content">
+                          <span class="date"> 2017 年 - 2020 年</span>
+                          <h5 class="title">研究生期间还没结束暂时不写</h5>
+                          <p class="description">
+                              目测参加比赛少了，学的东西多了，沉迷搞实物了
+                          </p>
+                      </div>
+                  </div>
+				
+
+              </div>
+          </div>
+      </section> 
+
+    <!--====================================================
+                          CONTACT
+    ======================================================-->       
+      <section class="resume-section p-3 p-lg-5 d-flex flex-column">
+          <div class="row my-auto" id="contact"> 
+            <div class="col-md-8">
+              <div class="contact-cont">
+                <h3>联系我</h3>
+                <div class="heading-border-light"></div>
+               <!--  <p></p> -->
+                <!-- <p>亲爱的访客贵宾，您们好，浏览到这里就算结束了。如果您对我研究的东西感兴趣，欢迎关注我社交账号好友，便于我们讨论属于我们感兴趣的内容，或者查看更多菜单可以进入我的博客，gitbook，github等了解我更多。当然我们可以讨论的不光是技术层面哦，搞技术的不应该死在技术点上。兴趣点燃，生活工作才更有激情，更有干劲，所以除了技术，自己感兴趣的方面都要发展！</p> -->
+                
+                <p><strong>&emsp;&emsp;如有任何问题/建议，可以通过编辑下方的内容，然后点击发送，我将会收到来自您的邮件，并在第一时间通过您留下的邮箱地址回复您，感谢您的到访。</strong>（提示：发送支持匿名邮件发送，可以不输入邮箱地址。注意: 直接发送邮件功能需要调用google验证，如无法访问google，email将会发送失败。此时建议VPN支持或转<a href="https://blog.porterpan.top/about/contactme.html">加微信发送</a>。）<p>
+                	<p align="right">Porter 祝您生活愉快！</p>
+              </div>   
+
+              <form method="POST" action="https://formspree.io/porterpan@163.com">
+	              <div class="row con-form">
+		                <div class="col-md-12">
+		                  <input type="text" name="full-name" placeholder="输入您的姓名" class="form-control" title="可以使昵称">
+		                </div>
+		                <div class="col-md-12">
+		                  <input type="email" name="email" placeholder="Email 地址" class="form-control" title="可以不填，但请不要随意输入错误地址">
+		                </div>
+		                <div class="col-md-12">
+		                  <input type="text" name="subject" placeholder="主题" class="form-control">
+		                </div>
+		                <div class="col-md-12"><textarea name="message" placeholder="输入您的内容" id=""></textarea></div>
+		                <div class="col-md-12 sub-but"><button class="btn btn-general btn-white" type="submit" role="button" title="发送邮件需要google业务支持，请测试是否能上google">发送 Email</button></div>
+	              </div>
+              </form>
+
+            </div>
+            <div class="col-md-4 col-sm-12 mt-5"> 
+              <div class="contact-cont2"> 
+                <div class="contact-add contact-box-desc">
+                  <h3><i class="fa fa-map-marker cl-atlantis fa-2x"></i> Address</h3>
+                  <p>25, Porter Pan Street,Jiang <br>
+                  Su, CN <br></p>
+                </div>
+                <div class="contact-phone contact-side-desc contact-box-desc">
+                  <h3><i class="fa fa-phone cl-atlantis fa-2x"></i> Phone</h3>
+                  <p>+86 133 3333 3333 <br>+022 8666 666</p>
+                </div>
+                <div class="contact-mail contact-side-desc contact-box-desc">
+                  <h3><i class="fa fa-envelope-o cl-atlantis fa-2x"></i> Email</h3>
+                <address class="address-details-f"> 
+                  Fax: 000 000 0000 <br>
+                  Email: <a href="mailto:porterpan@163.com" class="">porterpan@163.com</a>
+                </address>
+                <ul class="list-inline social-icon-f top-data">
+                  <li><a href="#" target="_empty" onclick="disp_alert()" title="Facebook"><i class="fa top-social fa-facebook" style="color: #4267b2; border-color:#4267b2;"></i></a></li>
+                  <li><a href="https://twitter.com/zf_Porter" target="_empty"  title="Twitter"><i class="fa top-social fa-twitter" style="color: #4AB3F4; border-color:#4AB3F4;"></i></a></li>
+                  <li><a href="https://t.me/Porter_Pan" target="_empty"  title="Telegram"><i class="fa top-social fa-telegram" style="color: #007bff; border-color:##28a745;"></i></a></li> 
+                </ul>
+                </div>
+                
+              </div>
+            </div> 
+          </div>
+      </section>
+
+<!-- 	<form method="POST" action="https://formspree.io/porterpan@163.com">
+	  <input type="email" name="email" placeholder="Your email">
+	  <textarea name="message" placeholder="Test Message"></textarea>
+	  <button type="submit">Send Test</button>
+	</form> -->
+
+<div  style="font-size:3px" fontstyle>
+<center><i class="fa fa-copyright"></i> 2018-2019  Page content designed By <a href="https://blogs.porterpan.top">Porter. Pan</a> welcome to <a href="index.html" > my blog</a></center>
+<div>
+
+    </div>
+
+<!--====================================================
+                    PORTFOLIO MODALS
+======================================================-->
+    <div class="portfolio-modal modal fade" id="EmbeddedModal1" tabindex="-1" role="dialog" aria-hidden="true" >
+      <div class="modal-dialog" role="document">
+          <div class="modal-content">
+              <div class="close-modal" data-dismiss="modal">
+                  <div class="lr">
+                      <div class="rl"></div>
+                  </div>
+              </div>
+              <div class="container">
+                  <div class="row">
+                          <div class="modal-body">
+                              <div class="title-bar">
+                                <div class="col-md-12">
+                                  <h2 class="text-center">基于嵌入式单片机开发的在线理包系统</h2>
+                                  <div class="heading-border"></div>
+                                </div>
+                              </div>
+                              <div class="row">
+                                <div class="col-md-6">
+                                	
+                                  <img class="img-fluid img-centered" src="img/embedded/p-embedded-1-1.jpg" alt="">
+                                  <img class="img-fluid img-centered" src="img/embedded/p-embedded-1-2.jpg" alt="">
+                                </div>
+                                <div class="col-md-6">
+                                  <p>本项目主要是基于嵌入式单片机开发的在线发包/检包的理包系统</p>
+                                  <hr />
+                                  <ul >
+                                  	<li>在线发包:<li>
+                                  		<ul>
+                                  			<li>整套系统通过仓储上位机软件下发发包数量等信息</li>
+                                  			<li>本套硬件系统收到理包室下发的上车数量后，自动控制装车传送带进行作业</li>
+                                  			<li>当装车数量达到电脑端下发装车数量后，自动停止送货皮带的运行</li>
+                                  		</ul>
+
+                                  		<li>在线检包:<li>
+                                  		<ul>
+                                  			<li>本套系统在装车的过程中自动检测，工人装车的包数</li>
+                                  			<li>本套硬件系统将检测到的装报数量经过以太网直接传入公司服务器中</li>
+                                  			<li>上位机软件也会通过服务器实时下载的当前包数给理包室的软件客户端上，供操作人员直观查看</li>
+                                  			<li>本套系统，支持客户端操作实现硬件系统中途加包，中途停止和结束等功能</li>
+                                  		</ul>
+
+                                  		<li>客户端软件：<li>
+                                  		<ul>
+                                  			<li>客户端软件支持实时和服务器的数据库数据进行交换</li>
+                                  			<li>客户端支持密码登录，非操作人员不能擅自改动</li>
+                                  			<li>客户端支持报表等功能，供存表和打印等</li>
+                                  		</ul>
+										<br />
+                                  		<div>
+											<img class="img-fluid img-centered" src="img/embedded/p-embedded-1-3.jpg" alt="">
+                                  		</div>
+
+                                  </ul>
+                                  <ul class="list-inline item-details">
+                                      <li>Article:
+                                          <strong>
+                                            <a href="#">详情见我的博文</a>
+                                          </strong>
+                                      </li>
+                                      <li>Date:
+                                          <strong>
+                                            <a href="#">2017年4月</a>
+                                          </strong>
+                                      </li>
+                                      <li>Service:
+                                          <strong>
+                                            <a href="#">嵌入式开发</a>
+                                          </strong>
+                                      </li>
+                                  </ul>
+                                  <button class="btn btn-general btn-white" type="button" data-dismiss="modal">
+                                      <i class="fa fa-times"></i> Close
+                                  </button>
+                              </div>
+                            </div>
+                          </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+    </div>
+
+    <div class="portfolio-modal modal fade" id="deeplModal1" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="close-modal" data-dismiss="modal">
+                    <div class="lr">
+                        <div class="rl"></div>
+                    </div>
+                </div>
+                <div class="container">
+                <div class="row">
+                        <div class="modal-body">
+                            <div class="title-bar">
+                              <div class="col-md-12">
+                                <h2 class="text-center">基于深度学习的MNIST手写字识别</h2>
+                                <div class="heading-border"></div>
+                              </div>
+                            </div>
+                            <div class="row">
+                              <div class="col-md-6">
+                                <img class="img-fluid img-centered" src="img/deeplearning/deeplearning1-1.png" alt="">
+                              </div>
+                              <div class="col-md-6">
+                                <p>基于深度学习的MNIST手写字识别</p>
+                                <hr />
+                                <ul>
+                                  	<li>深度学习实战<li>
+                                  		<ul>
+                                  			<li>学习Pytorch</li>
+                                  			<li>numpy学习</li>
+                                  			<li>数据库学习</li>
+                                  		</ul>
+
+                                  		<li>Linux学习<li>
+                                  		<ul>
+                                  			<li>学习在Centos服务器上搭建数据库，并批量存储图片数据</li>
+                                  			<li>学习使用Ubuntu进行程序设计</li>
+                                  			<li>ubuntu中使用CUDA等</li>
+                                  		</ul>
+
+                                  </ul>
+                                <ul class="list-inline item-details">
+                                    <li>Article:
+                                        <strong>
+                                          <a href="#">详情见我的博文</a>
+                                        </strong>
+                                    </li>
+                                    <li>Date:
+                                        <strong>
+                                          <a href="#">2017年4月</a>
+                                        </strong>
+                                    </li>
+                                    <li>Service:
+                                        <strong>
+                                          <a href="#">深度学习实战</a>
+                                        </strong>
+                                    </li>
+                                </ul>
+                                <button class="btn btn-general btn-white" type="button" data-dismiss="modal">
+                                    <i class="fa fa-times"></i> Close
+                                </button>
+                            </div>
+                          </div>
+                        </div>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="portfolio-modal modal fade" id="webDModal1" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="close-modal" data-dismiss="modal">
+                    <div class="lr">
+                        <div class="rl"></div>
+                    </div>
+                </div>
+                <div class="container">
+                <div class="row">
+                        <div class="modal-body">
+                            <div class="title-bar">
+                              <div class="col-md-12">
+                                <h2 class="text-center">Our Project</h2>
+                                <div class="heading-border"></div>
+                              </div>
+                            </div>
+                            <div class="row">
+                              <div class="col-md-6">
+                                <img class="img-fluid img-centered" src="img/webdesigned/webdesigned1.jpg" alt="">
+                              </div>
+                              <div class="col-md-6">
+                                <p>个人博客的搭建</p>
+                                <hr />
+                                <p>内容暂时没有</p>
+                                <ul class="list-inline item-details">
+                                    <li>Article:
+                                        <strong>
+                                          <a href="blog.porterpan.top">详情见我的博文</a>
+                                        </strong>
+                                    </li>
+                                    <li>Date:
+                                        <strong>
+                                          <a href="#">2017年4月</a>
+                                        </strong>
+                                    </li>
+                                    <li>Service:
+                                        <strong>
+                                          <a href="#">Web Development</a>
+                                        </strong>
+                                    </li>
+                                </ul>
+                                <button class="btn btn-general btn-white" type="button" data-dismiss="modal">
+                                    <i class="fa fa-times"></i> Close
+                                </button>
+                              </div>
+                          </div>
+                        </div>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+    <div class="portfolio-modal modal fade" id="EmbeddedModal2" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="close-modal" data-dismiss="modal">
+                    <div class="lr">
+                        <div class="rl"></div>
+                    </div>
+                </div>
+                <div class="container">
+                <div class="row">
+                        <div class="modal-body">
+                            <div class="title-bar">
+                              <div class="col-md-12">
+                                <h2 class="text-center">Our Project</h2>
+                                <div class="heading-border"></div>
+                              </div>
+                            </div>
+                            <div class="row">
+                              <div class="col-md-6">
+                                <img class="img-fluid img-centered" src="img/embedded/p-embedded-2.jpg" alt="">
+                                 <img class="img-fluid img-centered" src="img/embedded/p-embedded-2-1.jpg" alt="">
+                              </div>
+                              
+                              <div class="col-md-6">
+                                <p>平板导热仪产品</p>
+								<hr />
+                                <ul>
+                                  	<li>平板导热仪主板电路设计<li>
+                                  		<ul>
+                                  			<li>可控硅的应用</li>
+                                  			<li>大功率加热</li>
+                                  			<li>低噪声小信号处理</li>
+                                  		</ul>
+
+                                  		<li>平板导热仪主板程序设计<li>
+                                  		<ul>
+                                  			<li>模糊PID的调节</li>
+                                  			<li>嵌入式单片机代码编写</li>
+                                  			<li>AD采样电路的卡尔曼滤波算法</li>
+                                  			<li>和电脑USB通信协议编写</li>
+                                  		</ul>
+
+                                  </ul>
+
+                                <ul class="list-inline item-details">
+                                    <li>Article:
+                                        <strong>
+                                          <a href="#">详情见我的博文</a>
+                                        </strong>
+                                    </li>
+                                    <li>Date:
+                                        <strong>
+                                          <a href="#">2017年4月</a>
+                                        </strong>
+                                    </li>
+                                    <li>Service:
+                                        <strong>
+                                          <a href="#">Web Development</a>
+                                        </strong>
+                                    </li>
+                                </ul>
+                                <button class="btn btn-general btn-white" type="button" data-dismiss="modal">
+                                    <i class="fa fa-times"></i> Close
+                                </button>
+                              </div>
+                          </div>
+                        </div>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+    <div class="portfolio-modal modal fade" id="EmbeddedModal3" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="close-modal" data-dismiss="modal">
+                    <div class="lr">
+                        <div class="rl"></div>
+                    </div>
+                </div>
+                <div class="container">
+                <div class="row">
+                        <div class="modal-body">
+                            <div class="title-bar">
+                              <div class="col-md-12">
+                                <h2 class="text-center">Our Project</h2>
+                                <div class="heading-border"></div>
+                              </div>
+                            </div>
+                            <div class="row">
+                              <div class="col-md-6">
+                                <img class="img-fluid img-centered" src="img/embedded/p-embedded-3.jpg" alt="">
+                              </div>
+                              <div class="col-md-6">
+                              	 <p>简单的机器人</p>
+                              	<hr />
+                                <p>这个是学校参加比赛的机器人中的一个，其他机器人，嗯，毕业好多年了，之前也没拍照片，好吧，可以YY，自己在大脑中想想，好多比这个强的机器人，没写出来了</p>
+                                <p>这个真的是里面很渣的一个，但是被我在网盘里找到了照片，将就看看吧。其实本科，不可能能投资或花费好几年专门做更高端的，所以。。。。</p>
+                                <ul class="list-inline item-details">
+                                    <li>Article:
+                                        <strong>
+                                          <a href="#">详情见我的博文</a>
+                                        </strong>
+                                    </li>
+                                    <li>Date:
+                                        <strong>
+                                          <a href="#">2017年4月</a>
+                                        </strong>
+                                    </li>
+                                    <li>Service:
+                                        <strong>
+                                          <a href="#">Web Development</a>
+                                        </strong>
+                                    </li>
+                                </ul>
+                                <button class="btn btn-general btn-white" type="button" data-dismiss="modal">
+                                    <i class="fa fa-times"></i> Close
+                                </button>
+                            </div>
+                          </div>
+                        </div>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+	<div class="portfolio-modal modal fade" id="EmbeddedModal4" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="close-modal" data-dismiss="modal">
+                    <div class="lr">
+                        <div class="rl"></div>
+                    </div>
+                </div>
+                <div class="container">
+                <div class="row">
+                        <div class="modal-body">
+                            <div class="title-bar">
+                              <div class="col-md-12">
+                                <h2 class="text-center">本科无线充电的项目</h2>
+                                <div class="heading-border"></div>
+                              </div>
+                            </div>
+                            <div class="row">
+                              <div class="col-md-6">
+                                <img class="img-fluid img-centered" src="img/embedded/p-embedded-4.jpg" alt="">
+                              </div>
+                              <div class="col-md-6">
+                              	 <p>简单的基于磁耦合的无线充电</p>
+                              	<hr />
+                              	<ul>
+									<li>照片拍摄于本科期间，当时手机像素有点不好，可能不是严谨的展示 </li>
+									<li>包括平时也比较忙，所以也就没进行PS修正 </li>
+									<li> 本无线充电，传输距离能达到30cm，手机接上均有充电指示效果</li>
+									<li> 原理是基于谐振的原理</li>
+									<li>思路来源于收音机的无限调频原理</li>
+									<li>如左图第二章所示，钢尺的长度是50cm的，当距离超过50cm，接收端还有微弱的电流，使电流指示灯点亮。</li>
+                              	</ul>
+                                <ul class="list-inline item-details">
+                                    <li>Article:
+                                        <strong>
+                                          <a href="https://github.com/porterpan/Undergraduate_project/tree/master/%E6%97%A0%E7%BA%BF%E8%BE%93%E7%94%B5%E9%A1%B9%E7%9B%AE/%E6%92%B0%E5%86%99%E6%96%87%E7%AB%A0">详情见我的博文</a>
+                                        </strong>
+                                    </li>
+                                    <li>Date:
+                                        <strong>
+                                          <a href="#">2017年4月</a>
+                                        </strong>
+                                    </li>
+                                    <li>Service:
+                                        <strong>
+                                          <a href="#">Web Development</a>
+                                        </strong>
+                                    </li>
+                                </ul>
+                                <button class="btn btn-general btn-white" type="button" data-dismiss="modal">
+                                    <i class="fa fa-times"></i> Close
+                                </button>
+                            </div>
+                          </div>
+                        </div>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+	<div class="portfolio-modal modal fade" id="EmbeddedModal5" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="close-modal" data-dismiss="modal">
+                    <div class="lr">
+                        <div class="rl"></div>
+                    </div>
+                </div>
+                <div class="container">
+                <div class="row">
+                        <div class="modal-body">
+                            <div class="title-bar">
+                              <div class="col-md-12">
+                                <h2 class="text-center">矿下钢架梁受力检测系统</h2>
+                                <div class="heading-border"></div>
+                              </div>
+                            </div>
+                            <div class="row">
+                              <div class="col-md-6">
+                                <img class="img-fluid img-centered" src="img/embedded/p-embedded-5.jpg" alt="">
+                                <img class="img-fluid img-centered" src="img/embedded/p-embedded-5-1.png" alt="">
+                              </div>
+                              <div class="col-md-6">
+                              	 <p>系统功能描述</p>
+                              	<hr />
+                              	<ul>
+									<li>下位机运行的UCOSII操作系统 </li>
+									<li>片上有FLASH，EEROM，内存卡多种存储联合实现，各个用途功能不一</li>
+									<li>片上有24位高精度的电压信号采集器</li>
+									<li>高灵敏应力传感器组，组成的桥式电桥，和AD实现差分信号采集</li>
+									<li>基于MOdebus通信协议，包括IIC,SPI,USART,USB等通信接口实现物理层的通信</li>
+									<li>支持数据实时显示和波形显示</li>
+                              	</ul>
+                              	<hr />
+                              	<p>说下硬件吧</p>
+                              	<ul>
+									<p>包括液晶的电路和电源等电路，没有采用现成的模块，全是集成到一块自己设计的电路板上的。</p>
+									<p>液晶FPC插线也是直接焊接到板子上的，不存在购买液晶模块嵌入</p>
+									<p>整套系统的控制硬件全是自己设计，代码也是自己完成，包括后期工厂联调，和液压机测试等均为个人完成</p>
+                              	</ul>
+                              	<br />
+                              	<div>
+									<img class="img-fluid img-centered" src="img/embedded/p-embedded-5-2.jpg" alt="">
+                                 </div>                                 
+                                <ul class="list-inline item-details">
+                                    <li>Article:
+                                        <strong>
+                                          <a href="https://github.com/porterpan/Undergraduate_project/tree/master/%E6%97%A0%E7%BA%BF%E8%BE%93%E7%94%B5%E9%A1%B9%E7%9B%AE/%E6%92%B0%E5%86%99%E6%96%87%E7%AB%A0">详情见我的博文</a>
+                                        </strong>
+                                    </li>
+                                   <li>Date:
+                                        <strong>
+                                          <font color='blue'> 2017年4月 </font>
+                                        </strong>
+                                    </li>
+                                    <li>Service:
+                                        <strong>
+                                          <a href="porterpan.github.io">Porter.Pan</a>
+                                        </strong>
+                                    </li>
+                                </ul>
+                                <button class="btn btn-general btn-white" type="button" data-dismiss="modal">
+                                    <i class="fa fa-times"></i> Close
+                                </button>
+                            </div>
+                          </div>
+                        </div>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="portfolio-modal modal fade" id="EmbeddedModal6" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="close-modal" data-dismiss="modal">
+                    <div class="lr">
+                        <div class="rl"></div>
+                    </div>
+                </div>
+                <div class="container">
+                <div class="row">
+                        <div class="modal-body">
+                            <div class="title-bar">
+                              <div class="col-md-12">
+                                <h2 class="text-center">物联网系统</h2>
+                                <div class="heading-border"></div>
+                              </div>
+                            </div>
+                            <div class="row">
+                              <div class="col-md-6">
+                                <img class="img-fluid img-centered" src="img/embedded/p-embedded-6-1.jpg" alt="">
+                                <img class="img-fluid img-centered" src="img/embedded/p-embedded-6-3.png" alt="">
+                              </div>
+                              <div class="col-md-6">
+                              	 <p>系统功能描述</p>
+                              	<hr />
+                              	<ul>
+									<li>支持网页的数据采集显示，左图的数据显示界面就是网页上的界面截图 </li>
+									<li>片上有FLASH，EEROM，内存卡多种存储联合实现，各个用途功能不一</li>
+									<li>片上直接使用移动物联网卡实现的数据远端传输</li>
+									<li>高灵敏应温度、湿度、二氧化碳、硫化氢，甲醛等的浓度监测</li>
+									<li>基于MOdebus通信协议，包括IIC,SPI,USART,USB等通信接口实现物理层的通信</li>
+									<li>支持数据实时显示和波形显示</li>
+									<li>网页端支持自己设置预警值，当传感器的懂得值大于阈值将会通过手机发送报警短信，同时微信公众号也会给用户推送报警值</li>
+									<li> 微信公众号上也可以接收并查看个人账户的传感器状态</li>
+                              	</ul>
+                              	<hr />
+                              	<p>说下硬件吧</p>
+                              	<ul>
+									<p>硬件就是传感器网络组成</p>
+									<p>移动物联网的流量数据，来实现数据上传服务器中</p>
+									<p>整套系统的控制硬件全是自己设计，代码也是自己完成，包括后期工厂联调，和液压机测试等均为个人完成</p>
+                              	</ul>
+                              	<br />
+                              	<div>
+									<img class="img-fluid img-centered" src="img/embedded/p-embedded-6-2.jpg" alt="">
+                                 </div>                                 
+                                <ul class="list-inline item-details">
+                                    <li>Article:
+                                        <strong>
+                                          <a href="#">详情见我的博文</a>
+                                        </strong>
+                                    </li>
+                                    <li>Date:
+                                        <strong>
+                                          <font color='blue'> 2017年4月 </font>
+                                        </strong>
+                                    </li>
+                                    <li>Service:
+                                        <strong>
+                                          <a href="porterpan.github.io">Porter.Pan</a>
+                                        </strong>
+                                    </li>
+                                </ul>
+                                <button class="btn btn-general btn-white" type="button" data-dismiss="modal">
+                                    <i class="fa fa-times"></i> Close
+                                </button>
+                            </div>
+                          </div>
+                        </div>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="portfolio-modal modal fade" id="EmbeddedModal7" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="close-modal" data-dismiss="modal">
+                    <div class="lr">
+                        <div class="rl"></div>
+                    </div>
+                </div>
+                <div class="container">
+                <div class="row">
+                        <div class="modal-body">
+                            <div class="title-bar">
+                              <div class="col-md-12">
+                                <h2 class="text-center">图书馆站位系统</h2>
+                                <div class="heading-border"></div>
+                              </div>
+                            </div>
+                            <div class="row">
+                              <div class="col-md-6">
+                                <img class="img-fluid img-centered" src="img/embedded/liberary.jpg" alt="">
+                              </div>
+                              <div class="col-md-6">
+                              	 <p>系统功能描述</p>
+                              	<hr />
+                              	<ul>
+									<li>可以查询当前选择的房间号和当前填写的时间段的座位被占用情况 </li>
+									<li>可以查询当前座位的同学姓名</li>
+									<li>可以选择当前选择的房间号和当前填写的时间段的座位，对对应房间号中的某座位进行预约</li>
+									<li>支持当天的位置预约和未来24小时的位置进行预约</li>
+									<li>更多功能自行探索</li>
+                              	</ul>                        
+                                <ul class="list-inline item-details">
+                                    <li>Article:
+                                        <strong>
+                                          <a href="https://www.kancloud.cn/porterpan/projects-doc/content/-Library-%E5%8D%A0%E5%BA%A7%E5%B0%8F%E5%B7%A5%E5%85%B7%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C.md">图书馆占座使用说明书</a>
+                                        </strong>
+                                    </li>
+                                    <li>Date:
+                                        <strong>
+                                          <font color='blue'> 2019年5月 </font>
+                                        </strong>
+                                    </li>
+                                    <li>Service:
+                                        <strong>
+                                          <a href="porterpan.github.io">Porter.Pan</a>
+                                        </strong>
+                                    </li>
+                                </ul>
+                                <button class="btn btn-general btn-white" type="button" data-dismiss="modal">
+                                    <i class="fa fa-times"></i> Close
+                                </button>
+                            </div>
+                          </div>
+                        </div>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+    <div class="portfolio-modal modal fade" id="EmbeddedModal8" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="close-modal" data-dismiss="modal">
+                    <div class="lr">
+                        <div class="rl"></div>
+                    </div>
+                </div>
+                <div class="container">
+                <div class="row">
+                        <div class="modal-body">
+                            <div class="title-bar">
+                              <div class="col-md-12">
+                                <h2 class="text-center">文本转语音合成软件</h2>
+                                <div class="heading-border"></div>
+                              </div>
+                            </div>
+                            <div class="row">
+                              <div class="col-md-6">
+                                <img class="img-fluid img-centered" src="img/embedded/texToSpeech.gif" alt="">
+                                 <img class="img-fluid img-centered" src="img/embedded/text2speech_select.jpg" alt="">
+                              </div>
+                              
+                              <div class="col-md-6">
+                                <p>本软件是基于Qt5开发的，实现的功能是文本转语音合成的功能。</p>
+								<hr />
+                                <ul>
+                                  	<li>文本转语音合成软件操作步骤<li>
+                                  		<li>第一种操作方式<li>	
+						<ul>
+                                  			<li>加载TXT</li>
+                                  			<li>选择发音人</li>
+                                  			<li>点击语音合成</li>
+                                  		</ul>
+
+                                  		<li>第二种操作方式<li>
+                                  		<ul>
+                                  			<li>直接编辑最右边文本框</li>
+                                  			<li>选择发音人</li>
+                                  			<li>点击语音合成</li>
+                                  		</ul>
+
+                                  </ul>
+
+                                <ul class="list-inline item-details">
+                                    <li>Article:
+                                        <strong>
+                                          <a href="https://blogs.porterpan.top/TxtToSpeech/#more">详情见我的博文</a>
+                                        </strong>
+                                    </li>
+                                    <li>Date:
+                                        <strong>
+                                          <font color='blue'> 2019年10月 </font>
+                                        </strong>
+                                    </li>
+                                    <li>Service:
+                                        <strong>
+                                          <a href="porterpan.github.io">Porter.Pan</a>
+                                        </strong>
+                                    </li>
+                                </ul>
+                                <button class="btn btn-general btn-white" type="button" data-dismiss="modal">
+                                    <i class="fa fa-times"></i> Close
+                                </button>
+                              </div>
+                          </div>
+                        </div>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+
+		<!-- web  designed -->
+
+    <div class="portfolio-modal modal fade" id="webDModal2" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="close-modal" data-dismiss="modal">
+                    <div class="lr">
+                        <div class="rl"></div>
+                    </div>
+                </div>
+                <div class="container">
+                <div class="row">
+                        <div class="modal-body">
+                            <div class="title-bar">
+                              <div class="col-md-12">
+                                <h2 class="text-center">我的项目进度网</h2>
+                                <div class="heading-border"></div>
+                              </div>
+                            </div>
+                            <div class="row">
+                              <div class="col-md-6">
+                                <img class="img-fluid img-centered" src="img/webdesigned/webdesigned2.jpg" alt="">
+                              </div>
+                              <div class="col-md-6">
+                                <p>个人的项目进度和项目经验网站.</p>
+                                <hr />
+                                 <p>内容暂时没有</p>
+                                <ul class="list-inline item-details">
+                                    <li>Article:
+                                        <strong>
+                                          <a href="../index.html">详情见我的网站</a>
+                                        </strong>
+                                    </li>
+                                    <li>Date:
+                                        <strong>
+                                          <a href="#">2017年4月</a>
+                                        </strong>
+                                    </li>
+                                    <li>Service:
+                                        <strong>
+                                          <a href="#">Web Development</a>
+                                        </strong>
+                                    </li>
+                                </ul>
+                                <button class="btn btn-general btn-white" type="button" data-dismiss="modal">
+                                    <i class="fa fa-times"></i> Close
+                                </button>
+                            </div>
+                          </div>
+                        </div>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>    
+    <div class="portfolio-modal modal fade" id="webDModal3" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="close-modal" data-dismiss="modal">
+                    <div class="lr">
+                        <div class="rl"></div>
+                    </div>
+                </div>
+                <div class="container">
+                <div class="row">
+                        <div class="modal-body">
+                            <div class="title-bar">
+                              <div class="col-md-12">
+                                <h2 class="text-center">Our Project</h2>
+                                <div class="heading-border"></div>
+                              </div>
+                            </div>
+                            <div class="row">
+                              <div class="col-md-6">
+                                <img class="img-fluid img-centered" src="img/webdesigned/webdesigned3.jpg" alt="">
+                              </div>
+                              <div class="col-md-6">
+                                <p>这个网站目前已经作废了，主要帮实验室的小伙伴挂上个人学术交流信息</p>
+                                <hr />
+                                 <p>内容暂时没有</p>
+                                <ul class="list-inline item-details">
+                                    <li>Article:
+                                        <strong>
+                                          <a href="#">详情见我的网站</a>
+                                        </strong>
+                                    </li>
+                                    <li>Date:
+                                        <strong>
+                                          <a href="#">2017年4月</a>
+                                        </strong>
+                                    </li>
+                                    <li>Service:
+                                        <strong>
+                                          <a href="#">Web Development</a>
+                                        </strong>
+                                    </li>
+                                </ul>
+                                <button class="btn btn-general btn-white" type="button" data-dismiss="modal">
+                                    <i class="fa fa-times"></i> Close
+                                </button>
+                            </div>
+                          </div>
+                        </div>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+
+        <div class="portfolio-modal modal fade" id="deeplModal2" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="close-modal" data-dismiss="modal">
+                    <div class="lr">
+                        <div class="rl"></div>
+                    </div>
+                </div>
+                <div class="container">
+                <div class="row">
+                        <div class="modal-body">
+                            <div class="title-bar">
+                              <div class="col-md-12">
+                                <h2 class="text-center">Our Project</h2>
+                                <div class="heading-border"></div>
+                              </div>
+                            </div>
+                            <div class="row">
+                              <div class="col-md-6">
+                                <img class="img-fluid img-centered" src="img/deeplearning/flappy_bird_demp.jpg" alt="">
+                              </div>
+                              <div class="col-md-6">
+                                <p>这个网站目前已经作废了，主要帮实验室的小伙伴挂上个人学术交流信息</p>
+                                <hr />
+                                 <p>此实战是基于Flybird的DQN学习</p>
+                                  <p>
+                                2013年DeepMind 在NIPS上发表Playing Atari with Deep Reinforcement Learning 一文，提出了DQN（Deep Q Network）算法，实现端到端学习玩Atari游戏，即只有像素输入，看着屏幕玩游戏。Deep Mind就凭借这个应用以6亿美元被Google收购。由于DQN的开源，在github上涌现了大量各种版本的DQN程序。但大多是复现Atari的游戏，代码量很大，也不好理解。 <br /> Flappy Bird是个极其简单又困难的游戏，风靡一时。在很早之前，就有人使用Q-Learning 算法来实现完Flappy Bird。http://sarvagyavaish.github.io/FlappyBirdRL/ 但是这个的实现是通过获取小鸟的具体位置信息来实现的。<br />能否使用DQN来实现通过屏幕学习玩Flappy Bird是一个有意思的挑战。（话说本人和朋友在去年年底也考虑了这个idea，但当时由于不知道如何截取游戏屏幕只能使用具体位置来学习，不过其实也成功了） <br />最近，github上有人放出<a href="https://github.com/yenchenlin1994/DeepLearningFlappyBird">使用DQN玩Flappy Bird的代码</a>， 该repo通过结合之前的repo成功实现了这个想法。这个repo对整个实现过程进行了较详细的分析，但是由于其DQN算法的代码基本采用别人的repo，代码较为混乱，不易理解。</p>
+
+
+                                <ul class="list-inline item-details">
+                                    <li>Article:
+                                        <strong>
+                                          <a href="#">详情见我的网站</a>
+                                        </strong>
+                                    </li>
+                                    <li>Date:
+                                        <strong>
+                                          <a href="#">2017年4月</a>
+                                        </strong>
+                                    </li>
+                                    <li>Service:
+                                        <strong>
+                                          <a href="#">Deep Learning</a>
+                                        </strong>
+                                    </li>
+                                </ul>
+                                <button class="btn btn-general btn-white" type="button" data-dismiss="modal">
+                                    <i class="fa fa-times"></i> Close
+                                </button>
+                            </div>
+                          </div>
+                        </div>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="portfolio-modal modal fade" id="deeplModal3" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="close-modal" data-dismiss="modal">
+                    <div class="lr">
+                        <div class="rl"></div>
+                    </div>
+                </div>
+                <div class="container">
+                <div class="row">
+                        <div class="modal-body">
+                            <div class="title-bar">
+                              <div class="col-md-12">
+                                <h2 class="text-center">深度学习目标检测</h2>
+                                <div class="heading-border"></div>
+                              </div>
+                            </div>
+                            <div class="row">
+                              <div class="col-md-6">
+                                <img class="img-fluid img-centered" src="img/deeplearning/deeplearning2-1.png" alt="">
+                              </div>
+                              <div class="col-md-6">
+                                <p> 学习习内容</p>
+                                <ul>
+									<li>SPP-net</li>
+									<li>R-CNN</li>
+									<li>Fast R-CNN</li>
+                                </ul>
+                                <ul class="list-inline item-details">
+                                    <li>Article:
+                                        <strong>
+                                          <a href="#">详情见我的博文</a>
+                                        </strong>
+                                    </li>
+                                    <li>Date:
+                                        <strong>
+                                          <a href="#">2017年4月</a>
+                                        </strong>
+                                    </li>
+                                    <li>Service:
+                                        <strong>
+                                          <a href="#">Web Development</a>
+                                        </strong>
+                                    </li>
+                                </ul>
+                                <button class="btn btn-general btn-white" type="button" data-dismiss="modal">
+                                    <i class="fa fa-times"></i> Close
+                                </button>
+                            </div>
+                          </div>
+                        </div>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>    
+    <div class="portfolio-modal modal fade" id="deeplModal4" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="close-modal" data-dismiss="modal">
+                    <div class="lr">
+                        <div class="rl"></div>
+                    </div>
+                </div>
+                <div class="container">
+                <div class="row">
+                        <div class="modal-body">
+                            <div class="title-bar">
+                              <div class="col-md-12">
+                                <h2 class="text-center">仪表读书</h2>
+                                <div class="heading-border"></div>
+                              </div>
+                            </div>
+                            <div class="row">
+                              <div class="col-md-6">
+                                <img class="img-fluid img-centered" src="img/deeplearning/deeplearning4-1.jpg" alt="软件著作权">
+                                <img class="img-fluid img-centered" src="img/deeplearning/deeplearning4-2.png" alt="整体效果">
+                                <img class="img-fluid img-centered" src="img/deeplearning/deeplearning4-3.jpg" alt="识别效果">
+                              </div>
+                              <div class="col-md-6">
+                                <p> 技术内容</p>
+                                <ul>
+                									<li>图像处理</li>
+                									<li>感兴趣区域提取</li>
+                									<li>仪表图像数字识别</li>
+                                </ul>
+                                <p> 实现功能</p>
+                                <ul>
+                									<li>摄像头获取数字仪表界面数字</li>
+                									<li>对获取到的图片中仪表数字提取</li>
+                									<li>数字仪表数字阈值报警</li>
+                                </ul>
+                                <p><a href="https://v.qq.com/x/page/c0307rzoimv.html">实物演示效果</a> 如下视屏所示</p>
+                                <iframe frameborder="0" src="https://v.qq.com/txp/iframe/player.html?vid=c0307rzoimv" width="360" height="240" allowFullScreen="true"></iframe>
+                                <p> 更多视频说明</p>
+                                <ul>
+                									<li>这个视屏只是本地仪表图片识别</li>
+                									<li>我的youtue和腾讯视屏还有更多的相关演示</li>
+                									<li>上传的视频包括网络摄像头下的数字仪表识别</li>
+                									<li>本地USB接口的数字仪表读数识别等部分</li>
+                									<li>由于篇幅，在这里就不把所有视屏贴上了</li>
+                                </ul>
+                                <ul class="list-inline item-details">
+                                    <li>Article:
+                                        <strong>
+                                          <a href="#">更多的视频见我的腾讯和YouTube视频</a>
+                                        </strong>
+                                    </li>
+                                    <li>Date:
+                                        <strong>
+                                          <a href="#">2017年4月</a>
+                                        </strong>
+                                    </li>
+                                    <li>Service:
+                                        <strong>
+                                          <a href="#">Web Development</a>
+                                        </strong>
+                                    </li>
+                                </ul>
+                                <button class="btn btn-general btn-white" type="button" data-dismiss="modal">
+                                    <i class="fa fa-times"></i> Close
+                                </button>
+                            </div>
+                          </div>
+                        </div>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Global javascript -->
+    <script src="js/jquery/jquery.min.js"></script>
+    <script src="js/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="js/jquery-easing/jquery.easing.min.js"></script>
+    <script src="js/counter/jquery.waypoints.min.js"></script>
+    <script src="js/counter/jquery.counterup.min.js"></script>
+    <script src="js/custom.js"></script>
+    <script>
+        $(document).ready(function(){
+
+        $(".filter-b").click(function(){
+            var value = $(this).attr('data-filter');
+            if(value == "all")
+            { 
+                $('.filter').show('1000');
+            }
+            else
+            { 
+                $(".filter").not('.'+value).hide('3000');
+                $('.filter').filter('.'+value).show('3000');
+            }
+        });
+        
+        if ($(".filter-b").removeClass("active")) {
+          $(this).removeClass("active");
+        }
+        $(this).addClass("active");
+        });
+
+        // SKILLS
+        $(function () {
+            $('.counter').counterUp({
+                delay: 10,
+                time: 2000
+            });
+
+        });
+    </script> 
+</body>
+
+</html>
