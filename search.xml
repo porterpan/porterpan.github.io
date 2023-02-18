@@ -9617,4 +9617,51 @@ auto：0/1<br>
         <tag>Qt5</tag>
       </tags>
   </entry>
+  <entry>
+    <title>pnp 算法求解</title>
+    <url>//pnp_solve_theory/</url>
+    <content><![CDATA[<h1 id="引言"><a class="markdownIt-Anchor" href="#引言"></a> 引言</h1>
+<p>PNP问题的描述以及定义是相对简单的，他的目的就是<u>求解3D-2D点对运动的方法</u>。简单来说，就是 <big>在已知n个三维空间点坐标（相对于某个指定的坐标系A）及其二维投影位置的情况下，如何估计相机的位姿（即相机在坐标系A下的姿态）</big>。</p>
+<p>举个例子，我们在一幅图像中，知道其中至少四个图像中确定的点在3D空间下的相对坐标位置，我们就可以估计出相机相对于这些点的姿态，或者说估计出这些3D点在相机坐标系下姿态。（上述说的姿态或者位姿，包括位置以及方向，即一个6自由度的状态）<a href="https://www.jianshu.com/p/b3e9fb2ad0dc"> <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mrow></mrow><mrow><mo stretchy="false">[</mo><mn>1.</mn><mo stretchy="false">]</mo></mrow></msup></mrow><annotation encoding="application/x-tex">^{[1.]}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8879999999999999em;vertical-align:0em;"></span><span class="mord"><span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8879999999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mopen mtight">[</span><span class="mord mtight">1</span><span class="mord mtight">.</span><span class="mclose mtight">]</span></span></span></span></span></span></span></span></span></span></span></span> </a></p>
+<p>PnP 问题有很多种求解方法，例如用三对点估计位姿的 P3P 、直接线性变换(DLT)、EPnP。此外,还能用非线性优化的方式,构建最小二乘问题并迭代求解,也就是万金油式的 Bundle Adjustment<a href="https://blog.csdn.net/u014709760/article/details/88029841"> <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mrow></mrow><mrow><mo stretchy="false">[</mo><mn>2.</mn><mo stretchy="false">]</mo></mrow></msup></mrow><annotation encoding="application/x-tex">^{[2.]}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8879999999999999em;vertical-align:0em;"></span><span class="mord"><span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8879999999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mopen mtight">[</span><span class="mord mtight">2</span><span class="mord mtight">.</span><span class="mclose mtight">]</span></span></span></span></span></span></span></span></span></span></span></span> </a>。</p>
+<ul>
+<li>[x] Edit By Porter, 积水成渊,蛟龙生焉。</li>
+<li>[ ] Insert Date String 插件，ctrl+shift+I 插入时间字符串</li>
+</ul>
+<span id="more"></span>
+<h1 id="更新中"><a class="markdownIt-Anchor" href="#更新中"></a> 更新中。。。。。</h1>
+<h1 id="参考文献"><a class="markdownIt-Anchor" href="#参考文献"></a> 参考文献</h1>
+<p><a href="https://www.jianshu.com/p/b3e9fb2ad0dc">1. PNP(pespective-n-point)算法学习笔记</a></p>
+<p><a href="https://blog.csdn.net/u014709760/article/details/88029841">2. 3D-2D：PnP算法原理</a></p>
+]]></content>
+      <categories>
+        <category>vision</category>
+      </categories>
+      <tags>
+        <tag>Algorithm</tag>
+        <tag>vision</tag>
+        <tag>calibration</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>力扣刷题</title>
+    <url>//letcode_train/</url>
+    <content><![CDATA[<center> Porter Pan </center>
+<h2 id="摘要"><a class="markdownIt-Anchor" href="#摘要"></a> 摘要</h2>
+<p>力扣刷题，每日一道题</p>
+<span id="more"></span>
+<hr>
+<ol>
+<li><a href="https://leetcode.cn/problems/find-positive-integer-solution-for-a-given-equation/">1237. 找出给定方程的正整数解</a></li>
+</ol>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line">vector&lt;vector&lt;<span class="type">int</span>&gt;&gt; <span class="built_in">findSolution</span>(CustomFunction&amp; customfunction, <span class="type">int</span> z) &#123;</span><br><span class="line">        vector&lt;vector&lt;<span class="type">int</span>&gt;&gt; data_buff;</span><br><span class="line">        <span class="type">int</span> count_y = <span class="number">1000</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> x=<span class="number">1</span>;x&lt;=<span class="number">1000</span>;x++)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">for</span>(<span class="type">int</span> y=count_y;y&gt;<span class="number">0</span>;y-=<span class="number">2</span>)</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="keyword">if</span>(customfunction.<span class="built_in">f</span>(x,y)==z)</span><br><span class="line">                &#123;</span><br><span class="line">                    vector&lt;<span class="type">int</span>&gt; x_y;</span><br><span class="line">                    x_y.<span class="built_in">push_back</span>(x);</span><br><span class="line">                    x_y.<span class="built_in">push_back</span>(y);</span><br><span class="line">                    data_buff.<span class="built_in">push_back</span>(x_y);</span><br><span class="line">                    count_y = y;</span><br><span class="line">                    <span class="keyword">break</span>;</span><br><span class="line">                &#125;</span><br><span class="line">                            </span><br><span class="line">            &#125;</span><br><span class="line">            </span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> data_buff;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">findSolution</span>(<span class="params">self, customfunction: <span class="string">&#x27;CustomFunction&#x27;</span>, z: <span class="built_in">int</span></span>) -&gt; <span class="type">List</span>[<span class="type">List</span>[<span class="built_in">int</span>]]:</span><br><span class="line">       data_ = []</span><br><span class="line">       y_temp = <span class="number">1000</span></span><br><span class="line">       <span class="keyword">for</span> x <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>,<span class="number">1000</span>):</span><br><span class="line">           <span class="keyword">for</span> y <span class="keyword">in</span> <span class="built_in">range</span>(y_temp,<span class="number">0</span>,-<span class="number">1</span>):</span><br><span class="line">               <span class="keyword">if</span> customfunction.f(x,y)==z:                    </span><br><span class="line">                   data_.append([x,y])</span><br><span class="line">                   y_temp =y</span><br><span class="line">                   <span class="keyword">break</span></span><br><span class="line">               </span><br><span class="line">       <span class="keyword">return</span> data_</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>summary</category>
+      </categories>
+      <tags>
+        <tag>日记</tag>
+      </tags>
+  </entry>
 </search>
