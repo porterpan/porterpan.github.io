@@ -125,3 +125,4 @@ neat_js:
     - '**/love.js'
     - 'loader.js'
     - '**/helpers.js'
+    - '**/gitment.ejs'
