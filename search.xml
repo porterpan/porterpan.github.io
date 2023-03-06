@@ -9914,46 +9914,22 @@ t=-\frac{n_{x} r_{x}+n_{y} r_{y}}{n^{2}_{x}r_{xx}+2n_{x}n_{y}r_{xy}+n^{2}_{y}r_{
       </tags>
   </entry>
   <entry>
-    <title>2.18gcc相关命令</title>
-    <url>//vscodegcc/</url>
-    <content><![CDATA[<h1 id="摘要"><a class="markdownIt-Anchor" href="#摘要"></a> 摘要</h1>
+    <title>2.19 YOLOV1</title>
+    <url>//yolov1/</url>
+    <content><![CDATA[<h1>摘要</h1>
+<p>《You Only Look Once: Unified, Real-Time Object Detection》</p>
+<p>论文地址：<a href="https://arxiv.org/abs/1506.02640">https://arxiv.org/abs/1506.02640</a></p>
+<p>代码地址：<a href="https://github.com/pjreddie/dar">https://github.com/pjreddie/dar</a></p>
 <p>gcc和g++相关的命令学习笔记</p>
 <span id="more"></span>
-<h2 id="g"><a class="markdownIt-Anchor" href="#g"></a> g++</h2>
-<p>g<ins>主要是c</ins>语言编译的相关命令</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">GCC(1)                                GNU                               GCC(1)</span><br><span class="line"></span><br><span class="line">NAME</span><br><span class="line">       gcc - GNU project C and C++ compiler</span><br><span class="line"></span><br><span class="line">SYNOPSIS</span><br><span class="line">       gcc [-c|-S|-E] [-std=standard]</span><br><span class="line">           [-g] [-pg] [-Olevel]</span><br><span class="line">           [-Wwarn...] [-Wpedantic]</span><br><span class="line">           [-Idir...] [-Ldir...]</span><br><span class="line">           [-Dmacro[=defn]...] [-Umacro]</span><br><span class="line">           [-foption...] [-mmachine-option...]</span><br><span class="line">           [-o outfile] [@file] infile...</span><br></pre></td></tr></table></figure>
-<h3 id="11-常用命令"><a class="markdownIt-Anchor" href="#11-常用命令"></a> 1.1 常用命令</h3>
-<ul>
-<li>gcc -o</li>
-</ul>
-<p>指定生成可执行文件的名称，如果不实用-o则会生成a.out</p>
-<p>使用方法：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">g++ -o afile file.cpp file.hpp</span><br><span class="line">g++ -o <span class="built_in">test</span> test.cpp</span><br><span class="line">g++ test.cpp -o <span class="built_in">test</span></span><br></pre></td></tr></table></figure>
-<ul>
-<li>gcc -g</li>
-</ul>
-<p>可以对程序进行调试，添加gdb调试选项,生成调试信息</p>
-<p>使用方法：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">g++ -g -o hello hello.cpp</span><br></pre></td></tr></table></figure>
-<ul>
-<li>g++ -c</li>
-</ul>
-<p>只生成目标文件，只编译步链接</p>
-<p>使用方法：</p>
-<ul>
-<li>g++ -wall</li>
-</ul>
-<p>编译后显示警告</p>
-<ul>
-<li>g++ -std=c++17</li>
-</ul>
-<p>最新的g<ins>6.3已经默认支持c</ins>14 而更高的已经支持c++17标准</p>
+<h1>参考文献</h1>
+<p><a href="https://blog.csdn.net/m0_37192554/article/details/81092514">1. yoloV1，看过好多篇，这篇感觉讲的最通俗易懂</a></p>
 ]]></content>
       <categories>
         <category>summary</category>
       </categories>
       <tags>
-        <tag>gcc</tag>
+        <tag>dl</tag>
       </tags>
   </entry>
 </search>
