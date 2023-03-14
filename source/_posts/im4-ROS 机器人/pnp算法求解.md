@@ -7,7 +7,7 @@ tags: [vision,calibration,Algorithm]
 date: 2023-02-18 12:49:21
 ---
 
-# 引言（未完）
+# 引言
 
 PNP问题的描述以及定义是相对简单的，他的目的就是<u>求解3D-2D点对运动的方法</u>。简单来说，就是 <big>在已知n个三维空间点坐标（相对于某个指定的坐标系A）及其二维投影位置的情况下，如何估计相机的位姿（即相机在坐标系A下的姿态）</big>。
 
@@ -37,24 +37,82 @@ Perspective-n-Point问题(PnP)的已知条件：
 
 ### 直接线性变换(DLT) [ $^{[8.]}$ ](https://zhuanlan.zhihu.com/p/76047709) [ $^{[9.]}$ ](https://blog.csdn.net/b5w2p0/article/details/8804216)
 
+此部分按照《视觉slam十四讲》做了个笔记，直接线性变换仅仅需要6对3d-2d匹配点，即可求解出相机3d到2d的 $R| t$ 矩阵。
 
+考虑空间一点 $P=(X,Y,Z,1)^{T}$。 在图像 $I_{1}$ 中投影到图像特征点 $x_{1}=(u_{1}, v_{1}, 1)^{T}$ （以归一化平面齐次坐标表示）。我们需要求解相机位姿 $R,t$ ，与单应矩阵的求解类似，我们定义增广矩阵 $[R|T]$ 为一个3x4的矩阵，包含了旋转平移信息。将其展开如下形式
 
+$$
+\begin{pmatrix}
+u_{1} \\
+v_{1} \\
+1
+\end{pmatrix}
+
+=\begin{pmatrix}
+t_{1}  &t_{2}  & t_{3} & t_{4}\\
+t_{5}  &t_{6}  & t_{7} & t_{8}\\
+t_{9}  &t_{10}  &t_{11}  &t_{12}
+\end{pmatrix}
+\begin{pmatrix}
+X \\
+Y \\
+Z \\
+1
+\end{pmatrix}
+$$
+
+用最后一行把s消除掉，得到两个约束(一对特征点，对应两个约束)
+
+$u_{1} = \frac{t_{1}X + t_{2}Y+t_{3}Z+t_{4}}{t_{9}X+t_{10}Y+t_{11}Z+t_{12}}$
+
+$v_{1} = \frac{t_{5}X + t_{6}Y+t_{7}Z+t_{8}}{t_{9}X+t_{10}Y+t_{11}Z+t_{12}}$
+
+为了简化表示，定义 $T$ 的行向量
+
+$\mathbf{t}_{1} = (t_{1}, t_{2}, t_{3}, t_{4})^{T}$
+
+$\mathbf{t}_{2} = ( t_{5}, t_{6},t_{7}, t_{8})^{T}$
+
+$\mathbf{t}_{3} = ( t_{9},t_{10},t_{11},t_{12})^{T}$
+
+于是有
+
+$\mathbf{t}_{1}^{T} P - t_{3}^{T} P u_{1} = 0,$
+
+$\mathbf{t}_{2}^{T} P - t_{3}^{T} P v_{1} = 0$
+
+请注意 $\mathbf{t}$是待求变量，可以看到，每个特征点提供两个关于 $\mathbf{t}$ 的线性约束，假设一共存在N对特征点，则可以列出如下线性方程：
+
+$\begin{pmatrix}
+ P_{1}^{T}  &0  &-u_{1}P_{1}^{T} \\
+0  &P_{1}^{T}  &-v_{1}P_{1}^{T}  \\
+...  &....  &... \\
+P_{N}^{T}  &0  &-u_{N}P_{1}^{T} \\
+0  &P_{N}^{T}  &-v_{N}P_{1}^{T}
+\end{pmatrix}$
+
+于是6对特诊点，即可得到12组方程式，正好对应12个待求变量 $\mathbf{t}$ 直接求解即可得到变量值。这种方法称为DLT。
+
+直接求解中，当匹配点对大于6个点时， 也可以用SVD [ $^{[11.]}$ ](https://zhuanlan.zhihu.com/p/36546367#:~:text=SVD%20%E5%85%A8%E7%A7%B0%EF%BC%9ASingular%20Value,Decomposition%E3%80%82.%20SVD%20%E6%98%AF%E4%B8%80%E7%A7%8D%E6%8F%90%E5%8F%96%E4%BF%A1%E6%81%AF%E7%9A%84%E5%BC%BA%E5%A4%A7%E5%B7%A5%E5%85%B7%EF%BC%8C%E5%AE%83%E6%8F%90%E4%BE%9B%E4%BA%86%E4%B8%80%E7%A7%8D%E9%9D%9E%E5%B8%B8%E4%BE%BF%E6%8D%B7%E7%9A%84%E7%9F%A9%E9%98%B5%E5%88%86%E8%A7%A3%E6%96%B9%E5%BC%8F%EF%BC%8C%E8%83%BD%E5%A4%9F%E5%8F%91%E7%8E%B0%E6%95%B0%E6%8D%AE%E4%B8%AD%E5%8D%81%E5%88%86%E6%9C%89%E6%84%8F%E6%80%9D%E7%9A%84%E6%BD%9C%E5%9C%A8%E6%A8%A1%E5%BC%8F%E3%80%82.%20%E7%9F%A9%E9%98%B5%E5%BD%A2%E5%BC%8F%E6%95%B0%E6%8D%AE%EF%BC%88%E4%B8%BB%E8%A6%81%E6%98%AF%E5%9B%BE%E5%83%8F%E6%95%B0%E6%8D%AE%EF%BC%89%E7%9A%84%E5%8E%8B%E7%BC%A9%E3%80%82.)等方法对超定方程求最小二乘解。
 
 ### P3P
   
+可以参考前面一篇双目相机标定的文章，以及slam 十四讲里面的介绍。
 
 
 
 
 
+### EPnP [ $^{[12.]}$ ](https://zhuanlan.zhihu.com/p/361791835)
 
-### EPnP
+与其他方法相比，EPnP方法的复杂度为O(n)，对于点对数量较多的PnP问题，非常高效。
 
+核心思想是将3D点表示为4个控制点的组合，优化也只针对4个控制点，所以速度很快，在求解 
+$Mx=0$ 时，最多考虑了4个奇异向量，因此精度也很高。
 
+### AP3P
 
-### SDP
-
-
+参考 opencv 的官方介绍 [ $^{[13.]}$ ](https://docs.opencv.org/4.x/d5/d1f/calib3d_solvePnP.html#calib3d_solvePnP_flags)
 
 ### UPnP
 
@@ -116,6 +174,12 @@ distance = (COEFF_K * sqrt(Tran_vector.transpose() * Tran_vector) + COEFF_B) * c
 
 [9. 双目视觉算法研究（二）相机模型和直接线性法（DLT）](https://blog.csdn.net/b5w2p0/article/details/8804216)
 
-[5. 《slam十四讲》中的视觉里程计一章]()
+[10. 《slam十四讲》中的视觉里程计一章]()
+
+[11. SVD-矩阵奇异值分解 —— 原理与几何意义](https://zhuanlan.zhihu.com/p/36546367#:~:text=SVD%20%E5%85%A8%E7%A7%B0%EF%BC%9ASingular%20Value,Decomposition%E3%80%82.%20SVD%20%E6%98%AF%E4%B8%80%E7%A7%8D%E6%8F%90%E5%8F%96%E4%BF%A1%E6%81%AF%E7%9A%84%E5%BC%BA%E5%A4%A7%E5%B7%A5%E5%85%B7%EF%BC%8C%E5%AE%83%E6%8F%90%E4%BE%9B%E4%BA%86%E4%B8%80%E7%A7%8D%E9%9D%9E%E5%B8%B8%E4%BE%BF%E6%8D%B7%E7%9A%84%E7%9F%A9%E9%98%B5%E5%88%86%E8%A7%A3%E6%96%B9%E5%BC%8F%EF%BC%8C%E8%83%BD%E5%A4%9F%E5%8F%91%E7%8E%B0%E6%95%B0%E6%8D%AE%E4%B8%AD%E5%8D%81%E5%88%86%E6%9C%89%E6%84%8F%E6%80%9D%E7%9A%84%E6%BD%9C%E5%9C%A8%E6%A8%A1%E5%BC%8F%E3%80%82.%20%E7%9F%A9%E9%98%B5%E5%BD%A2%E5%BC%8F%E6%95%B0%E6%8D%AE%EF%BC%88%E4%B8%BB%E8%A6%81%E6%98%AF%E5%9B%BE%E5%83%8F%E6%95%B0%E6%8D%AE%EF%BC%89%E7%9A%84%E5%8E%8B%E7%BC%A9%E3%80%82.)
+
+[12. EPnP原理与源码详解](https://zhuanlan.zhihu.com/p/361791835)
+
+[13. Perspective-n-Point (PnP) pose computation](https://docs.opencv.org/4.x/d5/d1f/calib3d_solvePnP.html#calib3d_solvePnP_flags)
 
 <iframe src="//player.bilibili.com/player.html?aid=59593514&bvid=BV16t411g7FR&cid=103818657&page=7" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>

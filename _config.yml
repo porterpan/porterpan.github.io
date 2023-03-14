@@ -110,6 +110,7 @@ neat_css:
   exclude:
     - '**/*.min.css'
     - '**/*cntl.css'
+    - '**/yelee/*'
     
 # 压缩js
 neat_js:
@@ -126,3 +127,4 @@ neat_js:
     - 'loader.js'
     - '**/helpers.js'
     - '**/gitment.ejs'
+    - '**/yelee/*'

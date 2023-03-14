@@ -118,12 +118,23 @@ youyan:
   # 友言服务在 Web 环境下运行，普通本地环境无法查看，请部署后在线上测试。
 
 #5、Gitment
-gitment_on: true # 是否开启gitment
-gitment_owner: porterpan #你的 GitHub ID
-gitment_repo: 'porterpan.github.io' #存储评论的 repo
+gitment:
+  on: false # 是否开启gitment
+  gitment_owner: 'porterpan' #你的 GitHub ID
+  gitment_repo: 'porterpan.github.io' #存储评论的 repo
 gitment_oauth:
-  client_id: '9461105c752e5503b4de'           #client ID
-  client_secret: 'f2c5ffeac82d7dcdad2e06aceed9320bff0694dc' #client secret
+  client_id: '1eae01b6d529e9af0773' #9461105c752e5503b4de'           #client ID
+  client_secret: '086de9854ab8ed21973699c73efb0a9f57b57eab' #f2c5ffeac82d7dcdad2e06aceed9320bff0694dc' #client secret
+
+#6、gitalk评论
+gitalk:
+  enable: true
+  githubID: porterpan
+  repo: 'porterpan.github.io' #'repo 名字为可新建一个repo 或者使用博客托管的 repo 都行。'
+  ClientID: '8810e0ed40066eee0ea4' #'就是上步骤中注册的获取的信息'
+  ClientSecret: '5035d100854226605dd381db52a7e0327d22f3d4' #'就是上步骤中注册的获取的信息'
+  adminUser: 'porterpan' #填写你的 github 账户名即可
+  distractionFreeMode: true
 # >>> Style Customisation 样式自定义 <<<
 
 # Background | 背景
@@ -194,26 +205,16 @@ tagcloud: true
 
 # Blogroll, Link exchange | 友情链接
 friends:  
-  盒子部落: http://scholar.hezibuluo.com/
-  南瓜网: http://www.588230.com/
-  皮皮虾: http://www.wenkuwenku.com/
-  武侯阁: http://www.wuhouge.com/
-  free-ss: https://free-ss.site/
-  Git命令: https://www.yiibai.com/git/git_checkout.html
+  创客制造: https://www.ncnynl.com/
   paper Weekly: http://www.paperweekly.site/rank
   arXiv.org: https://arxiv.org/
   小木虫: http://muchong.com/bbs/
   红色石头博客: https://redstonewill.com/
   Leo Zhu: http://people.csail.mit.edu/leozhu/?from=singlemessage
-  gitchat: https://gitbook.cn/
   fast.Ai: https://www.fast.ai/
   image-net-ilsvrc: http://image-net.org/
-  知识星球: https://wx.zsxq.com/dweb/#/index/825884414222
-  掘金: https://juejin.im/
+  知识星球: https://wx.zsxq.com/dweb2/index/group/48844552425158
   medium: https://medium.com/
-  savido: https://www.savido.net/
-  videosolo: https://www.videosolo.com/zh-CN/online-video-downloader/
-  tubeninja: https://www.tubeninja.net/zh-hans/
   传智人工智能与机器人实验室: https://robot.czxy.com/docs/
 
   
